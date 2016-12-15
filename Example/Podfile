@@ -1,0 +1,6 @@
+use_frameworks!
+target 'JMapiOSSDK4.0_Tests' do
+  pod 'JMapiOSSDK4.0', :path => '../'
+  
+  
+end
