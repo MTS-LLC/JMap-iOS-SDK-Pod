@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.platform = :ios, '9.0'
   s.source_files = 'JMapiOSSDK4.0/Classes/*.{h,m}'
-  s.public_header_files = 'JMapiOSSDK4.0/Classes/*.h'
   s.vendored_frameworks = 'JMapiOSSDK4.0/Frameworks/*.framework'
 
 end
