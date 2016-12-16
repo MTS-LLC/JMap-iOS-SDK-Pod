@@ -1,0 +1,6 @@
+framework module Pods_JMapiOSSDK4_0_Tests {
+  umbrella header "Pods-JMapiOSSDK4.0_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
