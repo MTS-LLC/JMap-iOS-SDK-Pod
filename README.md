@@ -23,7 +23,3 @@ pod "JMapiOSSDK4.0"
 ## Author
 
 Louie, lyuen@jibestream.com
-
-## License
-
-JMapiOSSDK4.0 is available under the MIT license. See the LICENSE file for more info.
