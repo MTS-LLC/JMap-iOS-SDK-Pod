@@ -404,6 +404,14 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 -(void)addComponent:(nonnull UIView*)component toMap:(nonnull JMapMap*)map atPoint:(CGPoint)point;
 
+/*!
+ Updates the UIView on the map to a specified position.
+ 
+ @param component The UIView that will be added to the map.
+ @param map The JMapMap object that the UIView will be added to.
+ @param point The point on the map that the UIView will be updated to.
+ */
+- (void)updateComponent:(nonnull UIView *)component onMap:(nonnull JMapMap *)map toPoint:(CGPoint)point;
 
 /*!
  Removes a UIView that has been added to the map.
@@ -518,6 +526,15 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  @return Array of layer name strings
  */
 - (nonnull NSArray <NSString *>*)getAllVisibleLayerNamesInMap:(nonnull JMapMap *)map;
+
+/*!
+ Returns a list of layer names that are hidden on the map
+ 
+ @param map JMapMap object for retrieving layer names
+ 
+ @return Array of layer names that are hidden
+ */
+- (nonnull NSArray <NSString *>*)getAllHiddenLayerNamesInMap:(nonnull JMapMap *)map;
 
 /*!
  Get Waypoints From Shape
