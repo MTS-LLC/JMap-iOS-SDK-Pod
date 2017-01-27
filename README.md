@@ -20,6 +20,16 @@ it, simply add the following line to your Podfile:
 pod 'JMapiOSSDK', :git => 'https://github.com/Jibestream/JMap-iOS-SDK-Pod.git'
 ```
 
+For installing the first time run:
+```ruby
+pod install
+```
+
+To get the latest version of the pod run:
+```ruby
+pod update
+```
+
 ## Author
 
 Louie, lyuen@jibestream.com
