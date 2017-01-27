@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'JMapiOSSDK'
-  s.version          = '1.0.0'
+s.version='4.0.0+’
   s.summary          = 'The Jibestream JMap 4.0 iOS SDK.'
 
   s.description      = 'This CocoaPod provides the release version for the Jibestream iOS SDK.'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   s.platform = :ios, '9.0'
-  s.source_files = 'JMapiOSSDK4.0/Classes/*.{h,m}'
+#  s.source_files = 'JMapiOSSDK4.0/Classes/*.{h,m}'
   s.vendored_frameworks = 'JMapiOSSDK4.0/Frameworks/*.framework'
 
 end
