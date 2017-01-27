@@ -64,14 +64,7 @@
  * @param reload A BOOL to set caching option
  * @param host A NSString* host name/server endpoint
  */
-- (nonnull instancetype)initWithCustomerId:(NSInteger)customerId autoReloadCache:(BOOL)reload host:(nonnull NSString *)host;
-
-/*!
- * Populate JCore with authentication
- * @param token A NSString* object containing the authentication token for making API requests
- * @param completionHandler A callback that returns JMapJCore* instance and NSError* for debugging
- */
-- (void)populateJCoreWithOAuthToken:(nullable NSString *)token completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapError* _Nullable error))completionHandler;
+- (nonnull instancetype)initWithCustomerId:(NSInteger)customerId autoReloadCache:(BOOL)reload host:(nonnull NSString *)host clientId:(nonnull NSString *)clientId clientSecret:(nonnull NSString *)clientSecret;
 
 #pragma mark - populate methods
 /*!

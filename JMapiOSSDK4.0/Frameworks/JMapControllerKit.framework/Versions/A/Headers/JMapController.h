@@ -404,14 +404,6 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 -(void)addComponent:(nonnull UIView*)component toMap:(nonnull JMapMap*)map atPoint:(CGPoint)point;
 
-/*!
- Updates the UIView on the map to a specified position.
- 
- @param component The UIView that will be added to the map.
- @param map The JMapMap object that the UIView will be added to.
- @param point The point on the map that the UIView will be updated to.
- */
-- (void)updateComponent:(nonnull UIView *)component onMap:(nonnull JMapMap *)map toPoint:(CGPoint)point;
 
 /*!
  Removes a UIView that has been added to the map.
