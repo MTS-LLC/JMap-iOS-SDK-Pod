@@ -52,14 +52,29 @@
  * List of JMapLocation objects associated with the destination
  */
 @property (nonatomic, strong, readonly, nullable) NSArray<JMapLocation *> *locations;
-
+/*!
+ * List of Category Id strings associated with the destination
+ */
 @property (nonatomic, strong, readonly, nullable) NSArray <NSString *> *categoryIds;
-
+/*!
+ * List of keyword strings associated with the destination
+ */
 @property (nonatomic, strong, readonly, nullable) NSArray <NSString *> *keywords;
-
+/*!
+ * List of tag strings associated with the destination
+ */
 @property (nonatomic, strong, readonly, nullable) NSArray <NSString *> *tags;
-
+/*!
+ * List of JMapWaypoint objects associated with the destination
+ */
 @property (nonatomic, strong, readonly, nullable) NSArray <JMapWaypoint *> *waypoints;
+/*!
+ * Display mode associated with the destination for determining the content displayed in the destination unit
+ * 0 - Display none
+ * 1 - Display Text
+ * 2 - Display Image
+ */
+@property (nonatomic, strong, readonly, nullable) NSNumber *displayMode;
 
 -(nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dict;
 

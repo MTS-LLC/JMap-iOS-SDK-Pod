@@ -357,10 +357,10 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 /*!
  Adds an image to a unit on the map.
  
- @param image A UIImage with the image to be added to the unit.
+ @param uri A NSString with the uri to be added to the unit.
  @param unit A shape representing the unit on the map that the image will be added to.
 */
--(void) addImage:(nonnull UIImage*)image toUnit:(nonnull Shape*)unit;
+-(void) addImage:(nonnull NSString*)uri toUnit:(nonnull Shape*)unit;
 
 /*!
  Hides the contents of a unit.
