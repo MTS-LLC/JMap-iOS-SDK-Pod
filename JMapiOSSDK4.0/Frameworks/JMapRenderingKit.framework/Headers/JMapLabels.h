@@ -16,7 +16,7 @@
 
 //- (void)createLabelForDestination:(nonnull JMapDestination *)destination frame:(CGRect)frame;
 
-- (nonnull JMapLabel *)createLabelForUnitId:(NSInteger)unitId content:(nullable NSString *)content frame:(CGRect)frame mapIds:(nonnull NSArray <NSNumber*>*)mapIds image:(nullable UIImage *)image uri:(nullable NSString *)uri font:(nullable UIFont *)font;
+- (nonnull JMapLabel *)createLabelForUnitId:(NSInteger)unitId content:(nullable NSString *)content frame:(CGRect)frame mapIds:(nonnull NSArray <NSNumber*>*)mapIds image:(nullable UIImage *)image uri:(nullable NSString *)uri font:(nullable UIFont *)font isUnitLabel:(BOOL)isUnitLabel;
 
 - (void)createMapLabels:(nonnull NSArray <JMapMapLabel *>*)mapLabels forMapWithId:(nonnull NSNumber *)mapId onCanvas:(nonnull JMapCanvas *)canvas;
 

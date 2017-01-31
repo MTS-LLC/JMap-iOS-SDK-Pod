@@ -28,8 +28,11 @@
 @property (nonatomic, assign, readonly) CGAffineTransform rotatedTransform;
 @property (nonatomic, assign, readonly) BOOL isRotated;
 @property (nonatomic, assign, readonly) BOOL showEllipses;
+@property (nonatomic, assign, readonly) BOOL isUnitLabel;
 
-- (nonnull instancetype)initWithFrame:(CGRect)frame id:(nonnull NSNumber *)id mapIds:(nonnull NSArray <NSNumber *>*)mapIds text:(nullable NSString *)text image:(nullable UIImage *)image uri:(nullable NSString *)uri svg:(nullable NSString *)svg font:(nullable UIFont *)font rotation:(nullable NSNumber *)rotation;
+- (nonnull instancetype)initWithFrame:(CGRect)frame id:(nonnull NSNumber *)id mapIds:(nonnull NSArray <NSNumber *>*)mapIds text:(nullable NSString *)text image:(nullable UIImage *)image uri:(nullable NSString *)uri svg:(nullable NSString *)svg font:(nullable UIFont *)font rotation:(nullable NSNumber *)rotation isUnitLabel:(BOOL)isUnitLabel;
+
+- (nonnull instancetype)initWithMapLabel:(nonnull JMapLabel *)mapLabel;
 
 - (void)updateValuesWithText:(nullable NSString *)text image:(nullable UIImage *)image uri:(nullable NSString *)uri svg:(nullable NSString *)svg font:(nullable UIFont *)font rotation:(nullable NSNumber *)rotation;
 
@@ -37,7 +40,7 @@
 
 - (void)loadTextLabel;
 
-- (void)loadWebLabel;
+- (void)loadWebLabel:(nonnull void(^)(BOOL success))completion;
 
 - (void)loadImageLabel;
 
