@@ -18,5 +18,6 @@
 @property JMapPathType *mover; // JMapPathDataTypes
 @property NSMutableArray <JMapASNode*> *points; // ASNode[]
 @property NSMutableArray <JMapPoint*> *mapPoints;
+@property float cost;
 
 @end
