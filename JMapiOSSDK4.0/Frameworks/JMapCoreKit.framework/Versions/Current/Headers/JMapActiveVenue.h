@@ -16,6 +16,7 @@
 @class JMapMapCollection;
 @class JMapPathTypeCollection;
 @class JMapMapLabelCollection;
+@class JMapPathPerFloor;
 
 @interface JMapActiveVenue : JMapBaseModel
 
@@ -69,7 +70,7 @@
 #pragma mark - Wayfind Helpers
 - (void)updateWayfindDataWithCompletion:(nullable void(^)(BOOL success))completion;
 
-- (nonnull NSArray <CALayer *>*)wayfind:(nonnull JMapWaypoint *)waypointStart to:(nonnull JMapWaypoint *)waypointEnd  withAccessibility:(NSInteger)accessible;
+- (nonnull NSArray <JMapPathPerFloor *>*)wayfind:(nonnull JMapWaypoint *)waypointStart to:(nonnull JMapWaypoint *)waypointEnd  withAccessibility:(NSInteger)accessible;
 
 - (nullable JMapWaypoint *)getClosestWaypointInArray:(nonnull NSArray <JMapWaypoint *>*)waypointArray toWaypoint:(nonnull JMapWaypoint *)waypoint withAccessibility:(NSInteger)accessible;
 
