@@ -8,13 +8,31 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "JMapMovableItem.h"
 
-@interface JMapUserLocation : JMapMovableItem
+@interface JMapUserLocation : UIView
 
+@property (nonatomic) UIColor *locationColor;
+@property (nonatomic) UIColor *pulseColor;
+@property (nonatomic) UIColor *confidenceColor;
+@property (nonatomic) UIImage *image;
+@property (nonatomic) CGAffineTransform userLocationTransform;
+@property (nonatomic) float startAlpha;
+@property (nonatomic) float endAlpha;
+@property (nonatomic) float speed;
+@property (nonatomic) float confidenceAlpha;
+@property (nonatomic) CGPoint position;
+@property (nonatomic) float confidenceRadius;
+@property (nonatomic) NSTimeInterval pulseAnimationDuration;
+@property (nonatomic) NSTimeInterval delayBetweenPulseCycles;
+@property (nonatomic) float orientation;
+@property (nonatomic) NSInteger mapId;
 @property (nonatomic, assign) BOOL tracking;
+
+@property (nonatomic, copy) void (^willMoveToSuperviewAnimationBlock)(JMapUserLocation *view, UIView *superview); // default is pop animation
 
 // Singleton implementation
 + (instancetype)sharedInstance;
+
+- (instancetype)initUserLocation;
 
 @end

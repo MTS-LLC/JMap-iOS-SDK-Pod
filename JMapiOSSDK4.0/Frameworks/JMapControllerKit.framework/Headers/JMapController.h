@@ -392,65 +392,8 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (nullable NSArray <Shape *>*)getUnitsFromDestination:(nonnull JMapDestination *)destination;
 
-#pragma mark - MovableItem Helpers
-
-
-
 #pragma mark - Component/Popup Helpers
-/*!
- Add MovableItem object onto map
- 
- @param movableItem A JMapMovableItem object to be added to the map
- @param map A JMapMap for the item to be added
- @param point CGPoint to indicate X,Y coordinates of the item
- @param onLayer A NSString layer name on the map
- */
-- (void)addMovableItem:(nonnull JMapMovableItem *)movableItem toMap:(nonnull JMapMap *)map atPoint:(CGPoint)point onLayer:(nonnull NSString *)layerName;
 
-/*
- Remove MovableItem object from map
- 
- @param movableItem A JMapMovableItem object to be removed from the map
- */
-- (void)removeMovableItem:(nonnull JMapMovableItem *)movableItem;
-
-/*!
- Update MovableItem on map
- 
- @param movableItem A JMapMovableItem object to be update on the map
- @param map A JMapMap for the item to be updated on
- @param point CGPoint to indicate X,Y coordinates for updating the item
- @param animate A BOOL to determine whether to animate movement or not
- */
-- (void)updateMovableItem:(nonnull JMapMovableItem *)movableItem onMap:(nonnull JMapMap *)map toPoint:(CGPoint)point animated:(BOOL)animate;
-
-/*
- Hide all MovableItems on layer
- 
- @param layerName A NSString layer name to have items hidden
- */
-- (void)hideAllMovableItemsOnLayer:(nonnull NSString *)layerName;
-
-/*
- Show all MovableItems on layer
- 
- @param layerName A NSString layer name to have items shown
- */
-- (void)showAllMovableItemsOnLayer:(nonnull NSString *)layerName;
-
-/*
- Hide a MovableItem
- 
- @param movableItem A JMapMovableItem object to be hidden
- */
-- (void)hideMovableItem:(nonnull JMapMovableItem *)movableItem;
-
-/*
- Hide a MovableItem
- 
- @param movableItem A JMapMovableItem object to be shown
- */
-- (void)showMovableItem:(nonnull JMapMovableItem *)movableItem;
 
 /*!
  Adds a UIView to the map at a specified position.
@@ -458,9 +401,9 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  @param component The UIView that will be added to the map.
  @param map The JMapMap object that the UIView will be added to.
  @param point The point on the map that the UIView will be placed at.
- @param counterRotate BOOL value to allow counter rotation
  */
--(void)addComponent:(nonnull UIView*)component toMap:(nonnull JMapMap*)map atPoint:(CGPoint)point allowCounterRotate:(BOOL)counterRotate;
+-(void)addComponent:(nonnull UIView*)component toMap:(nonnull JMapMap*)map atPoint:(CGPoint)point;
+
 
 /*!
  Removes a UIView that has been added to the map.

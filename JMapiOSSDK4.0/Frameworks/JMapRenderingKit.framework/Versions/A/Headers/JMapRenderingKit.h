@@ -22,7 +22,6 @@
 #import <JMapRenderingKit/JMapLabels.h>
 #import <JMapRenderingKit/JMapUserLocation.h>
 #import <JMapRenderingKit/JMapRenderingKitUtils.h>
-#import <JMapRenderingKit/JMapMovableItem.h>
 
 @class JMapCanvas;
 @class JMapBaseLayer;
