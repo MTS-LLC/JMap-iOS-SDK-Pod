@@ -10,20 +10,22 @@
 
 @class JMapMapLabelInstance;
 
+/**
+ *  The JMapMapLabelInstances model.
+ */
 @interface JMapMapLabelInstances : JMapBaseCollection
 
-/*!
- * Get List of JMapMapLabelInstance objects by mapId
- * @param mapId NSInteger to search for
+/**
+ *  Gets a list of JMapMapLabelInstance objects by map ID.
  *
- * @return An NSArray of JMapMapLabelInstance objects associated to mapId or a empty if none exists
+ *  @param mapId An NSInteger to search for.
+ *  @return An NSArray of JMapMapLabelInstance objects associated to mapId or an empty array if none exists.
  */
 -(nonnull NSArray <JMapMapLabelInstance*>*)getByMapId:(NSInteger)mapId;
-
-/*!
- * Get List of JMapMapLabelInstance objects on all levels
+/**
+ *  Gets a list of JMapMapLabelInstance objects that is on all levels.
  *
- * @return An NSArray of JMapMapLabelInstance objects on all levels
+ *  @return An NSArray of JMapMapLabelInstance objects that is located on all levels.
  */
 -(nonnull NSArray <JMapMapLabelInstance*>*)getLocationOnAllLevels;
 

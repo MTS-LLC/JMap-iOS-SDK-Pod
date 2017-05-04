@@ -10,42 +10,47 @@
 
 @class JMapPathType;
 
+/**
+ *  The JMapPathTypeCollection model.
+ */
 @interface JMapPathTypeCollection : JMapBaseCollection
 
-/*!
- * Get all object in collection
+/**
+ *  Gets all JMapPathType objects in the collection.
  *
- * @return an array of JMapPathType objects
+ *  @return An NSArray of JMapPathType objects.
  */
 - (nonnull NSArray <JMapPathType *>*)getAll;
 
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a list of JMapPathType objects by external ID.
  *
- * @return An array of JMapPathType objects associase to the external ID
+ *  @param externalId The external ID to search for.
+ *  @return An NSArray of JMapPathType objects associated to the external ID.
  */
 - (nonnull NSArray <JMapPathType *>*)getByExternalId:(nonnull NSString *)externalId;
 
-/*!
- * Get JMapPathType object by ID in collection
- * @param id ID to search for
+/**
+ *  Gets a JMapPathType object by ID in the collection.
  *
- * @return JMapPathType associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapPathType object associated to ID or nil if JMapPathType does not exist.
  */
 - (nullable JMapPathType *)getById:(NSInteger)id;
 
-/*!
- * Get Path Types by Name
- * @param name A NSString* name associated with the path type
- * @return NSArray* of JMapPathType objects
+/**
+ *  Gets a list of JMapPathType objects by name.
+ *
+ *  @param name An NSString name associated with the path type.
+ *  @return An NSArray of JMapPathType objects.
  */
 -(nullable NSArray <JMapPathType *>*)getByName:(nonnull NSString *)name;
 
-/*!
- * Get Path Types by Direction
- * @param direction A NSInteger direction associated with the path type
- * @return NSArray* of JMapPathType objects
+/**
+ *  Get a list of JMapPathType objects by direction.
+ *
+ *  @param direction A NSInteger direction associated with the path type.
+ *  @return An NSArray of JMapPathType objects.
  */
 -(nullable NSArray <JMapPathType *>*)getByDirection:(NSInteger)direction;
 

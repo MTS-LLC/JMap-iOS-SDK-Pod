@@ -15,23 +15,23 @@
 @class JMapAmenityCollection;
 @class JMapMapCollection;
 @class JMapPathTypeCollection;
+@class JMapPosition;
 
+/**
+ *  The JMapVenue model.
+ */
 @interface JMapVenue : JMapBaseModel
-
-/*!
- * Name of the venue
+/**
+ *  The name of the venue.
  */
 @property (nonatomic, strong, readonly, nullable) NSString *name;
-
-
-/*!
- * The map id associated with the venue
+/**
+ *  The map id associated with the venue.
  */
 @property (nonatomic, strong, readonly, nullable) NSNumber *mapId;
-
-/*!
- * List of all devices in the venue, JMapDevices objects
+/**
+ *  The JMapPosition object associated with the venue.
  */
-@property (nonatomic, strong, readonly, nullable) NSString *coordinates;
+@property (nonatomic, strong, readonly, nullable) JMapPosition *coordinates;
 
 @end

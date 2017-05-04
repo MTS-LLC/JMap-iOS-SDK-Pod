@@ -12,15 +12,29 @@
 @class JMapASGrid;
 @class JMapASNode;
 
+/**
+ *  The A* search model used for wayfinding.
+ */
 @interface JMapASSearch : NSObject
 {
     CFBinaryHeapRef openStartHeap;
 }
-
+/**
+ *  The tag of the search of type NSString.
+ */
 @property NSString *TAG;
+/**
+ *  The generated grid to run the search algorithm on.
+ */
 @property JMapASGrid *grid;
-
+/**
+ *  The search algorithm for wayfinding.
+ *
+ *  @param from An integer value of the waypoint/node ID.
+ *  @param to An integer value of the waypoint/node ID.
+ *  @param accessLevel The accessibility value for generating the wayfinding route.
+ *  @return An NSMutableArray of JMapPathPerFloor objects.
+ */
 - (NSMutableArray<JMapPathPerFloor*>*)search:(int)from to:(int)to accessLevel:(int)accessLevel;
-//CFComparisonResult compare (const void *ptr1,const void *ptr2,void *info);
 
 @end

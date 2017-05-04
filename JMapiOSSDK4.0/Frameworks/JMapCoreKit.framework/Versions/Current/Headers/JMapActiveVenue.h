@@ -16,65 +16,88 @@
 @class JMapMapCollection;
 @class JMapPathTypeCollection;
 @class JMapMapLabelCollection;
+@class JMapPathPerFloor;
+@class JMapPosition;
 
+/**
+ *  The JMapActiveVenue model.
+ */
 @interface JMapActiveVenue : JMapBaseModel
-
-/*!
- * Name of the venue
+/**
+ *  The name of the active venue.
  */
 @property (nonatomic, strong, readonly, nullable) NSString *name;
-
-/*!
- * Map associated with the venue
+/**
+ *  The map associated with the active venue
  */
 @property (nonatomic, strong, readonly, nullable) JMapMap * map;
-
-/*!
- * List of all devices in the venue, JMapDevices objects
+/**
+ *  The JMapPosition object associated with the active venue.
  */
-@property (nonatomic, strong, readonly, nullable) NSString *coordinates;
-
-/*!
- * Buildings associated with this venue
+@property (nonatomic, strong, readonly, nullable) JMapPosition *coordinates;
+/**
+ *  The JMapBuildingCollection object associated with the active venue.
  */
 @property (nonatomic, strong, readonly, nullable) JMapBuildingCollection * buildings;
-
-/*!
- * Destinations associated with this venue
+/**
+ *  The JMapDestinationCollection object associated with the active venue.
  */
 @property (nonatomic, strong, readonly, nullable) JMapDestinationCollection * destinations;
-
-/*!
- * Amenities associated with this venue
+/**
+ *  The JMapAmenityCollection object associated with the active venue.
  */
 @property (nonatomic, strong, readonly, nullable) JMapAmenityCollection * amenities;
-
-/*!
- * Maps associated with this venue
+/**
+ *  The JMapMapCollection object associated with the active venue.
  */
 @property (nonatomic, strong, readonly, nullable) JMapMapCollection * maps;
-
-/*!
- * Path Types associated with this venue
+/**
+ *  The JMapPathTypeCollection object associated with the active venue.
  */
 @property (nonatomic, strong, readonly, nullable) JMapPathTypeCollection * pathTypes;
-
-/*!
- * Map Labels associated with this venue
+/**
+ *  The JMapMapLabelCollection object associated with the active venue.
  */
 @property (nonatomic, strong, readonly, nullable) JMapMapLabelCollection * mapLabels;
-
+/**
+ *  Initializes a JMapActiveVenue.
+ *
+ *  @param dict An NSDictionary parsed from the server.
+ *  @return An initialized JMapActiveVenue instance.
+ */
 -(nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dict;
 
 #pragma mark - Wayfind Helpers
+/**
+ *  Updates the wayfinding data to enable the wayfinding algorithm.
+ *  @param completion The completion handler for when the data has been loaded successfully.
+ */
 - (void)updateWayfindDataWithCompletion:(nullable void(^)(BOOL success))completion;
-
-- (nonnull NSArray <CALayer *>*)wayfind:(nonnull JMapWaypoint *)waypointStart to:(nonnull JMapWaypoint *)waypointEnd  withAccessibility:(NSInteger)accessible;
-
+/**
+ *  Generates a list of wayfinding data with starting and ending waypoints with accessibility.
+ *  @param waypointStart The starting waypoint to wayfind from.
+ *  @param waypointEnd The ending waypoint to wayfind to.
+ *  @param accessible The accessibility value of the wayfinding route. 0 - 100 with 100 having full accessibility.
+ */
+- (nonnull NSArray <JMapPathPerFloor *>*)wayfind:(nonnull JMapWaypoint *)waypointStart to:(nonnull JMapWaypoint *)waypointEnd  withAccessibility:(NSInteger)accessible;
+/**
+ *  Gets the nearest waypoint in an array from a reference waypoint.
+ *  @param waypointArray An NSArray of JMapWaypoint objects to search in.
+ *  @param waypoint The waypoint reference to search with.
+ *  @param accessible The accessibility value of the wayfinding route used for calculating distance.
+ */
 - (nullable JMapWaypoint *)getClosestWaypointInArray:(nonnull NSArray <JMapWaypoint *>*)waypointArray toWaypoint:(nonnull JMapWaypoint *)waypoint withAccessibility:(NSInteger)accessible;
-
+/**
+ *  Gets the closest waypoint on the map from a given coordinate.
+ *  @param map The JMapMap object to search in.
+ *  @param coordinate The x,y coordinate reference to search with.
+ */
 - (nullable JMapWaypoint *)getClosestWaypointToCoordinateOnMap:(nonnull JMapMap *)map withCoordinate:(CGPoint)coordinate;
-
+/**
+ *  Gets the nearest waypoint in an array from a reference point.
+ *  @param waypointArray An NSArray of JMapWaypoint objects to search in.
+ *  @param point The point reference to search with.
+ */
 - (nullable JMapWaypoint *)getClosestWaypointInArray:(nonnull NSArray <JMapWaypoint *>*)waypointArray toCoordinate:(CGPoint)point;
 
 @end

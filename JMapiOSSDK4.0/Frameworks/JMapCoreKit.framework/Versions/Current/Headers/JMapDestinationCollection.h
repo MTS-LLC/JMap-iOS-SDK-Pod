@@ -14,88 +14,78 @@
 @class JMapMap;
 @class JMapWaypoint;
 
-/*!
- * @interface JMapDestinationCollection
- *  This is the Destination Collection Model of the SDK.
+/**
+ *  The JMapDestinationCollection model.
  */
 @interface JMapDestinationCollection : JMapBaseCollection
 
-/*!
- * Get all object in collection
+/**
+ *  Gets all JMapDestination objects in collection.
  *
- * @return an array of JMapDestination objects
+ *  @return An NSArray of JMapDestination objects.
  */
 - (nonnull NSArray <JMapDestination *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId NSString ID to search for
+/**
+ *  Gets a list of JMapDestination objects by external ID.
  *
- * @return An array of JMapDestination objects associase to the external ID
+ *  @param externalId NSString ID to search for.
+ *  @return An array of JMapDestination objects associase to the external ID.
  */
 - (nonnull NSArray <JMapDestination *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapDestination object by ID in collection
- * @param id NSNumber ID to search for
+/**
+ *  Gets a JMapDestination object by ID in the collection.
  *
- * @return JMapDestination associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id An NSInteger ID to search for.
+ *  @return A JMapDestination object associated to the ID or a nil if JMapDestination with the ID does not exist.
  */
 - (nullable JMapDestination *)getById:(NSInteger)id;
-
-/*!
- * Get Destinations by Tag
- * @param tag NSString* tag associated to the destination
- * @return NSArray* of JMapDestination* objects
+/**
+ *  Gets a list of JMapDestination objects by tag.
+ *
+ *  @param tag An NSString tag to search for.
+ *  @return An NSArray of JMapDestination objects associated to the tag.
  */
 -(nullable NSArray <JMapDestination *>*)getByTag:(nonnull NSString *)tag;
-
-/*!
- * Get Destinations by Keyword
- * @param keyword A NSString* keyword associated to the destination
- * @return NSArray* of JMapDestination* objects
+/**
+ *  Gets a list of JMapDestination objects by keyword.
+ *
+ *  @param keyword An NSString keyword to search for.
+ *  @return An NSArray of JMapDestination objects associated to the keyword.
  */
 -(nullable NSArray <JMapDestination *>*)getByKeyword:(nonnull NSString *)keyword;
-
-/*!
- * Get Destinations by Buidling
- * @param building A JMapBuilding* object associated to the destination
- * @return NSArray* of JMapDestination* objects
+/**
+ *  Gets a list of JMapDestination objects by buidling.
+ *
+ *  @param building The JMapBuilding object to search for.
+ *  @return An NSArray of JMapDestination objects associated to the building.
  */
 -(nullable NSArray <JMapDestination *>*)getByBuilding:(nonnull JMapBuilding *)building;
-
-/*!
- * Get Destinations by Floor
- * @param floor A JMapFloor* object associated to the destination
- * @return NSArray* of JMapDestination* objects
+/**
+ *  Gets a list of JMapDestination objects by floor.
+ *
+ *  @param floor The JMapFloor object to search for.
+ *  @return An NSArray of JMapDestination* objects associated to the floor.
  */
 -(nullable NSArray <JMapDestination *>*)getByFloor:(nonnull JMapFloor *)floor;
-
-/*!
- * Get Destinations by Map
- * @param map A JMapMap* object associated to the destination
- * @return NSArray* of JMapDestination* objects
+/**
+ *  Gets a list of JMapDestination objects by map.
+ *
+ *  @param map The JMapMap object to search for.
+ *  @return An NSArray of JMapDestination objects associated to the map.
  */
 -(nullable NSArray <JMapDestination *>*)getByMap:(nonnull JMapMap *)map;
-
-/*!
- * Get Destinations by Waypoint
- * @param waypoint A JMapWaypoint* object associated to the destination
- * @return NSArray* of JMapDestination* objects
+/**
+ *  Gets a list of JMapDestination objects by waypoint.
+ *
+ *  @param waypoint The JMapWaypoint object to search for.
+ *  @return An NSArray of JMapDestination objects associated to the waypoint.
  */
 -(nullable NSArray <JMapDestination *>*)getByWaypoint:(nonnull JMapWaypoint *)waypoint;
-
-/*!
- * Get Destinations by Status
- * @param status A NSInteger value associated to the destination
- * @return NSArray* of JMapDestination* objects
- */
--(nullable NSArray <JMapDestination *>*)getByStatus:(NSInteger)status;
-
-/*!
- * Get Destinations by Unit Number
- * @param unitNumber A NSString* unit number associated to the destination
- * @return NSArray* of JMapDestination* objects
+/**
+ *  Gets a list of JMapDestination objects by unit number.
+ *
+ *  @param unitNumber An NSString unit number to search for.
+ *  @return An NSArray of JMapDestination objects associated to the unit number.
  */
 -(nullable NSArray <JMapDestination *>*)getByUnitNumber:(nonnull NSString *)unitNumber;
 

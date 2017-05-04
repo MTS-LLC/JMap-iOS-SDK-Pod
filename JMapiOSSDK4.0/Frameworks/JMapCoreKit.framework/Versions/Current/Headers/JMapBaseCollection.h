@@ -9,68 +9,64 @@
 #import <Foundation/Foundation.h>
 #import <JMapCoreKit/JMapBaseModel.h>
 
+/**
+ *  The JMapBaseCollection model.
+ */
 @interface JMapBaseCollection : NSObject
-
+/**
+ *  The child collection model class extending the JMapBaseModel.
+ */
 @property (nonatomic, strong, readonly, nonnull) JMapBaseModel * collectionModelClass;
-
-/*!
- * Initializer For JMapBaseController
+/**
+ * Initializes a JMapBaseController.
  *
- * @return JMapBaseCollection object ready to be used
+ * @return A JMapBaseCollection instance.
  */
 - (nonnull instancetype)init;
-
-/*!
- * Create a batch in a collection
- * @discussion Used to create a collection object from an array of object data and add to the collection
+/**
+ * Create a batch in a collection. Used to create a collection object from an array of object data and add to the collection.
  *
- * @param dict NSArray <NSDictionary <NSString *, id>*> An array of object data to be parsed.
- *
- * @return The object if found, otherwise nil. If the array is not sorted the behavior is undefined.
+ * @param dict An NSDictionary containing data to be parsed.
+ * @return An NSArray of JMapBaseModel objects if found, otherwise nil. If the array is not sorted by ID the behavior is undefined.
  */
 - (nonnull NSArray<JMapBaseModel*>*)createBatch:(nonnull NSDictionary *)dict;
-
-/*!
- * Assign collection model class
- * @params collectionModelClass must be of type JMapBaseModel
+/**
+ * Assigns the child's collection model class.
+ *
+ * @params collectionModelClass Subclassed from JMapBaseModel.
  */
 - (void)assignCollectionModelClass:(nonnull JMapBaseModel *)collectionModelClass;
-
-/*!
- * Create Collection Object
- * @discussion Create a collection object and add to the collection
+/**
+ * Creates the collection object. Used to create a collection object and add to the collection.
  *
- * @param dictionary NSDictionary <NSString *, id> of object data to be parse.
+ * @param dictionary An NSDictionary <NSString *, id> of object data to be parse.
  */
 - (void)create:(nonnull NSDictionary <NSString *, id>*)dictionary;
-
-/*!
- * Get count of collection size
+/**
+ * Gets the count of collection size.
  *
- * @return Integer indicating size of the collection
+ * @return An NSInteger size of the collection.
  */
 - (NSInteger)getCount;
-
-/*!
- * Get all object in collection
+/**
+ * Gets all the objects in the collection.
  *
- * @return an array of JMapBaseModel objects
+ * @return An NSArray of JMapBaseModel objects
  */
 - (nonnull NSArray <JMapBaseModel *>*)getAll;
 
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ * Gets JMapBaseModel objects by external ID.
  *
- * @return An array of JMapBaseModel objects associase to the external ID
+ * @param externalId The ID to search for.
+ * @return An NSArray of JMapBaseModel objects associated to the external ID.
  */
 - (nonnull NSArray <JMapBaseModel *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapBaseModel object by ID in collection
- * @param id ID to search for
+/**
+ * Gets JMapBaseModel objects by ID in the collection.
  *
- * @return JMapBaseModel associated to ID or a nil if JMapBaseModel does not exists
+ * @param id The ID to search for.
+ * @return A JMapBaseModel associated to the ID or a nil if JMapBaseModel with ID does not exist.
  */
 - (nullable JMapBaseModel *)getById:(NSInteger)id;
 

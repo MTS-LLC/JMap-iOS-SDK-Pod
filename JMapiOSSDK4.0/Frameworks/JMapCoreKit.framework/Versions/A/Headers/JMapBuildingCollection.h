@@ -8,78 +8,74 @@
 
 #import <JMapCoreKit/JMapCoreKit.h>
 
+/**
+ *  The JMapBuildingCollection model.
+ */
 @interface JMapBuildingCollection : JMapBaseCollection
-
-/*!
- * Get Default Building
- * @return default JMapBuilding object
+/**
+ *  Gets the default building object.
+ *
+ *  @return A default JMapBuilding object, nil if default is not set.
  */
 - (nullable JMapBuilding *)getDefault;
-
-/*!
- * Assign default building ID in Building Collection
- * @param defaultId NSInteger ID value
+/**
+ *  Assigns default building ID in the building collection.
+ *
+ *  @param defaultId NSInteger ID value.
  */
 - (void)assignDefaultBuildingWithId:(NSInteger)defaultId;
-
-/*!
- * Get all object in collection
+/**
+ *  Gets all the JMapBuilding objects in the collection.
  *
- * @return an array of JMapBuilding objects
+ *  @return An NSArray of JMapBuilding objects.
  */
 - (nonnull NSArray <JMapBuilding *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a list of JMapBuilding objects by external ID.
  *
- * @return An array of JMapBuilding objects associase to the external ID
+ *  @param externalId The ID to search for.
+ *  @return An NSArray of JMapBuilding objects associated to the external ID.
  */
 - (nonnull NSArray <JMapBuilding *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapBuilding object by ID in collection
- * @param id ID to search for
+/**
+ *  Gets a JMapBuilding object by ID in the collection.
  *
- * @return JMapBuilding associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapBuilding associated to the ID or a nil if JMapBuilding with ID does not exist.
  */
 - (nullable JMapBuilding *)getById:(NSInteger)id;
-
-/*!
- * Get Building by Name
- * @param name A NSString name of the building
- * @return A JMapBuilding object result or nil if no matches found
+/**
+ *  Gets a JMapBuilding object by name.
+ *
+ *  @param name A NSString name to search for.
+ *  @return A JMapBuilding object associated to the name.
  */
 -(nullable JMapBuilding *)getByName:(nonnull NSString *)name;
-
-/*!
- * Get Building by Floor
- * @param floor JMapFloor associated to building to look for
+/**
+ *  Gets a JMapBuilding object by floor.
  *
- * @return A JMapBuilding object result or nil if no matches found
+ *  @param floor The JMapFloor object to search for.
+ *  @return A JMapBuilding object associated to the floor.
  */
 - (nullable JMapBuilding *)getByFloor:(nonnull JMapFloor *)floor;
-
-/*!
- * Get Building by Map
- * @param map JMapMap associated to building to look for
+/**
+ *  Gets a JMapBuilding object by map.
  *
- * @return A JMapBuilding object result or nil if no matches found
+ *  @param map The JMapMap to search for.
+ *  @return A JMapBuilding object associated to the map.
  */
 - (nullable JMapBuilding *)getByMap:(nonnull JMapMap *)map;
-
-/*!
- * Get Floor by Map
- * @param map JMapMap associated to Floo to look for
+/**
+ *  Gets a JMapFloor object by map
  *
- * @return A JMapFloor object result or nil if no matches found
+ *  @param map The JMapMap to search for.
+ *  @return A JMapFloor object associated to the map.
  */
 - (nullable JMapFloor *)getFloorByMap:(nonnull JMapMap *)map;
-
-/*!
- * Get All Floors
+/**
+ *  Gets all JMapFloor objects.
  *
- * @return A NSArray of JMapFloor objects result or empty array if none exists
+ *  @return A NSArray of JMapFloor objects.
  */
 - (nonnull NSArray <JMapFloor*> *)getAllFloors;
 

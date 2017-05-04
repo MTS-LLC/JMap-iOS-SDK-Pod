@@ -10,42 +10,42 @@
 
 @class JMapUri;
 
+/**
+ *  The JMapUriCollection model.
+ */
 @interface JMapUriCollection : JMapBaseCollection
-
-/*!
- * Get all object in collection
+/**
+ *  Gets all the JMapUri objects in the collection.
  *
- * @return an array of JMapWaypoint objects
+ *  @return An NSArray of JMapUri objects.
  */
 - (nonnull NSArray <JMapUri *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a list of JMapUri objects by external ID.
  *
- * @return An array of JMapUri objects associase to the external ID
+ *  @param externalId The ID to search for.
+ *  @return An NSArray of JMapUri objects associated to the external ID.
  */
 - (nonnull NSArray <JMapUri *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapUri object by ID in collection
- * @param id ID to search for
+/**
+ *  Gets a JMapUri object by ID in the collection.
  *
- * @return JMapUri associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapUri object associated to ID or nil if JMapUri with ID does not exist.
  */
 - (nullable JMapUri *)getById:(NSInteger)id;
-
-/*!
- * Get Uri by MimeType
- * @param mimeType A NSString associated to the Uri
- * @return An NSArray* of JMapUri* objects
+/**
+ *  Gets a list of JMapUri objects by mime type.
+ *
+ *  @param mimeType A NSString mime type to search for.
+ *  @return An NSArray of JMapUri objects associated to the mime type.
  */
 -(nonnull NSArray <JMapUri*>*)getByMimeType:(nonnull NSString *)mimeType;
-
-/*!
- * Get Uri by ResourceType
- * @param resourceType A NSString associated to the Uri
- * @return An NSArray* of JMapUri* objects
+/**
+ *  Gets a list of JMapUri objects by resource type.
+ *
+ *  @param resourceType An NSString resource type to search for.
+ *  @return An NSArray of JMapUri objects associated to the resource type.
  */
 -(nonnull NSArray <JMapUri*>*)getByResourceType:(nonnull NSString *)resourceType;
 

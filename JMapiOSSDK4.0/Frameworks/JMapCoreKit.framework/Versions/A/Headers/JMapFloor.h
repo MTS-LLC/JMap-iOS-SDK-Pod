@@ -10,17 +10,44 @@
 
 @class JMapMap;
 
+/**
+ *  The JMapFloor model.
+ */
 @interface JMapFloor : JMapBaseModel
-
+/**
+ *  The building ID of the floor.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *buildingId;
+/**
+ *  The map object associated with the floor.
+ */
 @property (nonatomic, strong, readonly, nullable) JMapMap *map;
+/**
+ *  The level value associated with the floor.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *level;
+/**
+ *  The preference value associated with the floor.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *preference;
+/**
+ *  The altitude value associated with the floor.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *altitude;
+/**
+ *  The name of the floor.
+ */
 @property (nonatomic, strong, readonly, nullable) NSString *name;
+/**
+ *  The short name or abbreviated name of the floor.
+ */
 @property (nonatomic, strong, readonly, nullable) NSString *shortName;
-@property (nonatomic, strong, readonly, nullable) NSDictionary *recordHistory;
-
+/**
+ *  Initializes a JMapFloor.
+ *
+ *  @param dict An NSDictionary parsed from the server.
+ *  @return An initialized JMapFloor instance.
+ */
 -(nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dict;
 
 @end

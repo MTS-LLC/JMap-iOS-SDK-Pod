@@ -45,8 +45,6 @@
 #import <JMapCoreKit/JMapMapLabelInstances.h>
 
 // Utilities
-#import <JMapCoreKit/JMapHeapSort.h>
-#import <JMapCoreKit/JMapAVLTree.h>
 #import <JMapCoreKit/JMapCoreUtils.h>
 #import <JMapCoreKit/JMapError.h>
 
@@ -60,4 +58,4 @@
 #import <JMapCoreKit/JMapPoint.h>
 
 #define JMapSDK_VERSION_STRING @"1.0.0"
-#define JMapSDK_DEFAULT_TARGET_SERVER_VERSION @"4.0"
+#define JMapSDK_DEFAULT_TARGET_SERVER_VERSION @"4.1"

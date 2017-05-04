@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  The JMapCoreUtils model.
+ */
 @interface JMapCoreUtils : NSObject
 
 #pragma mark - Parsers

@@ -11,79 +11,73 @@
 @class JMapFloor;
 @class JMapDestination;
 
+/**
+ *  The JMapFloorCollection model.
+ */
 @interface JMapFloorCollection : JMapBaseCollection
-
-/*!
- * Get Default Floor
+/**
+ *  Gets the default JMapFloor object.
  *
- * @return Default JMapFloor object
+ *  @return The default JMapFloor object, nil if default is not set.
  */
 - (nullable JMapFloor *)getDefault;
-
-/*!
- * Get all object in collection
+/**
+ *  Gets all the JMapFloor objects in the collection.
  *
- * @return an array of JMapFloor objects
+ *  @return An NSArray of JMapFloor objects.
  */
 - (nonnull NSArray <JMapFloor *>*)getAll;
 
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a list of JMapFloor objects by external ID.
  *
- * @return An array of JMapFloor objects associase to the external ID
+ *  @param externalId The ID to search for.
+ *  @return An NSArray of JMapFloor objects associated to the external ID.
  */
 - (nonnull NSArray <JMapFloor *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapFloor object by ID in collection
- * @param id ID to search for
+/**
+ *  Gets a JMapFloor object by ID in the collection.
  *
- * @return JMapFloor associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapFloor associated to the ID or a nil if JMapFloor with the ID does not exist.
  */
 - (nullable JMapFloor *)getById:(NSInteger)id;
-
-/*!
- * Get Floor By Level
- * @param level number to search by
+/**
+ *  Gets a JMapFloor object by level.
  *
- * @return JMapFloor object associated by the floor
+ *  @param level The level number to search for.
+ *  @return A JMapFloor object associated to the level.
  */
 - (nullable JMapFloor *)getByLevel:(int)level;
-
-/*!
- * Get Floor By MAp
+/**
+ *  Gets a JMapFloor object by map.
  *
- * @return JMapFloor object
+ *  @return A JMapFloor object associated to the map.
  */
 - (nullable JMapFloor *)getByMap:(nonnull JMapMap *)map;
-
-/*!
- * Get Array Of Floors By Destination
- * @param destination destination to search by
+/**
+ *  Gets a list of JMapFloor objects by destination.
  *
- * @return Array of JMapFloor objects associated to the destination
+ *  @param destination The destination to search for.
+ *  @return An NSArray of JMapFloor objects associated to the destination.
  */
 - (nonnull NSArray <JMapFloor *>*)getByDestination:(nonnull JMapDestination *)destination;
-
-/*!
- * Get All JMapFloors By Preference
+/**
+ *  Gets all JMapFloor objects sorted by preference.
  *
- * @return Array of all JMapFloor by order of preference
+ *  @return An NSArray of all JMapFloor objects ordered by preference.
  */
 - (nonnull NSArray <JMapFloor *>*)getAllSortedByPreference;
-
-/*!
- * Get All JMapFloors By Level
+/**
+ *  Gets all JMapFloor objects sorted by level.
  *
- * @return Array of all JMapFloor by order of level
+ *  @return An NSArray of all JMapFloor objects ordered by level.
  */
 - (nonnull NSArray <JMapFloor *>*)getAllSortedByLevel;
-
-/*!
- * Get All JMapFloors By Altitude
+/**
+ *  Gets all JMapFloor objects sorted by altitude.
  *
- * @return Array of all JMapFloor by order of altitude
+ *  @return An NSArray of all JMapFloor objects ordered by altitude.
  */
 - (nonnull NSArray <JMapFloor *>*)getAllSortedByAltitude;
 

@@ -7,25 +7,23 @@
 //
 
 #import <JMapCoreKit/JMapCoreKit.h>
-
+/**
+ *  The JMapAssociation model.
+ */
 @interface JMapAssociation : JMapBaseModel
-/*!
- * Entity type ID associated with the waypoint
- * 1 - Destination
- * 2 - Device
- * 13 - Scheduled Ad
- * 19 - Event
- * 25 - Path
- * 26 - Amenity
- * 41 - Location
+/**
+ *  The list of destination ID's that the object is associated with.
  */
 @property (nonatomic, strong, readonly) NSArray <NSNumber*>* destinations;
+/**
+ *  The list of amenity ID's that the object is associated with.
+ */
 @property (nonatomic, strong, readonly) NSArray <NSNumber*>* amenities;
-
-/*!
- * Initialization method for JMapWaypointAssociation
- * @param dict of key value pairs for the properties
- * @return JMapWaypointAssociation object linked to JMapwaypoint object
+/**
+ *  Initializes a JMapAssociation.
+ *
+ *  @param dict An NSDictionary parsed from the server.
+ *  @return An initialized JMapAssociation instance.
  */
 -(instancetype)initWithDictionary:(NSDictionary *)dict;
 @end

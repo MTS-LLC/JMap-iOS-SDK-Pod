@@ -14,18 +14,52 @@
 
 @interface JMapAmenity : JMapBaseModel
 
+/**
+ *  The customer ID of the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *customerId;
+/**
+ *  The name of the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSString *name;
+/**
+ *  The description of the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSString *description;
-@property (nonatomic, assign, readonly) BOOL status;
+/**
+ *  The display order of the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *displayOrder;
+/**
+ *  The primary Uri ID of the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *primaryUriId;
+/**
+ *  The list of JMapLocation objects associated to the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSArray<JMapLocation*> *locations;
+/**
+ *  The Uri collection of the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) JMapUriCollection *uris;
+/**
+ *  The keywords associated to the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSArray<NSString*> *keywords;
+/**
+ *  The SVG string of the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSString *svg;
+/**
+ *  The list of JMapWaypoint objects associated to the amenity.
+ */
 @property (nonatomic, strong, readonly, nullable) NSArray<JMapWaypoint *>*waypoints;
-
+/**
+ *  Initializes a JMapAmenity.
+ *
+ *  @param dict An NSDictionary parsed from the server.
+ *  @return An initialized JMapAmenity instance.
+ */
 -(nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dict;
 
 @end

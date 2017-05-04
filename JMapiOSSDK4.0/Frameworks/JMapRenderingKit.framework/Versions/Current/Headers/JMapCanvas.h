@@ -15,7 +15,14 @@
 
 @interface JMapCanvas : UIScrollView
 
+/**
+ *  JMapRenderingKitDelegate for rendering engine communication to the delegate class
+ */
 @property (nonatomic, weak, nullable) id <JMapRenderingKitDelegate> mapDelegate;
+
+/**
+ *  Rotation Gesture Recgonizer for all pannings, zoomings and rotations
+ */
 @property (nonatomic, strong, nonnull) UIRotationGestureRecognizer * rotationGestureRecognizer;
 
 @end

@@ -21,7 +21,7 @@
  *  @params stringToConvert NSString color string
  *  @return UIColor object from Hexidecimal color string
  */
-+ (UIColor *)colorWithHexString:(NSString *)stringToConvert;
++ (nonnull UIColor *)colorWithHexString:(nonnull NSString *)stringToConvert;
 
 #pragma mark Transforms
 /**
@@ -33,6 +33,37 @@
  *
  *  @return CGAffineTransform object
  */
-+ (CGAffineTransform)applyAngleTransFromUIView:(UIView *)thisView withCenter:(CGPoint)pt;
++ (CGAffineTransform)applyAngleTransFromUIView:(nonnull UIView *)thisView withCenter:(CGPoint)pt;
+
+/**
+ *  Bounds To Points
+ *  @discussion Turn bounds to array of points
+ *
+ *  @params bounds a CGRect of the bounds to convert
+ *
+ *  @return An array of CGPoints
+ */
++ (nonnull NSArray<NSValue *>*)boundsToPoints:(CGRect)bounds;
+
+/**
+ *  Point in polygon
+ *  @discussion Check to for if point is within a polygon
+ *
+ *  @params point CGPoint value of the point to check
+ *  @params polygon NSArray of polygon CGPoints
+ *
+ *  @return BOOL true if point is within the polygon, false if it is not
+ */
++ (BOOL)point:(CGPoint)point inPolygon:(nonnull NSArray <NSValue *>*)polygon;
+
+/**
+ *  Get Bounding Box From Points
+ *  @discussion get bounding box from array of points provided
+ *
+ *  @params points An array of CGPoints
+ *
+ *  @return CGRect constructed by points provided
+ */
++ (CGRect)getBoundingBoxFromPoints:(nonnull NSArray <NSValue *>*)points;
 
 @end

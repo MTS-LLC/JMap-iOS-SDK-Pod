@@ -10,77 +10,65 @@
 
 @class JMapMap;
 
+/**
+ *  The JMapAmenityCollection model.
+ */
 @interface JMapAmenityCollection : JMapBaseCollection
-
-/*!
- * Get all object in collection
+/**
+ *  Gets all the JMapAmenity objects in the collection.
  *
- * @return an array of JMapAmenity objects
+ *  @return An NSArray of JMapAmenity objects.
  */
 - (nonnull NSArray <JMapAmenity *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a list of JMapAmenity objects by external ID.
  *
- * @return An array of JMapAmenity objects associase to the external ID
+ *  @param externalId The ID to search for.
+ *  @return An NSArray of JMapAmenity objects associated to the external ID.
  */
 - (nonnull NSArray <JMapAmenity *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapAmenity object by ID in collection
- * @param id ID to search for
+/**
+ *  Gets a JMapAmenity object by ID in the collection.
  *
- * @return JMapAmenity associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapAmenity associated to the ID or nil if JMapAmenity with ID does not exist.
  */
 - (nullable JMapAmenity *)getById:(NSInteger)id;
-
-/*!
- * @discussion Get Amenities By Waypoint
- * @params waypoint JMapWaypoint to search by
+/**
+ *  Gets a list of JMapAmenity objects by waypoint.
  *
- * @return Array of JMapAmenity
+ *  @params waypoint The JMapWaypoint to search for.
+ *  @return AN NSArray of JMapAmenity objects associated to the waypoint.
  */
 - (nonnull NSArray <JMapAmenity *>*)getByWaypoint:(nonnull JMapWaypoint *)waypoint;
-
-/*!
- * @discussion Get Amenities By Keyword
- * @params keyword NSString to search by
+/**
+ *  Gets a list of JMapAmenity objects by keyword.
  *
- * @return Array of JMapAmenity
+ *  @params keyword The NSString keyword to search for.
+ *  @return AN NSArray of JMapAmenity objects associated to the keyword.
  */
 - (nonnull NSArray <JMapAmenity *>*)getByKeyword:(nonnull NSString *)keyword;
-
-/*!
- * @discussion Get Amenities By Floor
- * @params floor JMapFloor to search by
+/**
+ *  Gets a list of JMapAmenity objects by floor.
  *
- * @return Array of JMapAmenity
+ *  @params floor The JMapFloor object to search for.
+ *  @return An NSArray of JMapAmenity objects associated to the floor.
  */
 - (nonnull NSArray <JMapAmenity *>*)getByFloor:(nonnull JMapFloor *)floor;
-
-/*!
- * @discussion Get Amenities By Map
- * @params map JMaMap to search by
+/**
+ *  Gets a list of JMapAmenity objects by map.
  *
- * @return Array of JMapAmenity
+ *  @params map The JMapMap object to search for.
+ *  @return An NSArray of JMapAmenity objects associated to the map.
  */
 - (nonnull NSArray <JMapAmenity *>*)getByMap:(nonnull JMapMap *)map;
 
-/*!
- * @discussion Get Amenities By Building
- * @params building JMapBuilding to search by
+/**
+ *  Gets a list of JMapAmenity objects by building.
  *
- * @return Array of JMapAmenity
+ *  @params building The JMapBuilding object to search for.
+ *  @return An NSArray of JMapAmenity objects associated to the building.
  */
 - (nonnull NSArray <JMapAmenity *>*)getByBuilding:(nonnull JMapBuilding *)building;
-
-/*!
- * @discussion Get Amenities By Status
- * @params status NSInteger to search by
- *
- * @return Array of JMapAmenity
- */
-- (nonnull NSArray <JMapAmenity *>*)getByStatus:(NSInteger)status;
 
 @end

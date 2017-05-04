@@ -15,11 +15,14 @@
 @class JMapActiveVenue;
 @class JMapError;
 
+/**
+ *  The JMapJCoreDelegate model.
+ */
 @protocol JMapJCoreDelegate <NSObject>
 
 @optional
 
-/*!
+/**
  * Delegate call when wayfind data has been loaded
  */
 - (void)wayfindDataLoaded;
@@ -27,85 +30,132 @@
 @end
 
 #pragma mark - JMapView
+/**
+ *  The JMapJCore model.
+ */
 @interface JMapJCore : NSObject
 
+/**
+ *  The JMapJCoreDelegate of the JCore.
+ */
 @property (nonatomic, assign, nullable) id <JMapJCoreDelegate> delegate;
+/**
+ *  The name of the JCore.
+ */
 @property (nonatomic, strong, readonly, nullable) NSString *name;
+/**
+ *  The venue collection of the JCore.
+ */
 @property (nonatomic, strong, readonly, nullable) JMapVenueCollection *venues;
+/**
+ *  The active venue of the JCore.
+ */
 @property (nonatomic, strong, readonly, nullable) JMapActiveVenue *activeVenue;
 
 #pragma mark - Versioning
 
-/*!
- * Get SDK Version
- * @return Version string of the current SDK
+/**
+ *  Gets the SDK version.
+ *
+ *  @return Version string of the current SDK.
  */
 -(nonnull NSString *)getSDKVersion;
 
-/*!
- * Get Server Version
- * @return Version string of the currently target server
+/**
+ *  Gets the server version.
+ *
+ *  @return Version string of the currently targeted server.
  */
 -(nonnull NSString *)getServerVersion;
 
 #pragma mark - Destroy Methods
-/*!
- * Destroy Active Venue
- * @discussion Deallocates Active Venue and all assocated classes from memory
+/**
+ *  Destroys and deallocates active venue and all assocated classes from memory.
  */
 - (void)destroyActiveVenue;
 
 #pragma mark - init methods
 
-/*!
- * Initialization method with customer Id, cache, and host
+/**
+ *  Initializates the JMapJCore.
  *
- * @param customerId A Integer * unique customer identification
- * @param reload A BOOL to set caching option
- * @param host A NSString* host name/server endpoint
+ *  @param customerId An NSInteger unique customer ID.
+ *  @param reload A BOOL to set caching option.
+ *  @param host A NSString host name/server endpoint.
+ *  @param clientId The clientID for authentication.
+ *  @param clientSecret The clientSecret for authentication.
+ *  @return An initialized JMapJCore instance.
  */
 - (nonnull instancetype)initWithCustomerId:(NSInteger)customerId autoReloadCache:(BOOL)reload host:(nonnull NSString *)host clientId:(nonnull NSString *)clientId clientSecret:(nonnull NSString *)clientSecret;
 
 #pragma mark - populate methods
-/*!
- * Get All Venues
- * @param completionHandler A callback that returns an NSArray* of JMapVenue* objects
+/**
+ *  Gets all venues with API call to the server.
+ *
+ *  @param completionHandler A callback that returns an NSArray of JMapVenue objects.
  */
 -(void)getVenues:(nonnull __attribute__((noescape)) void(^)(NSArray <JMapVenue*>* _Nonnull venues, JMapError* _Nullable error))completionHandler;
 
-/*!
- * Populate Venue by Venue
- * @param venue A JMapVenue* object for data to be populated
- * @param completionHandler A callback that returns a JMapActiveVenue object and JMapError for debugging
+/**
+ *  Populates venue by venue object.
+ *
+ *  @param venue A JMapVenue object for data to be populated.
+ *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError for debugging.
  */
 -(void)populateVenue:(nonnull JMapVenue *)venue completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
-/*!
- * Populate Venue by Venue Id
- * @param venueId A NSNumber associated to the venue for data to be populated
- * @param completionHandler A callback that returns a JMapActiveVenue object and JMapError for debugging
+/**
+ *  Populates venue by venue ID.
+ *
+ *  @param venueId An NSInteger associated to the venue for data to be populated.
+ *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError for debugging.
  */
 -(void)populateVenueByVenueId:(NSInteger)venueId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
-/*!
- * Populate Building in Venue and Building Id
- * @param venue A JMapActiveVenue* object associated to the building
- * @param buildingId A NSNumber id associated to the building
- * @param completionHandler A callback that returns a JMapActiveVenue object and JMapError debugging
+/**
+ *  Populates venue by venue ID and also populates default building.
+ *
+ *  @param venueId An NSInteger associated to the venue for data to be populated.
+ *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError for debugging.
  */
--(void)populateBuildingInVenue:(nonnull JMapActiveVenue *)venue withBuildingId:(NSInteger)buildingId completionHandler:(nonnull __attribute__((noescape)) void(^)( JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+-(void)populateVenueWithDefaultBuildingByVenueId:(NSInteger)venueId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+
+/*!
+ *  Populates building in venue and building ID.
+ *
+ *  @param venue A JMapActiveVenue object associated to the building.
+ *  @param buildingId An NSInteger ID associated to the building.
+ *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError debugging.
+ */
+-(void)populateBuildingInVenue:(nonnull JMapActiveVenue *)venue withBuildingId:(NSInteger)buildingId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+
+/*!
+ *  Populates venue by venue ID and building ID.
+ *
+ *  @param venueId An NSInteger ID associated to the venue.
+ *  @param buildingId An NSInteger ID associated to the building in the venue.
+ *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError debugging.
+ */
+-(void)populateVenueWithBuildingByVenueId:(NSInteger)venueId withBuildingId:(NSInteger)buildingId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+
+/*!
+ *  Get Request : method used to make additional GET requests to the JACS server using JCore
+ *  @param url - the request to make. Each request is prepended with the host/customer id
+ *  and example of this argument would be: `/venue/123/zone/full` where 123 is the venue Id.
+ *  @param completionHandler - callback method.
+ */
+- (void)getRequest:(nonnull NSString *)url completionHandler:(nonnull __attribute__((noescape)) void(^)(NSDictionary * _Nullable data, JMapError* _Nullable error))completionHandler;
 
 #pragma mark - Cache
-/*!
- * Clear All Cache
- * @discussion Clears all cache that was previously store on the phone
+/**
+ *  Clears all cache that was previously store on the device.
  */
 - (void)clearAllCache;
 
-/*!
- * Clear Cache By Venue Id
- * @discussion Clears cache associated with provided venue ID
- * @param venueId provided ID of to purge from cache
+/**
+ *  Clears cache by venue ID
+ *
+ *  @param venueId The venue ID to purge cache data.
  */
 - (void)clearCacheByVenueId:(NSInteger)venueId;
 

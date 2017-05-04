@@ -15,81 +15,81 @@
 @class JMapMap;
 @class JMapBuilding;
 
+/**
+ *  The JMapMapCollection model.
+ */
 @interface JMapMapCollection : JMapBaseCollection
-
-/*!
- * Get all object in collection
+/**
+ *  Gets all the JMapMap objects in the collection.
  *
- * @return an array of JMapWaypoint objects
+ *  @return An NSArray of JMapWaypoint objects.
  */
 - (nonnull NSArray <JMapMap *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a list of JMapMap objects by external ID.
  *
- * @return An array of JMapMap objects associase to the external ID
+ *  @param externalId The ID to search for.
+ *  @return An NSArray of JMapMap objects associated to the external ID.
  */
 - (nonnull NSArray <JMapMap *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapMap object by ID in collection
- * @param id ID to search for
+/**
+ *  Geta a JMapMap object by ID in the collection.
  *
- * @return JMapMap associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapMap associated to the ID or nil if JMapMap with ID does not exist.
  */
 - (nullable JMapMap *)getById:(NSInteger)id;
-
-/*!
- * Get All Waypoints on Map
- * @return An NSArray* of JMapWaypoint objects
+/**
+ *  Gets a list of JMapWaypoint objects on the map.
+ *
+ *  @return An NSArray of JMapWaypoint objects.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getAllWaypoints;
-
-/*!
- * Get Waypoints containing Destinations
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects with destination associations.
+ *
+ *  @return An NSArray* of JMapWaypoint objects.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getWaypointsWithDestinations;
-
-/*!
- * Get Waypoints containing Amenities
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects with amenity associations.
+ *
+ *  @return An NSArray of JMapWaypoint objects.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getWaypointsWithAmenities;
-
-/*!
- * Get Waypoints by Destination
- * @param destination A JMapDestination* object associated to the waypoint
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects by destination.
+ *
+ *  @param destination The JMapDestination object to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the destination.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getWaypointsByDestination:(nonnull JMapDestination*)destination;
-
-/*!
- * Get Waypoints by Amenity
- * @param amenity A JMapAmenity* object associated to the waypoint
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects by amenity.
+ *
+ *  @param amenity The JMapAmenity object to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the amenity.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getWaypointsByAmenity:(nonnull JMapAmenity*)amenity;
-
-/*!
- * Get Waypoints by Floor
- * @param floor A JMapFloor* object associated to the waypoint
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects by floor.
+ *
+ *  @param floor The JMapFloor object to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the floor.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getWaypointsByFloor:(nonnull JMapFloor*)floor;
-
-/*!
- * Get Waypoints by Map
- * @param map A JMapMap* object associated to the waypoint
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects by map.
+ *
+ *  @param map The JMapMap object to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the map.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getWaypointsByMap:(nonnull JMapMap*)map;
-
-/*!
- * Get Waypoints by Building
- * @param building A JMapBuilding* object associated to the waypoint
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects by building.
+ *
+ *  @param building The JMapBuilding object to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the building.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getWaypointsByBuilding:(nonnull JMapBuilding*)building;
 

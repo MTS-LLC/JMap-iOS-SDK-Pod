@@ -11,42 +11,42 @@
 @class JMapDestination;
 @class JMapAmenity;
 
+/**
+ *  The JMapWaypointCollection model.
+ */
 @interface JMapWaypointCollection : JMapBaseCollection
-
-/*!
- * Get all object in collection
+/**
+ *  Gets all the JMapWaypoint objects in the collection.
  *
- * @return an array of JMapWaypoint objects
+ *  @return An NSArray of JMapWaypoint objects.
  */
 - (nonnull NSArray <JMapWaypoint *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a JMapWaypoint object by external ID.
  *
- * @return An array of JMapWaypoint objects associase to the external ID
+ *  @param externalId The ID to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the external ID.
  */
 - (nonnull NSArray <JMapWaypoint *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapWaypoint object by ID in collection
- * @param id ID to search for
- *
- * @return JMapWaypoint associated to ID or a nil if JMapBaseModel does not exists
+/**
+ *  Gets a JMapWaypoint object by ID in the collection.
+ * 
+ *  @param id The ID to search for.
+ *  @return A JMapWaypoint object associated to the ID or nil if JMapWaypoint with ID does not exist.
  */
 - (nullable JMapWaypoint *)getById:(NSInteger)id;
-
-/*!
- * Get Waypoints by Destination
- * @param destination A JMapDestination* object associated with the waypoint
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects by destination.
+ *
+ *  @param destination A JMapDestination to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the destination.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getByDestination:(nonnull JMapDestination *)destination;
-
-/*!
- * Get Waypoints by Amenity
- * @param amenity A JMapAmenity* object associated with the waypoint
- * @return An NSArray* of JMapWaypoint* objects
+/**
+ *  Gets a list of JMapWaypoint objects by amenity.
+ *
+ *  @param amenity A JMapAmenity to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the amenity.
  */
 -(nonnull NSArray <JMapWaypoint*>*)getByAmenity:(nonnull JMapAmenity *)amenity;
 

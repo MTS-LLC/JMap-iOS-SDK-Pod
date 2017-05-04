@@ -12,54 +12,47 @@
 @class JMapMapLabel;
 @class JMapMapLabelInstances;
 
+/**
+ *  The JMapMapLabelCollection model.
+ */
 @interface JMapMapLabelCollection : JMapBaseCollection
-
-/*!
- * Get all object in collection
+/**
+ *  Gets all the JMapMapLabel objects in the collection.
  *
- * @return an array of JMapMapLabel objects
+ *  @return An NSArray of JMapMapLabel objects.
  */
 - (nonnull NSArray <JMapMapLabel *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId NSString to search for
+/**
+ *  Gets a list of JMapMapLabel objects by external ID.
  *
- * @return An array of JMapMapLabel objects associase to the external ID
+ *  @param externalId An NSString external ID to search for.
+ *  @return An NSArray of JMapMapLabel objects associate to the external ID.
  */
 - (nonnull NSArray <JMapMapLabel *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapMapLabel object by ID in collection
- * @param id ID to search for
+/**
+ *  Gets a JMapMapLabel object by ID in the collection.
  *
- * @return JMapMapLabel associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapMapLabel associated to the ID or nil if JMapMapLabel with ID does not exist.
  */
 - (nullable JMapMapLabel *)getById:(NSInteger)id;
-
-/*!
- * Get By Map
- * @discussion Get array of JMapMapLabel objects by JMapMap
+/**
+ *  Gets a list of JMapMapLabel objects by map.
  *
- * @param map JMapMap object to search by
- *
- * @return NSArray of JMapMapLabel options
+ *  @param map The JMapMap object to search for.
+ *  @return An NSArray of JMapMapLabel objects associated to the map.
  */
 - (nonnull NSArray <JMapMapLabel *>*)getByMap:(nonnull JMapMap *)map;
-
-/*!
- * Get Labels With Image
- * @discussion Get array of JMapMapLabel that have images
+/**
+ *  Gets a list of JMapMapLabel objects with image associations.
  *
- * @return NSArray of JMapMapLabel options
+ *  @return An NSArray of JMapMapLabel objects.
  */
 - (nonnull NSArray <JMapMapLabel *>*)getLabelsWithImage;
-
-/*!
- * Get Labels Without Image
- * @discussion Get array of JMapMapLabel that have no images
+/**
+ *  Gets a list of JMapMapLabel objects without image associations.
  *
- * @return NSArray of JMapMapLabel options
+ *  @return An NSArray of JMapMapLabel objects.
  */
 - (nonnull NSArray <JMapMapLabel *>*)getLabelsWithoutImage;
 

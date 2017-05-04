@@ -8,37 +8,41 @@
 
 #import <JMapCoreKit/JMapCoreKit.h>
 
+/**
+ *  The JMapVenueCollection model.
+ */
 @interface JMapVenueCollection : JMapBaseCollection
-
-- (nullable JMapVenue *)getDefault;
-
-/*!
- * Get all object in collection
+/**
+ *  Gets the default JMapVenue object.
  *
- * @return an array of JMapVenue objects
+ *  @return A JMapVenue object. Nil if default venue doesn't exist.
+ */
+- (nullable JMapVenue *)getDefault;
+/**
+ *  Gets all the JMapVenue objects in collection.
+ *
+ *  @return An NSArray of JMapVenue objects.
  */
 - (nonnull NSArray <JMapVenue *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a list of JMapVenue objects by external ID.
  *
- * @return An array of JMapVenue objects associase to the external ID
+ *  @param externalId The ID to search for.
+ *  @return An NSArray of JMapVenue objects associated to the external ID.
  */
 - (nonnull NSArray <JMapVenue *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapVenue object by ID in collection
- * @param id ID to search for
+/**
+ *  Gets a JMapVenue object by ID in the collection.
  *
- * @return JMapVenue associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapVenue object associated to the ID or a nil if JMapVenue does not exist.
  */
 - (nullable JMapVenue *)getById:(NSInteger)id;
-
-/*!
- * Get Venue by Name
- * @param name A NSString name of the venue
- * @return A JMapVenue object result or nil if no matches found
+/**
+ *  Gets a JMapVenue by name.
+ *
+ *  @param name An NSString name of the venue to search for.
+ *  @return A JMapVenue object result or nil if no matches found
  */
 -(nullable JMapVenue *)getByName:(nonnull NSString *)name;
 

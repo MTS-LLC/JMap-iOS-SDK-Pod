@@ -12,64 +12,58 @@
 @class JMapWaypoint;
 @class JMapPath;
 
+/**
+ *  The JMapPathCollection model.
+ */
 @interface JMapPathCollection : JMapBaseCollection
 
-/*!
- * Get all object in collection
+/**
+ *  Gets all the JMapPath objects in the collection.
  *
- * @return an array of JMapWaypoint objects
+ *  @return An NSArray of JMapPath objects.
  */
 - (nonnull NSArray <JMapPath *>*)getAll;
-
-/*!
- * Get By External ID
- * @param externalId ID to search for
+/**
+ *  Gets a list of JMapPath objects by external ID.
  *
- * @return An array of JMapWaypoint objects associase to the external ID
+ *  @param externalId The ID to search for.
+ *  @return An NSArray of JMapWaypoint objects associated to the external ID.
  */
 - (nonnull NSArray <JMapPath *>*)getByExternalId:(nonnull NSString *)externalId;
-
-/*!
- * Get JMapPath object by ID in collection
- * @param id ID to search for
+/**
+ *  Gets a JMapPath object by ID in the collection.
  *
- * @return JMapPath associated to ID or a nil if JMapBaseModel does not exists
+ *  @param id The ID to search for.
+ *  @return A JMapPath object associated to the ID or nil if JMapPath with ID does not exist.
  */
 - (nullable JMapPath *)getById:(NSInteger)id;
-
-/*!
- * Get Paths by Path Type
- * @param pathType A JMapPathType* object associated to the path
- * @return An NSArray* of JMapPath* objects
+/**
+ *  Gets a list of JMapPath objects by path type.
+ * 
+ *  @param pathType The JMapPathType object to search for.
+ *  @return An NSArray of JMapPath objects associated to the path type.
  */
 -(nonnull NSArray <JMapPath*>*)getByPathType:(nonnull JMapPathType *)pathType;
-
-/*!
- * Get Paths by Name
- * @param name A NSString* name associated to the path
- * @return An NSArray* of JMapPath* objects
+/**
+ *  Gets a list of JMapPath objects by name.
+ *
+ *  @param name An NSString name to search for.
+ *  @return An NSArray of JMapPath objects associated to the name.
  */
 -(nonnull NSArray <JMapPath*>*)getByName:(nonnull NSString *)name;
-
-/*!
- * Get Paths by Waypoint
- * @param waypoint A JMapWaypoint* object associated to the path
- * @return An NSArray* of JMapPath* objects
+/**
+ *  Gets a list of JMapPath objects by waypoint.
+ *
+ *  @param waypoint The JMapWaypoint object to search for.
+ *  @return An NSArray of JMapPath objects associated to the waypoint.
  */
 -(nonnull NSArray <JMapPath*>*)getByWaypoint:(nonnull JMapWaypoint *)waypoint;
-
-/*!
- * Get Paths by Direction
- * @param direction A NSInteger associated to the path
- * @return An NSArray* of JMapPath* objects
+/**
+ *  Gets a list of JMapPath objects by direction.
+ *
+ *  @param direction An NSInteger direction to search for.
+ *  @return An NSArray of JMapPath objects associated to the direction.
  */
 -(nonnull NSArray <JMapPath*>*)getByDirection:(NSInteger)direction;
-
-/*!
- * Get Paths by Status
- * @param status A NSInteger associated to the path
- * @return An NSArray* of JMapPath* objects
- */
--(nonnull NSArray <JMapPath*>*)getByStatus:(NSInteger)status;
 
 @end

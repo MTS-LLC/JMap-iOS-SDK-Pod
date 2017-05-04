@@ -12,12 +12,30 @@
 @class JMapPathType;
 @class JMapPoint;
 
+/**
+ *  The JMapPathPerFloor model.
+ */
 @interface JMapPathPerFloor : NSObject
 
-@property NSNumber *mapId; // int
-@property JMapPathType *mover; // JMapPathDataTypes
-@property NSMutableArray <JMapASNode*> *points; // ASNode[]
+/**
+ *  The map ID associated to the path per floor object.
+ */
+@property NSNumber *mapId;
+/**
+ *  The mover/path type associated to the path per floor object.
+ */
+@property JMapPathType *mover;
+/**
+ *  A list of JMapASNode objects associated to the path per floor object.
+ */
+@property NSMutableArray <JMapASNode*> *points;
+/**
+ *  A list of JMapPoint objects associated to the path per floor object.
+ */
 @property NSMutableArray <JMapPoint*> *mapPoints;
+/**
+ *  The cost of the path per floor object.
+ */
 @property float cost;
 
 @end
