@@ -34,6 +34,9 @@
 @class JMapBaseLayer;
 @class Shape;
 
+/**
+ *  The JMapRenderingKitDelegate model.
+ */
 @protocol JMapRenderingKitDelegate <NSObject>
 
 @optional
@@ -100,6 +103,9 @@
 
 @end
 
+/**
+ *  The Rendering engine class of the iOS SDK.
+ */
 @interface JMapRenderingKit : NSObject
 
 /**

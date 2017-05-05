@@ -10,18 +10,45 @@
 #import <JMapCoreKit/JMapCoreKit.h>
 #import <JMapRenderingKit/JMapRenderingKit.h>
 
+/**
+ *  The Controller class of the iOS SDK.
+ */
 @interface JMapController : NSObject
 
+/**
+ *  The venue that is currently active and used.
+ */
 @property(nonatomic, strong, readonly) JMapActiveVenue *_Nullable activeVenue;
+/**
+ *  The current viewing floor.
+ */
 @property(nonatomic, strong, readonly) JMapFloor *_Nullable currentFloor;
+/**
+ *  The current viewing map.
+ */
 @property(nonatomic, strong, readonly) JMapMap *_Nullable currentMap;
+/**
+ *  The current loaded building.
+ */
 @property(nonatomic, strong, readonly) JMapBuilding *_Nullable currentBuilding;
+/**
+ *  The instance of the RenderingKit class.
+ */
 @property(nonatomic, nullable, strong, readonly) JMapRenderingKit *renderer;
+/**
+ *  The rendering kit delegate.
+ */
 @property (nonatomic, weak, nullable) id<JMapRenderingKitDelegate> delegate;
+/**
+ *  The singleton instance of the user location class.
+ */
 @property (nonatomic, nonnull) JMapUserLocation *userLocation;
 
 #pragma mark - Initializer Methods
 
+/**
+ *  Type definition of the JMapError.
+ */
 typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 
 /**
