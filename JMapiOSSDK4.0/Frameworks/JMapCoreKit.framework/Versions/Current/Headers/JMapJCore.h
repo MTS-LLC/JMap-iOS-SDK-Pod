@@ -120,7 +120,7 @@
  */
 -(void)populateVenueWithDefaultBuildingByVenueId:(NSInteger)venueId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
-/*!
+/**
  *  Populates building in venue and building ID.
  *
  *  @param venue A JMapActiveVenue object associated to the building.
@@ -129,7 +129,7 @@
  */
 -(void)populateBuildingInVenue:(nonnull JMapActiveVenue *)venue withBuildingId:(NSInteger)buildingId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
-/*!
+/**
  *  Populates venue by venue ID and building ID.
  *
  *  @param venueId An NSInteger ID associated to the venue.
@@ -138,7 +138,7 @@
  */
 -(void)populateVenueWithBuildingByVenueId:(NSInteger)venueId withBuildingId:(NSInteger)buildingId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
-/*!
+/**
  *  Get Request : method used to make additional GET requests to the JACS server using JCore
  *  @param url - the request to make. Each request is prepended with the host/customer id
  *  and example of this argument would be: `/venue/123/zone/full` where 123 is the venue Id.
