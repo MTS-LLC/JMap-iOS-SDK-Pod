@@ -17,7 +17,7 @@ JMapiOSSDK4.0 is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'AssetKit-iOS-Pod', :git => 'https://github.com/Jibestream/AssetKit-iOS-Pod.git'
+pod 'JMapiOSSDK', :git => 'https://github.com/Jibestream/JMap-iOS-SDK-Pod.git'
 ```
 
 For installing the first time run:
