@@ -44,6 +44,11 @@
  */
 @property (nonatomic, nonnull) JMapUserLocation *userLocation;
 
+/**
+ *  Stage reference
+ */
+@property(nonatomic, nullable, strong, readonly) JMapCanvas *stage;
+
 #pragma mark - Initializer Methods
 
 /**
@@ -229,6 +234,15 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param waypoint The JMapWaypoint that is associated with the amenities that will have their styling reset.
  */
 - (void)resetAmenityStyle:(nullable JMapAmenity*)amenity atWaypoint:(nullable JMapWaypoint*)waypoint;
+
+/**
+ *  Retrieves all icons, amenity and path type, on given map
+ *
+ *  @param map A JMapMap object to look for the icons.
+ *  @param layerName The layer name to search for on the map, nil value will return all icons on the map.
+ *  @return An array of JMapIconView objects that belong on the map.
+ */
+- (nonnull NSArray <JMapIconView*>*)getIconsOnMap:(nonnull JMapMap *)map withLayerName:(nullable NSString *)layerName;
 
 #pragma mark - Path Type Icon Helpers
 
@@ -722,6 +736,23 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param style A JMapSVGStyle object containing styling information
  */
 -(void)drawWayfindingPath:(nonnull JMapPathPerFloor*)wayfindPath withStyle:(nonnull JMapStyle*)style;
+
+/**
+ *  Get Bezier Path From Path Per Floor
+ *
+ *  @param pathPerFloor a JMapPathPerFloor object to render
+ *
+ *  @return UIBezierPath from the provided JMapPathPerFloor object
+ */
+- (nullable UIBezierPath *)getBezierPathFromPathPerFloor:(nonnull JMapPathPerFloor *)pathPerFloor;
+
+/**
+ *  Add Custom Wayfind PathLayer
+ *
+ *  @param wayfindLayer A custom CAShapeLayer for creating a waypath
+ *  @param mapId of the map to place the layer on
+ */
+- (void)addCustomWayfindPathLayer:(nonnull CAShapeLayer *)wayfindLayer toMapID:(NSInteger)mapId;
 
 /**
  *  Removes all wayfind paths on all floors.

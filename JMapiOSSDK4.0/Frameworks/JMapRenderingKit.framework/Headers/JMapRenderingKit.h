@@ -96,7 +96,7 @@
 - (void)canvas:(nonnull JMapCanvas *)canvas scrollViewDidRotateByDegrees:(float)degrees;
 
 /**
- *  Listener for when a mvoing object finish animating
+ *  Listener for when a moving object finish animating
  *  @param movable A JMapMovingObject that has animation completed
  */
 - (void)movingObjectAnimationComplete:(nonnull JMapMovingObject *)movable;

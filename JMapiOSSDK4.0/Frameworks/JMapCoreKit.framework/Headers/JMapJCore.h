@@ -14,6 +14,8 @@
 @class JMapBuilding;
 @class JMapActiveVenue;
 @class JMapError;
+@class JMapLocaleCollection;
+@class JMapLocale;
 
 /**
  *  The JMapJCoreDelegate model.
@@ -48,9 +50,17 @@
  */
 @property (nonatomic, strong, readonly, nullable) JMapVenueCollection *venues;
 /**
+ *  The locale collection of the JCore.
+ */
+@property (nonatomic, strong, readonly, nullable) JMapLocaleCollection *locales;
+/**
  *  The active venue of the JCore.
  */
 @property (nonatomic, strong, readonly, nullable) JMapActiveVenue *activeVenue;
+/**
+ *  The locale string used for defining localization. Defaults to en-US
+ */
+@property (nonatomic, strong, readonly, nullable) NSString *locale;
 
 #pragma mark - Versioning
 
@@ -77,7 +87,7 @@
 #pragma mark - init methods
 
 /**
- *  Initializates the JMapJCore.
+ *  Initializes the JMapJCore.
  *
  *  @param customerId An NSInteger unique customer ID.
  *  @param reload A BOOL to set caching option.
@@ -88,6 +98,15 @@
  */
 - (nonnull instancetype)initWithCustomerId:(NSInteger)customerId autoReloadCache:(BOOL)reload host:(nonnull NSString *)host clientId:(nonnull NSString *)clientId clientSecret:(nonnull NSString *)clientSecret;
 
+/**
+ *  Initializes the JMapJCore with Options dictionary.
+ *
+ *  @param options An NSDictionary containing key-value pair configurations
+ *  @return An initialized JMapJCore instance.
+ *  @code NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@(123), @"customerId", @"cId", @"clientId", @"cSecret", @"clientSecret", @"https://example.com", @"host", nil];
+ */
+- (nonnull instancetype)initCustomerWithDictionary:(nonnull NSDictionary *)options;
+
 #pragma mark - populate methods
 /**
  *  Gets all venues with API call to the server.
@@ -95,6 +114,13 @@
  *  @param completionHandler A callback that returns an NSArray of JMapVenue objects.
  */
 -(void)getVenues:(nonnull __attribute__((noescape)) void(^)(NSArray <JMapVenue*>* _Nonnull venues, JMapError* _Nullable error))completionHandler;
+
+/**
+ *  Gets all locales with API call to the server.
+ *
+ *  @param completionHandler A callback that returns an NSArray of JMapLocale objects.
+ */
+-(void)getLocales:(nonnull __attribute__((noescape)) void(^)(NSArray <JMapLocale*>* _Nonnull locales, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Populates venue by venue object.
