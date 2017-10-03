@@ -14,11 +14,11 @@
 /**
  *  The map ID that the object's location is associated to.
  */
-@property (nonatomic, strong, nullable) NSNumber *mapId;
+@property (nonatomic, strong, readonly, nullable) NSNumber *mapId;
 /**
  *  List of waypoint ID's that the object's location is associated to.
  */
-@property (nonatomic, strong, nullable) NSArray<NSNumber *> *waypointIds;
+@property (nonatomic, strong, readonly, nullable) NSArray<NSNumber *> *waypointIds;
 /**
  *  Initializes a JMapLocation.
  *

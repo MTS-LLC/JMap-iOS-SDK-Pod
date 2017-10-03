@@ -51,6 +51,12 @@
  *  The JMapPathCollection object associated with the map.
  */
 @property (nonatomic, strong, readonly, nullable) JMapPathCollection *paths;
+
+/**
+ *  The JMapUriCollection associated with the map.
+ */
+@property (nonatomic, strong, readonly, nullable) JMapUriCollection *uris;
+
 /**
  *  Initializes a JMapMap.
  *

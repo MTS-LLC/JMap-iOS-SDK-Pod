@@ -20,4 +20,11 @@
  */
 @property (nonatomic, strong, readonly, nullable) NSString *localeCode;
 
+/**
+ *  Initializes a JMapMapLabelInstance.
+ *
+ *  @param dict An NSDictionary parsed from the server.
+ *  @return An initialized JMapLocale instance.
+ */
+-(nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dict;
 @end

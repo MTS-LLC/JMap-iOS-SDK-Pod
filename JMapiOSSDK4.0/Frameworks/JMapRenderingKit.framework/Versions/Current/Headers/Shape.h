@@ -79,11 +79,6 @@
 @property (nonatomic, nullable) NSString *transformShapeStr;
 
 /**
- *  Init With Frame And Map ID : Constructor method
- */
-@property (nonatomic, strong, readonly, nullable) NSArray <NSArray <NSValue *>*>* segments;
-
-/**
  *  Init With ID : Constructor method for Shape
  *
  *  @param id optional integer identifier of the shape

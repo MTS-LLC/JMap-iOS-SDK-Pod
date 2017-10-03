@@ -71,6 +71,10 @@
  */
 @property (nonatomic, strong, readonly, nullable) NSNumber *displayMode;
 /**
+ *  The SVG string associated to the destination.
+ */
+@property (nonatomic, strong, readonly, nullable) NSString *svg;
+/**
  *  Initializes a JMapDestination.
  *
  *  @param dict An NSDictionary parsed from the server.

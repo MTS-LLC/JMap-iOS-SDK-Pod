@@ -49,6 +49,7 @@
 // Utilities
 #import <JMapCoreKit/JMapCoreUtils.h>
 #import <JMapCoreKit/JMapError.h>
+#import <JMapCoreKit/JMapUtils.h>
 
 // Wayfind
 #import <JMapCoreKit/JMapASEdge.h>
@@ -60,4 +61,4 @@
 #import <JMapCoreKit/JMapPoint.h>
 
 #define JMapSDK_VERSION_STRING @"1.0.0"
-#define JMapSDK_DEFAULT_TARGET_SERVER_VERSION @"4.2"
+#define JMapSDK_DEFAULT_TARGET_SERVER_VERSION @"4.3"

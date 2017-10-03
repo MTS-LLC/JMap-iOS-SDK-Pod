@@ -38,7 +38,7 @@
 
 @property (nonatomic, retain, nullable) NSMutableArray *arrayOfShapes;
 
-@property (nonatomic, strong, readonly, nullable) JMapIconStyle *defaultStyles;
+@property (nonatomic, strong, nullable) JMapIconStyle *defaultStyles;
 
 @property (nonatomic, strong, readonly, nullable) NSDictionary *allStyles;
 

@@ -32,6 +32,10 @@
  */
 @property (nonatomic, strong, readonly, nullable) JMapMap * map;
 /**
+ *  The venue status
+ */
+@property (nonatomic, assign, readonly) BOOL status;
+/**
  *  The JMapPosition object associated with the active venue.
  */
 @property (nonatomic, strong, readonly, nullable) JMapPosition *coordinates;

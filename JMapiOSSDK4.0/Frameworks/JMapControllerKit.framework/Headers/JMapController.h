@@ -92,6 +92,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  Renders and displays map. This method will also parse the map if needed.
  *
  *  @param map The JMapMap object to be rendered and displayed.
+ *  @param completion The completion handler for the API call.
  */
 - (void)showMap:(nonnull JMapMap *)map completionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
 
@@ -100,11 +101,23 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *
  *  @param map The JMapMap object to be rendered and displayed.
  *  @param bound CGRect bound of the map to be shown
+ *  @param completion The completion handler for the API call.
  */
 - (void)showMap:(nonnull JMapMap *)map withBounds:(CGRect)bound completionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
 
 /**
+ *  Renders and displays map with given options. This method will also parse the map if needed.
+ *
+ *  @param map The JMapMap object to be rendered and displayed.
+ *  @param options An NSDictionary options to be passed in for showing the map.
+ *  @param completion The completion handler for the API call.
+ */
+- (void)showMap:(nonnull JMapMap *)map withOptions:(nonnull NSDictionary *)options completionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
+
+/**
  *  Displays the default map.
+ *
+ *  @param completion The completion handler for the API call.
  */
 - (void)showDefaultMapWithCompletionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
 
@@ -112,11 +125,14 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  Parses a map so it is ready to be rendered.
  *
  *  @param map The JMapMap object to parse.
+ *  @param completion The completion handler for the API call.
  */
 - (void)parseMap:(nonnull JMapMap *)map completionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
 
 /**
  * Parses all maps. Can be used to parse all maps in the active venue before rendering.
+ *
+ *  @param completion The completion handler for the API call.
  */
 - (void)parseAllMapsWithCompletionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
 
@@ -517,11 +533,18 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 -(void)resetMapStyle;
 
 /**
- *  Applies custom styling using a json config file
+ *  Applies default styling using a json config file
  *
  *  @param stylesheet NSString containing styles info
  */
 - (void)useCustomStyleSheet:(nonnull NSString *)stylesheet;
+
+/**
+ *  Applies custom styling using a json config file
+ *
+ *  @param stylesheet NSString containing styles info
+ */
+- (void)loadJsonStyleConfiguration:(nonnull NSString *)stylesheet;
 
 #pragma mark - Shape/Layer Helpers
 

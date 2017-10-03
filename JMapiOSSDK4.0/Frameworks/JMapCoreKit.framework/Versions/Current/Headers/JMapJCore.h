@@ -16,6 +16,7 @@
 @class JMapError;
 @class JMapLocaleCollection;
 @class JMapLocale;
+@class JMapUtils;
 
 /**
  *  The JMapJCoreDelegate model.

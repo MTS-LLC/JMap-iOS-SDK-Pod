@@ -71,4 +71,12 @@
  */
 - (nonnull NSArray <JMapAmenity *>*)getByBuilding:(nonnull JMapBuilding *)building;
 
+/**
+ *  Gets a list of JMapAmenity objects by name.
+ *
+ *  @params name The NSString name to search for.
+ *  @return An NSArray of JMapAmenity objects associated to the name.
+ */
+- (nonnull NSArray <JMapAmenity *>*)getByName:(nonnull NSString *)name;
+
 @end

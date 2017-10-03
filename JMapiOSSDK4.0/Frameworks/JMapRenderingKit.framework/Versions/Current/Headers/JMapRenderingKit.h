@@ -16,6 +16,7 @@
 #import <JMapRenderingKit/Ellipse.h>
 #import <JMapRenderingKit/Rectangle.h>
 #import <JMapRenderingKit/Polyline.h>
+#import <JMapRenderingKit/Path.h>
 #import <JMapRenderingKit/JMapStyle.h>
 #import <JMapRenderingKit/JMapIconStyle.h>
 #import <JMapRenderingKit/JMapTransform.h>

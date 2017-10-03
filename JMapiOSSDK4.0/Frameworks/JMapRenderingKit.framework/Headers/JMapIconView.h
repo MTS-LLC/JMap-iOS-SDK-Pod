@@ -46,8 +46,6 @@
  */
 - (void)setIsAnimated:(BOOL)isAnimated scale:(float)scale;
 
-+(NSInteger)yourTag;
-
 /**
  *  Init With Frame : Constructor method JMapIconView
  *
