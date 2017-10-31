@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "JMapItemView.h"
 
 #define hideAfterSize 17.0
 
-@interface JMapLabel : UIView
+@interface JMapLabel : JMapItemView
 
 /**
  *  ID Unigue Integer identifier of the label

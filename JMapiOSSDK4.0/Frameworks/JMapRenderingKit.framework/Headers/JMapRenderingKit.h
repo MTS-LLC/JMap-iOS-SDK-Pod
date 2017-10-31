@@ -30,6 +30,7 @@
 #import <JMapRenderingKit/JMapUserLocation.h>
 #import <JMapRenderingKit/JMapRenderingKitUtils.h>
 #import <JMapRenderingKit/JMapMovingObject.h>
+#import <JMapRenderingKit/JMapItemView.h>
 
 @class JMapCanvas;
 @class JMapBaseLayer;

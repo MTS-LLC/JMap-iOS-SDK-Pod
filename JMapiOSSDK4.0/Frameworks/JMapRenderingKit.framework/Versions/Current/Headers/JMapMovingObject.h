@@ -7,17 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JMapItemView.h"
 
-@interface JMapMovingObject : UIView
+@interface JMapMovingObject : JMapItemView
 
 /**
  *  The unique ID of the moving object
  */
 @property (nonatomic) NSInteger id;
-/**
- *  The name of the moving object
- */
-@property (nonatomic, nullable) NSString *name;
 /**
  *  The map ID associated with the moving object
  */
@@ -46,14 +43,6 @@
  *  The layer name associated with the moving object
  */
 @property (nonatomic, nullable) NSString *layerName;
-/**
- *  Set whether the moving object should rotate with the map
- */
-@property (nonatomic, assign) BOOL rotateWithMap;
-/**
- *  Set whether the moving object should scale with the map
- */
-@property (nonatomic, assign) BOOL scaleWithMap;
 /**
  *  Set whether the moving object should snap to the grid/vector of the map
  */

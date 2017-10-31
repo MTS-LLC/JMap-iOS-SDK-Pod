@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <JMapRenderingKit/JMapRenderingKit.h>
+#import "JMapItemView.h"
 
 @class JMapIconStyle;
 
-@interface JMapIconView : UIView
+@interface JMapIconView : JMapItemView
 
 /**
  *  Unique Identifier of Amenity Icons
