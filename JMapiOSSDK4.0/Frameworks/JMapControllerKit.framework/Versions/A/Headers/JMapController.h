@@ -173,7 +173,6 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (void)showAmenity:(nonnull JMapAmenity *)amenity;
 
-
 /**
  *  Shows all amenities of a given type that are placed on a certain waypoint.
  *
@@ -201,6 +200,15 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  Shows all amenities.
  */
 - (void)showAllAmenities;
+
+/**
+ *  Shows amenities with options.
+ *
+ *  @param options An NSDictionary containing options on the amenity's behaviour on the map.
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default true
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default true
+ */
+- (void)showAllAmenitiesWithOptions:(nonnull NSDictionary *)options;
 
 /**
  *  Hides all amenities.
@@ -283,6 +291,15 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (void)showAllPathTypes;
 
 /**
+ *  Shows all path types with options.
+ *
+ *  @param options An NSDictionary containing options on the path type's behaviour on the map.
+ *  scaleWithMap - NSNumber 0/1, default to 1
+ *  rotateWithMap - NSNumber 0/1, default to 1
+ */
+- (void)showAllPathTypesWithOptions:(nonnull NSDictionary *)options;
+
+/**
  *  Hides all path types on map.
  */
 - (void)hideAllPathTypes;
@@ -326,12 +343,10 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (void)stylePathType:(nonnull JMapPathType*)pathType atWaypoint:(nonnull JMapWaypoint*)waypoint withStyling:(nonnull JMapIconStyle*)style;
 
-
 /**
  *  Resets the style of all path types to their defaults.
  */
 - (void)resetPathTypeStyle;
-
 
 /**
  *  Resets the style of all path types that are of the provided type.
@@ -350,40 +365,54 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 
 #pragma mark - Image Map Label Helpers
 
-
 /**
  *  Shows all map labels with images.
  */
-- (void) showAllImageMapLabels;
-
+- (void)showAllImageMapLabels;
 
 /**
- *  Hides all map labels with images.
+ *  Shows all map image labels with options.
+ *
+ *  @param options An NSDictionary containing options on the label's behaviour on the map.
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default true
+ *  flipWithRotation - [NSNumber numberWithBool:true/false], default false
+ *  scale - NSNumber, default to 1
  */
-- (void) hideAllImageMapLabels;
+- (void)showAllImageMapLabelsWithOptions:(nonnull NSDictionary *)options;
+
+/**
+ *  Hides all image map labels.
+ */
+- (void)hideAllImageMapLabels;
 
 #pragma mark - Text Map Label Helpers
 
+/**
+ *  Shows all text map labels.
+ */
+- (void)showAllTextMapLabels;
 
 /**
- *  Shows all textual map labels.
+ *  Shows all text map labels with options.
+ *
+ *  @param options An NSDictionary containing options on the label's behaviour on the map.
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default true
+ *  flipWithRotation - [NSNumber numberWithBool:true/false], default true
+ *  scale - NSNumber, default to 1
  */
-- (void) showAllTextMapLabels;
-
+- (void)showAllTextMapLabelsWithOptions:(nonnull NSDictionary *)options;
 
 /**
  *  Hides all textual map labels.
  */
-- (void) hideAllTextMapLabels;
-
+- (void)hideAllTextMapLabels;
 
 /**
  *  Sets the font for textual map labels.
  *
  *  @param font The font to be used for the text in labels.
  */
-- (void) setMapLabelFont:(nonnull UIFont*)font;
-
+- (void)setMapLabelFont:(nonnull UIFont*)font;
 
 #pragma mark - Unit Helpers
 

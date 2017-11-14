@@ -39,6 +39,8 @@
  */
 - (void)createMapLabels:(nonnull NSArray <JMapMapLabel *>*)mapLabels forMapWithId:(nonnull NSNumber *)mapId onCanvas:(nonnull JMapCanvas *)canvas;
 
+- (void)createMapLabels:(nonnull NSArray<JMapMapLabel *> *)mapLabels forMapWithId:(nonnull NSNumber *)mapId onCanvas:(nonnull JMapCanvas *)canvas withOptions:(nullable NSDictionary *)options;
+
 /**
  *  Remove Label With Unit ID : remove label associated with unit ID
  *
