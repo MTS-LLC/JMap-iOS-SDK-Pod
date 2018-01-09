@@ -57,12 +57,43 @@
  */
 + (double)convertLongitudeEPSG3857ToEPSG4326:(double) longitude;
 
-+ (float)distanceToLine:(CGPoint)point lineP1:(CGPoint)lineP1 lineP2:(CGPoint)lineP2 intersectPoint:(nullable CGPoint *)interSectPoint;
+/**
+ *  Gets the nearest intersection point on a line from point.
+ *
+ *  @param point The relative point away from the line.
+ *  @param lineP1 The start point of the line.
+ *  @param lineP2 The end point of the line.
+ *  @param intersectPoint The intersecting point on the line.
+ *  @return The closest distance from the point to the line.
+ */
++ (float)distanceToLine:(CGPoint)point lineP1:(CGPoint)lineP1 lineP2:(CGPoint)lineP2 intersectPoint:(nullable CGPoint *)intersectPoint;
 
-+ (float)distToSegmentSquared:(CGPoint)point lineP1:(CGPoint)lineP1 lineP2:(CGPoint)lineP2 intersectPoint:(nullable CGPoint *)interSectPoint;
+/**
+ *  Result of distanceToLine method squared.
+ *
+ *  @param point The relative point away from the line.
+ *  @param lineP1 The start point of the line.
+ *  @param lineP2 The end point of the line.
+ *  @param intersectPoint The intersecting point on the line.
+ *  @return The closest distance from the point to the line squared.
+ */
++ (float)distToSegmentSquared:(CGPoint)point lineP1:(CGPoint)lineP1 lineP2:(CGPoint)lineP2 intersectPoint:(nullable CGPoint *)intersectPoint;
 
+/**
+ *  Gets the distance between two points.
+ *
+ *  @param first The first point of reference.
+ *  @param second The second point of reference.
+ *  @return The distance between the two points.
+ */
 + (float)dist2:(CGPoint)first second:(CGPoint)second;
 
+/**
+ *  Computes the square root of input float.
+ *
+ *  @param x The input float value to be square rooted.
+ *  @return The square root of the input value.
+ */
 + (float)sqr:(float)x;
 
 @end

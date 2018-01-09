@@ -6,7 +6,7 @@
 //  Copyright © 2016 Jibestream. All rights reserved.
 //
 
-#import <JMapRenderingKit/JMapRenderingKit.h>
+#import "Shape.h"
 
 @interface Ellipse : Shape
 

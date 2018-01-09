@@ -34,7 +34,7 @@
 /**
  *  The instance of the RenderingKit class.
  */
-@property(nonatomic, nullable, strong, readonly) JMapRenderingKit *renderer;
+@property(nonatomic, nullable, strong, readonly) JMapRendering *renderer;
 /**
  *  The rendering kit delegate.
  */
@@ -461,7 +461,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param waypoint A JMapWaypoint object used to search for unit
  *  @param completion A callback that returns the shape and any errors or nil if shape association doesn't exist.
  */
- - (void)getUnitFromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(nonnull __attribute__((noescape)) void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
+- (void)getUnitFromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(nonnull __attribute__((noescape)) void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
 
 /**
  *  Gets a units from a destination.

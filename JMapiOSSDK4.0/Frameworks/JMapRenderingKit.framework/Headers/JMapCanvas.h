@@ -6,9 +6,6 @@
 //  Copyright © 2016 Jibestream. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <JMapRenderingKit/JMapRenderingKit.h>
-
 @class JMapIconView;
 
 @protocol JMapRenderingKitDelegate;

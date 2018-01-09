@@ -6,9 +6,8 @@
 //  Copyright © 2016 Jibestream. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import <UIKit/UIKit.h>
 
 @interface JMapStyle : NSObject
 

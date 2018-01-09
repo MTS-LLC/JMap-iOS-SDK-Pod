@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <JMapRenderingKit/JMapRenderingKit.h>
 #import "JMapItemView.h"
 
 @class JMapIconStyle;

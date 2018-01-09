@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <JMapRenderingKit/JMapStyle.h>
-#import <JMapRenderingKit/JMapIconStyle.h>
-#import <JMapRenderingKit/JMapRenderingKitUtils.h>
+#import "Shape.h"
+#import "JMapStyle.h"
+#import "JMapIconStyle.h"
+#import "MapLayer.h"
 
 @class JMapIconStyle;
 @class JMapStyle;
