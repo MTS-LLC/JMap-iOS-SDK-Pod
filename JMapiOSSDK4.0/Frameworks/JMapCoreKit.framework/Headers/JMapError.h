@@ -8,14 +8,41 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Possible error codes thrown from the JMap SDK.
+ */
 typedef enum JMapErrorCode : NSUInteger {
+    /**
+     *  Connection error to server.
+     */
     CouldNotConnect,
+    /**
+     *  Authentication error with server.
+     */
     AuthenticationError,
+    /**
+     *  Bad data from server.
+     */
     MalformedJson,
+    /**
+     *  Invalid SVG format.
+     */
     MapSVGError,
+    /**
+     *  Invalid URI.
+     */
     URIError,
+    /**
+     *  Invalid object passed to SDK.
+     */
     IncorrectObjectType,
+    /**
+     *  Data from server not found.
+     */
     NotFound,
+    /**
+     *  Cache data undefined.
+     */
     UndefinedError
 } JMapErrorCode;
 

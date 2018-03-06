@@ -50,6 +50,7 @@
 #import <JMapCoreKit/JMapCoreUtils.h>
 #import <JMapCoreKit/JMapError.h>
 #import <JMapCoreKit/JMapUtils.h>
+#import <JMapCoreKit/UIFont+withColor.h>
 
 // Wayfind
 #import <JMapCoreKit/JMapASEdge.h>
@@ -60,5 +61,5 @@
 #import <JMapCoreKit/JMapPathPerFloor.h>
 #import <JMapCoreKit/JMapPoint.h>
 
-#define JMapSDK_VERSION_STRING @"1.0.0"
-#define JMapSDK_DEFAULT_TARGET_SERVER_VERSION @"4.3"
+#define JMapSDK_VERSION_STRING @"5.1.0"
+#define JMapSDK_DEFAULT_TARGET_SERVER_VERSION @"4.4"

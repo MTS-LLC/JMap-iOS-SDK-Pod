@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MapLayer.h"
 
+/**
+ *  The JMapBaseLayer model.
+ */
 @interface JMapBaseLayer : UIView
 
 /**

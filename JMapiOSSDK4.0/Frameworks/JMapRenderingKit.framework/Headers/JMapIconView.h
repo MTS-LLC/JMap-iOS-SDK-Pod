@@ -11,32 +11,35 @@
 
 @class JMapIconStyle;
 
+/**
+ *  The JMapIconView model.
+ */
 @interface JMapIconView : JMapItemView
 
 /**
  *  Unique Identifier of Amenity Icons
  */
-@property (nonatomic) NSString *amenityTypeId;
+@property (nonatomic, strong) NSString *amenityTypeId;
 
 /**
  *  Unique Identifier of Path Type Icons
  */
-@property (nonatomic) NSString *pathTypeId;
+@property (nonatomic, strong) NSString *pathTypeId;
 
 /**
  *  Unique Waypoint ID associated to the icon
  */
-@property (nonatomic) NSString *waypointId;
+@property (nonatomic, strong) NSString *waypointId;
 
 /**
  *  Unique Map ID associated to the icon
  */
-@property (nonatomic) NSString *mapId;
+@property (nonatomic, strong) NSString *mapId;
 
 /**
  *  Custom Icon Style of the icon
  */
-@property (nonatomic) JMapIconStyle *customStyle;
+@property (nonatomic, strong) JMapIconStyle *customStyle;
 
 /**
  *  Set Is Animated And Scale : method used to set animation and scale

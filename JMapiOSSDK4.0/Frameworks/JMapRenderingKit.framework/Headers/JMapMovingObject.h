@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "JMapItemView.h"
 
+/**
+ *  The JMapMovingObject model.
+ */
 @interface JMapMovingObject : JMapItemView
 
 /**

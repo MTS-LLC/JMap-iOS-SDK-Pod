@@ -10,6 +10,9 @@
 
 @class JMapLocale;
 
+/**
+ *  The JMapLocaleCollection model.
+ */
 @interface JMapLocaleCollection : JMapBaseCollection
 
 /**

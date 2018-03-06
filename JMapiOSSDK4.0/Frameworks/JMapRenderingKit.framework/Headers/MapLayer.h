@@ -10,6 +10,9 @@
 
 @class JMapBaseLayer;
 
+/**
+ *  The MapLayer base UIView
+ */
 @interface MapLayer : UIView
 
 /**

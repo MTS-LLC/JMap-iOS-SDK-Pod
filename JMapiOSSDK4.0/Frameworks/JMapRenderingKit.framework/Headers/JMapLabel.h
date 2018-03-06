@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "JMapItemView.h"
+#import <JMapCoreKit/UIFont+withColor.h>
 
 #define hideAfterSize 17.0
 
+/**
+ *  The JMapLabel model.
+ */
 @interface JMapLabel : JMapItemView
 
 /**
@@ -68,11 +72,6 @@
  *  Map Label image label for any image to be used as labels
  */
 @property (nonatomic, strong, readonly, nullable) UIImageView *imageLabel;
-
-/**
- *  default original transform
- */
-@property (nonatomic, assign, readonly) CGAffineTransform originalTransform;
 
 /**
  *  Rotated transform value

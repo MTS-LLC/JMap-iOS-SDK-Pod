@@ -17,6 +17,9 @@
 @class JMapStyle;
 @class MapLayer;
 
+/**
+ *  The Shape base class
+ */
 @interface Shape : CAShapeLayer
 
 /**

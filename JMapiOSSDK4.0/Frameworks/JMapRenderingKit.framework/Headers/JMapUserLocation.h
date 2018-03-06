@@ -10,6 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "JMapMovingObject.h"
 
+/**
+ *  The JMapUserLocation object.
+ */
 @interface JMapUserLocation : JMapMovingObject
 /**
  *  Set whether the item view be centered on the view port

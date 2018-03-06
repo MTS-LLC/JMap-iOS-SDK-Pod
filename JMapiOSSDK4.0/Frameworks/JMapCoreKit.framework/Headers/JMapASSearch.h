@@ -17,6 +17,9 @@
  */
 @interface JMapASSearch : NSObject
 {
+    /**
+     *  Binary heap reference variable.
+     */
     CFBinaryHeapRef openStartHeap;
 }
 /**

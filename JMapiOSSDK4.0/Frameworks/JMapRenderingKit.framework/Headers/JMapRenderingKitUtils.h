@@ -11,6 +11,9 @@
 
 #define DEGREES_TO_RADIANS(x) (M_PI * (x) / 180.0)
 
+/**
+ *  The JMapRenderingKitUtils class.
+ */
 @interface JMapRenderingKitUtils : NSObject
 
 #pragma mark - Stylings helper methods

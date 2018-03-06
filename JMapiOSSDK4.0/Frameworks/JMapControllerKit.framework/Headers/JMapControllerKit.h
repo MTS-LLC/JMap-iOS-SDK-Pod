@@ -9,3 +9,5 @@
 #import <UIKit/UIKit.h>
 
 #import <JMapControllerKit/JMapController.h>
+#import <JMapControllerKit/JMap.h>
+#import <JMapControllerKit/JMapOptions.h>

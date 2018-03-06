@@ -8,6 +8,9 @@
 
 #import <JMapCoreKit/JMapCoreKit.h>
 
+/**
+ *  The JMapLocale model.
+ */
 @interface JMapLocale : JMapBaseModel
 
 /**

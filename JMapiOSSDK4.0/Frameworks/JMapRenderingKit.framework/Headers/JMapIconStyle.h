@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "JMapStyle.h"
 
+/**
+ *  The JMapIconStyle model.
+ */
 @interface JMapIconStyle : NSObject
 
 /**
@@ -35,6 +38,7 @@
  * Visibility of JMapAmenity object
  */
 @property (nonatomic, strong) NSNumber *hidden;
+
 /**
  * Initialization method for JMapAmenity
  * @param foreground styling, JMapStyle object

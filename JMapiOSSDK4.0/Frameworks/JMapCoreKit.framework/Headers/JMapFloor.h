@@ -31,6 +31,10 @@
  */
 @property (nonatomic, strong, readonly, nullable) NSNumber *preference;
 /**
+ *  The elevation value associated with the floor.
+ */
+@property (nonatomic, strong, readonly, nullable) NSNumber *elevation;
+/**
  *  The altitude value associated with the floor.
  */
 @property (nonatomic, strong, readonly, nullable) NSNumber *altitude;

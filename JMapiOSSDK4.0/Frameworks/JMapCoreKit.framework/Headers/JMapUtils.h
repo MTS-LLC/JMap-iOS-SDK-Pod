@@ -12,6 +12,9 @@
 
 @class JMapActiveVenue;
 
+/**
+ *  The JMapUtils class.
+ */
 @interface JMapUtils : NSObject
 
 /**

@@ -12,6 +12,9 @@
 @class JMapUriCollection;
 @class JMapWaypoint;
 
+/**
+ *  The JMapAmenity model.
+ */
 @interface JMapAmenity : JMapBaseModel
 
 /**

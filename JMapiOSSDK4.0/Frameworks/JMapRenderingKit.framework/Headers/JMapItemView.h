@@ -11,6 +11,9 @@
 
 @class JMapMap;
 
+/**
+ *  The JMapItemView model.
+ */
 @interface JMapItemView : UIView
 /**
  *  The name of the item view
@@ -40,5 +43,9 @@
  *  Set the scale of the item
  */
 @property (nonatomic, nullable) NSNumber* scale;
+/**
+ *  Default original transform
+ */
+@property (nonatomic, assign) CGAffineTransform originalTransform;
 
 @end

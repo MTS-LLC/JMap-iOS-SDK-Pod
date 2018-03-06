@@ -75,6 +75,13 @@
  */
 - (nonnull NSArray <JMapFloor *>*)getAllSortedByLevel;
 /**
+ *  Gets all JMapFloor objects sorted by elevation.
+ *
+ *  @return An NSArray of all JMapFloor objects ordered by elevation.
+ */
+- (nonnull NSArray <JMapFloor *>*)getAllSortedByElevation;
+
+/**
  *  Gets all JMapFloor objects sorted by altitude.
  *
  *  @return An NSArray of all JMapFloor objects ordered by altitude.

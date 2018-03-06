@@ -9,6 +9,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
+/**
+ *  The JMapStyle object.
+ */
 @interface JMapStyle : NSObject
 
 /**

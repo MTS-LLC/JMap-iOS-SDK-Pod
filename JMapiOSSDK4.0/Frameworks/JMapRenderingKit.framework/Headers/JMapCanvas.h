@@ -8,8 +8,14 @@
 
 @class JMapIconView;
 
+/**
+ *  The JMapRenderingKitDelegate protocol.
+ */
 @protocol JMapRenderingKitDelegate;
 
+/**
+ *  The JMapCanvas model.
+ */
 @interface JMapCanvas : UIScrollView
 
 /**

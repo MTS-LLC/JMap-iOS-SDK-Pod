@@ -11,7 +11,11 @@
 #import <UIKit/UIKit.h>
 #import "JMapLabel.h"
 #import "JMapCanvas.h"
+#import <JMapCoreKit/UIFont+withColor.h>
 
+/**
+ *  The JMapLabels model.
+ */
 @interface JMapLabels : NSObject
 
 /**
@@ -39,6 +43,14 @@
  */
 - (void)createMapLabels:(nonnull NSArray <JMapMapLabel *>*)mapLabels forMapWithId:(nonnull NSNumber *)mapId onCanvas:(nonnull JMapCanvas *)canvas;
 
+/**
+ *  Create Map Labels with options
+ *
+ *  @param mapLabels Array of JMapMapLabels to create
+ *  @param mapId Integer MapId to place labels on
+ *  @param canvas JMapCanvas
+ *  @param options The options associated to the map labels. (scaleWithMap, rotateWithMap, flipWithRotation, scale)
+ */
 - (void)createMapLabels:(nonnull NSArray<JMapMapLabel *> *)mapLabels forMapWithId:(nonnull NSNumber *)mapId onCanvas:(nonnull JMapCanvas *)canvas withOptions:(nullable NSDictionary *)options;
 
 /**

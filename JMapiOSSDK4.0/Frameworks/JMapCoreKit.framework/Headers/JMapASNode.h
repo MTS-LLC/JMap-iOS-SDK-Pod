@@ -52,8 +52,17 @@
  */
 @property NSNumber *closed;
 
+/**
+ *  f variable used in heuristic calculation.
+ */
 @property NSNumber *f;
+/**
+ *  g variable used in heuristic calculation.
+ */
 @property NSNumber *g;
+/**
+ *  h variable used in heuristic calculation.
+ */
 @property NSNumber *h;
 /**
  *  The parent associated to the node of type JMapASNode.

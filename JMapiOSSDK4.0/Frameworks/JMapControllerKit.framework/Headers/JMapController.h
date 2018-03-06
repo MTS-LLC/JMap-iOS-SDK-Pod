@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <JMapCoreKit/JMapCoreKit.h>
 #import <JMapRenderingKit/JMapRenderingKit.h>
+#import <JMapCoreKit/UIFont+withColor.h>
 
 /**
  *  The Controller class of the iOS SDK.
@@ -163,6 +164,14 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (void)setMinScale:(CGFloat)min andMaxScale:(CGFloat)max;
 
+/**
+ *  Scales the map by a given percentage (0 - 1)
+ *
+ *  @param percent The percentage to increase the current zoom scale by.
+ *  @param duration The animation duration for the zoom scaling UI.
+ */
+- (void)scaleMapByPercent:(CGFloat)percent withAnimationDuration:(CGFloat)duration;
+
 
 #pragma mark - Amenity Icon Helpers
 
@@ -180,6 +189,31 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param waypoint The waypoint that is associated with the amenities to be shown.
  */
 - (void)showAmenity:(nonnull JMapAmenity *)amenity atWaypoint:(nonnull JMapWaypoint*)waypoint;
+
+/**
+ *  Shows all amenities of a given type.
+ *
+ *  @param amenity A JMapAmenity which will be used to determine which type of amenities to show.
+ *  @param options An NSDictionary containing options on the amenity's behaviour on the map.
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default false
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default false, when false has precedence over flipWithRotation
+ *  flipWithRotation - [NSNumber numberWithBool:true/false], default false
+ *  scale - NSNumber, default to 1
+ */
+- (void)showAmenity:(nonnull JMapAmenity *)amenity withOptions:(nonnull NSDictionary *)options;
+
+/**
+ *  Shows all amenities of a given type that are placed on a certain waypoint.
+ *
+ *  @param amenity A JMapAmenity which will be used to determine which type of amenities to show.
+ *  @param waypoint The waypoint that is associated with the amenities to be shown.
+ *  @param options An NSDictionary containing options on the amenity's behaviour on the map.
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default false
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default false, when false has precedence over flipWithRotation
+ *  flipWithRotation - [NSNumber numberWithBool:true/false], default false
+ *  scale - NSNumber, default to 1
+ */
+- (void)showAmenity:(nonnull JMapAmenity *)amenity atWaypoint:(nonnull JMapWaypoint*)waypoint withOptions:(nonnull NSDictionary *)options;
 
 /**
  *  Hides all amenities of a given type.
@@ -205,8 +239,10 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  Shows amenities with options.
  *
  *  @param options An NSDictionary containing options on the amenity's behaviour on the map.
- *  scaleWithMap - [NSNumber numberWithBool:true/false], default true
- *  rotateWithMap - [NSNumber numberWithBool:true/false], default true
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default false
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default false, when false has precedence over flipWithRotation
+ *  flipWithRotation - [NSNumber numberWithBool:true/false], default false
+ *  scale - NSNumber, default to 1
  */
 - (void)showAllAmenitiesWithOptions:(nonnull NSDictionary *)options;
 
@@ -286,6 +322,32 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (void)showPathType:(nonnull JMapPathType*)pathType atWaypoint:(nullable JMapWaypoint*)waypoint;
 
 /**
+ *  Shows all path types of a given type.
+ *
+ *  @param pathType A JMapAmenity which will be used to determine which type of amenities to show.
+ *  @param options An NSDictionary containing options on the amenity's behaviour on the map.
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default false
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default false, when false has precedence over flipWithRotation
+ *  flipWithRotation - [NSNumber numberWithBool:true/false], default false
+ *  scale - NSNumber, default to 1
+ */
+- (void)showPathType:(nonnull JMapPathType*)pathType withOptions:(nonnull NSDictionary *)options;
+
+/**
+ *  Shows all path types of a given type that are placed on a certain waypoint.
+ *
+ *  @param pathType A JMapPathType which will be used to determine which type of path types to show.
+ *  @param waypoint The waypoint that is associated with the path types to be shown.
+ *  @param options An NSDictionary containing options on the amenity's behaviour on the map.
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default false
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default false, when false has precedence over flipWithRotation
+ *  flipWithRotation - [NSNumber numberWithBool:true/false], default false
+ *  scale - NSNumber, default to 1
+ */
+- (void)showPathType:(nonnull JMapPathType*)pathType atWaypoint:(nullable JMapWaypoint*)waypoint withOptions:(nonnull NSDictionary *)options;
+
+
+/**
  *  Shows all path types on map.
  */
 - (void)showAllPathTypes;
@@ -294,8 +356,10 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  Shows all path types with options.
  *
  *  @param options An NSDictionary containing options on the path type's behaviour on the map.
- *  scaleWithMap - NSNumber 0/1, default to 1
- *  rotateWithMap - NSNumber 0/1, default to 1
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default false
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default false, when false has precedence over flipWithRotation
+ *  flipWithRotation - [NSNumber numberWithBool:true/false], default false
+ *  scale - NSNumber, default to 1
  */
 - (void)showAllPathTypesWithOptions:(nonnull NSDictionary *)options;
 
@@ -374,7 +438,8 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  Shows all map image labels with options.
  *
  *  @param options An NSDictionary containing options on the label's behaviour on the map.
- *  scaleWithMap - [NSNumber numberWithBool:true/false], default true
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default false
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default false, when false has precedence over flipWithRotation
  *  flipWithRotation - [NSNumber numberWithBool:true/false], default false
  *  scale - NSNumber, default to 1
  */
@@ -396,7 +461,8 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  Shows all text map labels with options.
  *
  *  @param options An NSDictionary containing options on the label's behaviour on the map.
- *  scaleWithMap - [NSNumber numberWithBool:true/false], default true
+ *  scaleWithMap - [NSNumber numberWithBool:true/false], default false
+ *  rotateWithMap - [NSNumber numberWithBool:true/false], default false, when false has precedence over flipWithRotation
  *  flipWithRotation - [NSNumber numberWithBool:true/false], default true
  *  scale - NSNumber, default to 1
  */
@@ -439,21 +505,21 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param uri A NSString with the uri to be added to the unit.
  *  @param unit A shape representing the unit on the map that the image will be added to.
  */
--(void) addImage:(nonnull NSString*)uri toUnit:(nonnull Shape*)unit;
+-(void)addImage:(nonnull NSString*)uri toUnit:(nonnull Shape*)unit;
 
 /**
  *  Hides the contents of a unit.
  *
  *  @param unit A shape representing the unit on the map which will have its text and image contents hidden.
  */
--(void) hideUnitContents:(nonnull Shape*)unit;
+-(void)hideUnitContents:(nonnull Shape*)unit;
 
 /**
  *  Shows the contents of a unit.
  *
  *  @param unit A shape representing the unit on the map which will have its text and image contents shown.
  */
--(void) showUnitContents:(nonnull Shape*)unit;
+-(void)showUnitContents:(nonnull Shape*)unit;
 
 /**
  *  Gets a unit from a waypoint.
@@ -472,11 +538,31 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (void)getUnitsFromDestination:(nonnull JMapDestination *)destination completionHandler:(nonnull __attribute__((noescape)) void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
 
 /**
+ *  Applies display mode to all units.
+ */
+- (void)applyDisplayModeToAllUnits;
+
+/**
+ *  Applies display mode to units on all maps, with fontStyle on units which display text
+ *
+ *  @param font A UIFont object to be applied to units which display text
+ */
+- (void)applyDisplayModeToAllUnitsWithFont:(nullable UIFont *)font;
+
+/**
  *  Applies display mode to units.
  *
  *  @param units An NSArray of Shape objects
  */
 - (void)applyDisplayModeToUnits:(nonnull NSArray<Shape *>*)units;
+
+/**
+ *  Applies display mode to units, with fontStyle on units which display text
+ *
+ *  @param units An NSArray of Shape objects
+ *  @param font A UIFont object to be applied to units which display text
+ */
+- (void)applyDisplayModeToUnits:(nonnull NSArray<Shape *>*)units withFont:(nullable UIFont *)font;
 
 #pragma mark - Component/Popup Helpers
 
@@ -586,7 +672,6 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 -(void)getShapesInLayerWithName:(nonnull NSString*)name fromMap:(nonnull JMapMap*)map completionHandler:(nonnull __attribute__((noescape)) void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
 
-
 /**
  *  Retrieves the bounds of a rectangle containing all the provided shapes.
  *
@@ -594,7 +679,6 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @return A CGRect which is large enough to contain all the provided shapes.
  */
 -(CGRect)getBoundsFromShapes:(nonnull NSArray<Shape*>*)shapes;
-
 
 /**
  *  Applies styling to a shape.
@@ -690,19 +774,9 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 #pragma mark - Gesture Helpers
 
 /**
- *  enableRotationGesture will be deprecated in 4.1.0, use enableRotationGestures instead.
- */
--(void)enableRotationGesture __attribute__((deprecated("Use enableRotationGestures instead")));
-
-/**
  *  Enables rotation gestures on the map.
  */
 -(void)enableRotationGestures;
-
-/**
- *  disableRotationGesture will be deprecated in 4.1.0, use disableRotationGestures instead.
- */
--(void)disableRotationGesture __attribute__((deprecated("Use disableRotationGestures instead")));
 
 /**
  *  Disables rotation gestures on the map.
@@ -710,19 +784,9 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 -(void)disableRotationGestures;
 
 /**
- *  enablePanGesture will be deprecated in 4.1.0, use enablePanGestures instead.
- */
--(void)enablePanGesture __attribute__((deprecated("Use enablePanGestures instead")));
-
-/**
  *  Enables pan (swipe) gestures on the map.
  */
 -(void)enablePanGestures;
-
-/**
- *  disablePanGesture will be deprecated in 4.1.0, use disablePanGestures instead.
- */
--(void)disablePanGesture __attribute__((deprecated("Use disablePanGestures instead")));
 
 /**
  *  Disables pan (swipe) gestures on the map.
@@ -730,19 +794,9 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 -(void)disablePanGestures;
 
 /**
- *  enablesScaleGesture will be deprecated in 4.1.0, use enableScaleGestures instead.
- */
--(void)enableScaleGesture __attribute__((deprecated("Use enableScaleGestures instead")));
-
-/**
  *  Enables scale (pinch zoom) gestures on the map.
  */
 -(void)enableScaleGestures;
-
-/**
- *  disableScaleGesture will be deprecated in 4.1.0, use disableScaleGestures instead.
- */
--(void)disableScaleGesture __attribute__((deprecated("Use disableScaleGestures instead")));
 
 /**
  *  Disables scale (pinch zoom) gestures on the map.
@@ -775,6 +829,20 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (nonnull NSArray<JMapPathPerFloor*> *)wayfindBetweenWaypoint:(nonnull JMapWaypoint *)waypointStart andWaypoint:(nonnull JMapWaypoint *)waypointEnd withAccessibility:(NSInteger)accessibility withObstacle:(nullable NSArray <NSString *>*)obstacles;
 
 /**
+ *  Finds the waypoint with shortest path from the start waypoint, with the path adhering to the given accessibility and obstacles
+ *  Generates an NSArray containing JMapPathPerFloor data.
+ *
+ *  @param waypointsArray An array of waypoints used to find the closest waypoint (waypoint with the shortest path) from the start way point
+ *  @param waypointStart A JMapWaypoint object as starting point
+ *  @param accessibility A NSInteger value between 0-100 to indicate accessibility level; 0 - Not accessible, 100 - accessible path
+ *  @param obstacles An NSArray of obstacle layer names used for path generalization
+ *
+ *  @return An NSArray of JMapPathPerFloor objects
+ */
+- (nonnull NSArray<JMapPathPerFloor*> *) wayfindToClosestWaypointInArray:(nonnull NSArray<JMapWaypoint *>*)waypointsArray fromWaypoint:(nonnull JMapWaypoint*)waypointStart
+                                                       withAccessibility:(NSInteger)accessibility withObstacle:(nullable NSArray<NSString *> *)obstacles;
+
+/**
  *  Draws the wayfind path on the map.
  *
  *  @param wayfindPath A JMapPathPerFloor object returned in the method wayfindBetweenWaypoint:andWaypoint:withAccessibility
@@ -790,7 +858,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 -(void)drawWayfindingPath:(nonnull JMapPathPerFloor*)wayfindPath withStyle:(nonnull JMapStyle*)style;
 
 /**
- *  Get Bezier Path From Path Per Floor
+ *  Get Bézier Path From Path Per Floor
  *
  *  @param pathPerFloor a JMapPathPerFloor object to render
  *
@@ -805,6 +873,22 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param mapId of the map to place the layer on
  */
 - (void)addCustomWayfindPathLayer:(nonnull CAShapeLayer *)wayfindLayer toMapID:(NSInteger)mapId;
+
+/**
+ *  Zoom to focus to wayfind path on the map with padding.
+ *
+ *  @param map The map of the wayfind path
+ *  @param padding The surrounding padding around the path
+ *  @param duration The animation duration for the zooming
+ */
+- (void)zoomToPathOnMap:(nonnull JMapMap *)map withPadding:(float)padding withAnimationDuration:(CGFloat)duration;
+
+/**
+ *  Gets the bound of a wayfinding path on the map.
+ *
+ *  @param map The map of the wayfind path
+ */
+- (CGRect)getBoundsOfPathOnMap:(nonnull JMapMap *)map;
 
 /**
  *  Removes all wayfind paths on all floors.
@@ -831,4 +915,53 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (nullable JMapWaypoint *)getNearestWaypointWithJMapPoint:(nonnull JMapPoint *)point;
 
+/**
+ *  Applies a style to all empty units and will override the initial style of all UnitswithDestinations
+ *  Note: Overrides the initial style of the unit with the one provided meaning that calling `resetShapeStyles` to `resetMapStyle` will default to the style set here.
+ *
+ *  @param style A JMapStyle object that defines the style to be used for all units with Destinations.
+ */
+- (void)styleEmptyUnits:(nonnull JMapStyle*)style;
+
+/**
+ *  Applies a style to all empty units
+ *  Note: Overrides the initial style of the unit with the one provided meaning that calling `resetShapeStyles` to `resetMapStyle` will default to the style set here.
+ *
+ *  @param style A JMapStyle object that defines the style to be used for all empty units.
+ *  @param overrideStyle A Boolean value that determines if the initial style of a unit should be overridden.
+ */
+- (void)styleEmptyUnits:(nonnull JMapStyle*)style  overrideInitialStyle:(Boolean)overrideStyle;
+
+
+/**
+ *  Applies a style to all units with Destinations and will override the initial style of all UnitswithDestinations
+ *  Note: Overrides the initial style of the unit with the one provided meaning that calling `resetShapeStyles` to `resetMapStyle` will default to the style set here.
+ *
+ *  @param style A JMapStyle object that defines the style to be used for all units with Destinations.
+ */
+- (void)styleUnitsWithDestinations:(nonnull JMapStyle*)style;
+
+/**
+ *  Applies a style to all units with Destinations
+ *  Note: Overrides the initial style of the unit with the one provided meaning that calling `resetShapeStyles` to `resetMapStyle` will default to the style set here.
+ *
+ *  @param style A JMapStyle object that defines the style to be used for all units with Destinations.
+ *  @param overrideStyle A Boolean value that determines if the initial style of a unit should be overridden.
+ */
+- (void)styleUnitsWithDestinations:(nonnull JMapStyle*)style overrideInitialStyle:(Boolean)overrideStyle;
+
+/**
+ * Looks through an array of objects, using the properties of each object and the given query,
+ * determines which Objects in the array have properties the most relevant to what the query is.
+ * Allows for the inclusion of `highRankProperties` giving certain properties a more importance
+ * then others. Finally, returning an array of objects which is <= to the maxResults limit set.
+ *
+ * @param array the array of objects to query
+ * @param query the regex / keywords you want to find in an objects properties
+ * @param rankedProperties an array of property names that should hold additional value when compared to others
+ * @param maxResults the maximum number of results that you want the return array to have, defaults to 3
+ * @return an array of objects, in order of most to least relevant based on your, Query and Ranked Properties.
+ */
++ (nonnull NSArray*) getObjectsInArray:(nonnull NSArray*)array byString:(nonnull NSString *)query highRankProperties:(nullable NSArray<NSString *>*)rankedProperties maxResults:(nullable NSNumber*)maxResults;
 @end
+
