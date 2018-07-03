@@ -99,4 +99,13 @@
  */
 + (float)sqr:(float)x;
 
+/**
+ *  Computes the distance between two points on the map.
+ *
+ *  @param point1 The first point on the map.
+ *  @param point2 The second point on the map.
+ *  @return The distance between the two points.
+ */
++ (float)distanceBetweenPoint1:(CGPoint)point1 point2:(CGPoint)point2;
+
 @end

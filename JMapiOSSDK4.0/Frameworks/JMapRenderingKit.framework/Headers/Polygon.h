@@ -12,6 +12,12 @@
  *  The Polygon shape model.
  */
 @interface Polygon : Shape
+
+/**
+ *  Polygon points
+ */
+@property (nonatomic, copy, nonnull) NSArray <NSValue *>* coordinates;
+
 /**
  *  Initializes Polygon
  *  @param id the ID of the polygon

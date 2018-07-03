@@ -10,6 +10,9 @@
 #import "JMapOptions.h"
 #import "JMapController.h"
 
+/**
+ *  The JMapDelegate object.
+ */
 @protocol JMapDelegate <NSObject>
 
 @optional
@@ -96,6 +99,9 @@
 
 @end
 
+/**
+ *  The JMap Class.
+ */
 @interface JMap : NSObject
 
 /**

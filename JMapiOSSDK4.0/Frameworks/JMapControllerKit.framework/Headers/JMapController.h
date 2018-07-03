@@ -594,6 +594,14 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (void)updateMovingObject:(nonnull JMapMovingObject *)movingObject onMap:(nonnull JMapMap *)map toPoint:(CGPoint)point duration:(nullable NSNumber *)duration;
 
 /**
+ *  Gets all JMapMovingObject on the map, gets all moving object instance if map is nil.
+ *
+ *  @param map A JMapMap to look for moving objects
+ *  @return An array of moving objects
+ */
+- (nonnull NSArray <JMapMovingObject *>*)getAllMovingObjectsOnMap:(nullable JMapMap *)map;
+
+/**
  *  Hides all JMapMovingObjects on specified layer.
  *
  *  @param layerName A NSString layer name to have items hidden
@@ -770,6 +778,22 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (void)getShapeInLayer:(nonnull NSString *)layerName fromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(nonnull __attribute__((noescape)) void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
 
+/**
+ *  Draws a shape on the map with optional style and layer name.
+ *
+ *  @param shape The shape to be drawn on the map
+ *  @param map The map for the shape to be drawn on
+ *  @param style Optional style associated to the Shape, defaults to black fill
+ *  @param layerName A NSString layerName to add the shape on, defaults to "shapesLayer"
+ */
+- (void)drawShape:(nonnull Shape *)shape onMap:(nonnull JMapMap *)map withStyle:(nullable JMapStyle *)style withLayerName:(nullable NSString *)layerName;
+
+/**
+ *  Removes a shape on the map.
+ *
+ *  @param shape The shape to be removed on the map
+ */
+- (void)removeShape:(nonnull Shape *)shape;
 
 #pragma mark - Gesture Helpers
 
