@@ -117,6 +117,14 @@
 -(void)getVenues:(nonnull __attribute__((noescape)) void(^)(NSArray <JMapVenue*>* _Nonnull venues, JMapError* _Nullable error))completionHandler;
 
 /**
+ *  Gets all venues with matching external Ids API call to the server.
+ *
+ *  @param externalIds A list of NSString Id's to check
+ *  @param completionHandler A callback that returns an NSArray of JMapVenue objects with corresponding external Ids.
+ */
+-(void)getVenuesWithExternalIds:(nonnull NSArray <NSString *>*)externalIds completionHandler:(nonnull __attribute__((noescape)) void(^)(NSArray <JMapVenue*>* _Nonnull venues, JMapError* _Nullable error))completionHandler;
+
+/**
  *  Gets all locales with API call to the server.
  *
  *  @param completionHandler A callback that returns an NSArray of JMapLocale objects.
