@@ -114,7 +114,7 @@
  *
  *  @param completionHandler A callback that returns an NSArray of JMapVenue objects.
  */
--(void)getVenues:(nonnull __attribute__((noescape)) void(^)(NSArray <JMapVenue*>* _Nonnull venues, JMapError* _Nullable error))completionHandler;
+-(void)getVenues:(nonnull void(^)(NSArray <JMapVenue*>* _Nonnull venues, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Gets all venues with matching external Ids API call to the server.
@@ -122,14 +122,14 @@
  *  @param externalIds A list of NSString Id's to check
  *  @param completionHandler A callback that returns an NSArray of JMapVenue objects with corresponding external Ids.
  */
--(void)getVenuesWithExternalIds:(nonnull NSArray <NSString *>*)externalIds completionHandler:(nonnull __attribute__((noescape)) void(^)(NSArray <JMapVenue*>* _Nonnull venues, JMapError* _Nullable error))completionHandler;
+-(void)getVenuesWithExternalIds:(nonnull NSArray <NSString *>*)externalIds completionHandler:(nonnull void(^)(NSArray <JMapVenue*>* _Nonnull venues, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Gets all locales with API call to the server.
  *
  *  @param completionHandler A callback that returns an NSArray of JMapLocale objects.
  */
--(void)getLocales:(nonnull __attribute__((noescape)) void(^)(NSArray <JMapLocale*>* _Nonnull locales, JMapError* _Nullable error))completionHandler;
+-(void)getLocales:(nonnull void(^)(NSArray <JMapLocale*>* _Nonnull locales, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Populates venue by venue object.
@@ -137,7 +137,7 @@
  *  @param venue A JMapVenue object for data to be populated.
  *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError for debugging.
  */
--(void)populateVenue:(nonnull JMapVenue *)venue completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+-(void)populateVenue:(nonnull JMapVenue *)venue completionHandler:(nonnull void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Populates venue by venue ID.
@@ -145,7 +145,7 @@
  *  @param venueId An NSInteger associated to the venue for data to be populated.
  *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError for debugging.
  */
--(void)populateVenueByVenueId:(NSInteger)venueId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+-(void)populateVenueByVenueId:(NSInteger)venueId completionHandler:(nonnull void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Populates venue by venue ID and also populates default building.
@@ -153,7 +153,7 @@
  *  @param venueId An NSInteger associated to the venue for data to be populated.
  *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError for debugging.
  */
--(void)populateVenueWithDefaultBuildingByVenueId:(NSInteger)venueId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+-(void)populateVenueWithDefaultBuildingByVenueId:(NSInteger)venueId completionHandler:(nonnull void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Populates building in venue and building ID.
@@ -162,7 +162,7 @@
  *  @param buildingId An NSInteger ID associated to the building.
  *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError debugging.
  */
--(void)populateBuildingInVenue:(nonnull JMapActiveVenue *)venue withBuildingId:(NSInteger)buildingId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+-(void)populateBuildingInVenue:(nonnull JMapActiveVenue *)venue withBuildingId:(NSInteger)buildingId completionHandler:(nonnull void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Populates venue by venue ID and building ID.
@@ -171,7 +171,7 @@
  *  @param buildingId An NSInteger ID associated to the building in the venue.
  *  @param completionHandler A callback that returns a JMapActiveVenue object and JMapError debugging.
  */
--(void)populateVenueWithBuildingByVenueId:(NSInteger)venueId withBuildingId:(NSInteger)buildingId completionHandler:(nonnull __attribute__((noescape)) void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
+-(void)populateVenueWithBuildingByVenueId:(NSInteger)venueId withBuildingId:(NSInteger)buildingId completionHandler:(nonnull void(^)(JMapActiveVenue * _Nullable activeVenue, JMapError* _Nullable error))completionHandler;
 
 /**
  *  Get Request : method used to make additional GET requests to the JACS server using JCore
@@ -179,7 +179,7 @@
  *  and example of this argument would be: `/venue/123/zone/full` where 123 is the venue Id.
  *  @param completionHandler - callback method.
  */
-- (void)getRequest:(nonnull NSString *)url completionHandler:(nonnull __attribute__((noescape)) void(^)(NSDictionary * _Nullable data, JMapError* _Nullable error))completionHandler;
+- (void)getRequest:(nonnull NSString *)url completionHandler:(nonnull void(^)(NSDictionary * _Nullable data, JMapError* _Nullable error))completionHandler;
 
 #pragma mark - Cache
 /**

@@ -95,7 +95,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param map The JMapMap object to be rendered and displayed.
  *  @param completion The completion handler for the API call.
  */
-- (void)showMap:(nonnull JMapMap *)map completionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
+- (void)showMap:(nonnull JMapMap *)map completionHandler:(ErrorCompletion)completion;
 
 /**
  *  Renders and displays map with given bounds. This method will also parse the map if needed.
@@ -104,7 +104,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param bound CGRect bound of the map to be shown
  *  @param completion The completion handler for the API call.
  */
-- (void)showMap:(nonnull JMapMap *)map withBounds:(CGRect)bound completionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
+- (void)showMap:(nonnull JMapMap *)map withBounds:(CGRect)bound completionHandler:(ErrorCompletion)completion;
 
 /**
  *  Renders and displays map with given options. This method will also parse the map if needed.
@@ -113,14 +113,14 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param options An NSDictionary options to be passed in for showing the map.
  *  @param completion The completion handler for the API call.
  */
-- (void)showMap:(nonnull JMapMap *)map withOptions:(nonnull NSDictionary *)options completionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
+- (void)showMap:(nonnull JMapMap *)map withOptions:(nonnull NSDictionary *)options completionHandler:(ErrorCompletion)completion;
 
 /**
  *  Displays the default map.
  *
  *  @param completion The completion handler for the API call.
  */
-- (void)showDefaultMapWithCompletionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
+- (void)showDefaultMapWithCompletionHandler:(ErrorCompletion)completion;
 
 /**
  *  Parses a map so it is ready to be rendered.
@@ -128,14 +128,14 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param map The JMapMap object to parse.
  *  @param completion The completion handler for the API call.
  */
-- (void)parseMap:(nonnull JMapMap *)map completionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
+- (void)parseMap:(nonnull JMapMap *)map completionHandler:(ErrorCompletion)completion;
 
 /**
  * Parses all maps. Can be used to parse all maps in the active venue before rendering.
  *
  *  @param completion The completion handler for the API call.
  */
-- (void)parseAllMapsWithCompletionHandler:(__attribute__((noescape)) ErrorCompletion)completion;
+- (void)parseAllMapsWithCompletionHandler:(ErrorCompletion)completion;
 
 /**
  *  Sets the transform of the map canvas displaying the map.
@@ -488,7 +488,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param map The JMapMap that the units will be retrieved from.
  *  @param completion A callback with array of Shapes from the map's unit layer and JMapError.
  */
--(void)getUnitsFromMap:(nonnull JMapMap*)map completionHandler:(nonnull __attribute__((noescape)) void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
+-(void)getUnitsFromMap:(nonnull JMapMap*)map completionHandler:(void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
 
 /**
  *  Adds text to a unit on the map.
@@ -527,7 +527,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param waypoint A JMapWaypoint object used to search for unit
  *  @param completion A callback that returns the shape and any errors or nil if shape association doesn't exist.
  */
-- (void)getUnitFromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(nonnull __attribute__((noescape)) void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
+- (void)getUnitFromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
 
 /**
  *  Gets a units from a destination.
@@ -535,7 +535,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param destination A JMapDestination object used to search for unit
  *  @param completion A callback that returns an array of shapes and any errors.
  */
-- (void)getUnitsFromDestination:(nonnull JMapDestination *)destination completionHandler:(nonnull __attribute__((noescape)) void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
+- (void)getUnitsFromDestination:(nonnull JMapDestination *)destination completionHandler:(void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
 
 /**
  *  Applies display mode to all units.
@@ -678,7 +678,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param map The map that the layer is associated with.
  *  @param completion Callback for getting shapes in layer with name
  */
--(void)getShapesInLayerWithName:(nonnull NSString*)name fromMap:(nonnull JMapMap*)map completionHandler:(nonnull __attribute__((noescape)) void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
+-(void)getShapesInLayerWithName:(nonnull NSString*)name fromMap:(nonnull JMapMap*)map completionHandler:(void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
 
 /**
  *  Retrieves the bounds of a rectangle containing all the provided shapes.
@@ -776,7 +776,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param waypoint A JMapWaypoint association to the Shape object
  *  @param completion Callback for getting a shape object in layer with waypoint
  */
-- (void)getShapeInLayer:(nonnull NSString *)layerName fromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(nonnull __attribute__((noescape)) void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
+- (void)getShapeInLayer:(nonnull NSString *)layerName fromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
 
 /**
  *  Draws a shape on the map with optional style and layer name.
