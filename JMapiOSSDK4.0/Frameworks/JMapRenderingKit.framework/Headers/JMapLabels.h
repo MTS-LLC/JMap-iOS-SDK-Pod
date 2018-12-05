@@ -35,6 +35,22 @@
 - (nonnull JMapLabel *)createLabelForUnitId:(NSInteger)unitId content:(nullable NSString *)content frame:(CGRect)frame mapIds:(nonnull NSArray <NSNumber*>*)mapIds image:(nullable UIImage *)image uri:(nullable NSString *)uri font:(nullable UIFont *)font isUnitLabel:(BOOL)isUnitLabel;
 
 /**
+ *  Create Label For Unit
+ *
+ *  @param unitId Integer for the asociated unit of this label
+ *  @param content optional UIImage for the image label
+ *  @param frame CGRect frame of the label in the unit
+ *  @param mapIds optional Array of map ids
+ *  @param image optional image for the image label
+ *  @param uri optional URI String for the web label
+ *  @param jmapFont optional customized JMap for the text label
+ *  @param isUnitLabel Boolean value for if the label is for a unit
+ *
+ *  @return newly created JMapLabel object
+ */
+- (nonnull JMapLabel *)createLabelForUnitId:(NSInteger)unitId content:(nullable NSString *)content frame:(CGRect)frame mapIds:(nonnull NSArray <NSNumber*>*)mapIds image:(nullable UIImage *)image uri:(nullable NSString *)uri jmapFont:(nullable JMapFont *)jmapFont isUnitLabel:(BOOL)isUnitLabel;
+
+/**
  *  Create Map Labels
  *
  *  @param mapLabels Array of JMapMapLabels to create
@@ -119,5 +135,24 @@
  *  @param font the text font passed in for map labels
  */
 - (void)setMapLabelsFont:(nonnull UIFont *)font;
+/**
+ *  Set All Labels with JMapFont
+ *
+ *  @param jmapFont the text font passed in for all labels
+ */
+- (void)setAllLabelsJMapFont:(nonnull JMapFont *)jmapFont;
+
+/**
+ *  Set All Unit Labels with JMapFont
+ *
+ *  @param jmapFont the text font passed in for unit labels
+ */
+- (void)setUnitLabelsJMapFont:(nonnull JMapFont *)jmapFont;
+/**
+ *  Set All Map Labels with JMapFont
+ *
+ *  @param jmapFont the text font passed in for map labels
+ */
+- (void)setMapLabelsJMapFont:(nonnull JMapFont *)jmapFont;
 
 @end

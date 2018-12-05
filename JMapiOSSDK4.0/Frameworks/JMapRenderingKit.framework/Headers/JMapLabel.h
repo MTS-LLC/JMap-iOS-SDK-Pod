@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "JMapItemView.h"
 #import <JMapCoreKit/UIFont+withColor.h>
+#import "JMapFont.h"
 
 #define hideAfterSize 17.0
 
@@ -52,6 +53,11 @@
  *  Font of the text map label
  */
 @property (nonatomic, strong, readonly, nullable) UIFont *font;
+
+/**
+ *  JMapFont of the text map label
+ */
+@property (nonatomic, strong, readonly, nullable) JMapFont *jmapFont;
 
 /**
  *  Rotaion value
@@ -112,6 +118,24 @@
 - (nonnull instancetype)initWithFrame:(CGRect)frame id:(nonnull NSNumber *)id mapIds:(nonnull NSArray <NSNumber *>*)mapIds text:(nullable NSString *)text image:(nullable UIImage *)image uri:(nullable NSString *)uri svg:(nullable NSString *)svg font:(nullable UIFont *)font rotation:(nullable NSNumber *)rotation isUnitLabel:(BOOL)isUnitLabel;
 
 /**
+ *  Init With Frame: Constructor method JMapLabel
+ *
+ *  @param frame CGRect frame size of the label
+ *  @param id Integer unique identifier
+ *  @param mapIds Array of map ids
+ *  @param text optional String for the text label
+ *  @param image optional UIImage for the image label
+ *  @param uri optional String for the web label
+ *  @param svg optional String for the web label
+ *  @param jmapFont optional JMapFont for the text label
+ *  @param rotation optional Integer for the label
+ *  @param isUnitLabel Boolean to determine if the lebel is for a unit
+ *
+ *  @return new JMapLabel object
+ */
+- (nonnull instancetype)initWithFrame:(CGRect)frame id:(nonnull NSNumber *)id mapIds:(nonnull NSArray <NSNumber *>*)mapIds text:(nullable NSString *)text image:(nullable UIImage *)image uri:(nullable NSString *)uri svg:(nullable NSString *)svg jmapFont:(nullable JMapFont *)jmapFont rotation:(nullable NSNumber *)rotation isUnitLabel:(BOOL)isUnitLabel;
+
+/**
  *  Init With Map Label: Constructor method JMapLabel
  *
  *  @param mapLabel JMapLabel object
@@ -131,6 +155,18 @@
  *  @param rotation optional Integer for the label
  */
 - (void)updateValuesWithText:(nullable NSString *)text image:(nullable UIImage *)image uri:(nullable NSString *)uri svg:(nullable NSString *)svg font:(nullable UIFont *)font rotation:(nullable NSNumber *)rotation;
+
+/**
+ *  Update Values: Update parameters method
+ *
+ *  @param text optional String for the text label
+ *  @param image optional UIImage for the image label
+ *  @param uri optional String for the web label
+ *  @param svg optional String for the web label
+ *  @param jmapFont optional JMapFont for the text label
+ *  @param rotation optional Integer for the label
+ */
+- (void)updateValuesWithText:(nullable NSString *)text image:(nullable UIImage *)image uri:(nullable NSString *)uri svg:(nullable NSString *)svg jmapFont:(nullable JMapFont *)jmapFont rotation:(nullable NSNumber *)rotation;
 
 /**
  *  Content Scale Factor Changed : Used to change the scale and zoom values

@@ -183,6 +183,16 @@
 @property (nonatomic, strong) UIFont * mapLabelFont;
 
 /**
+ *  JMapFont property to be applied to text in displayMode
+ */
+@property (nonatomic, strong) JMapFont * displayModeJMapFont;
+
+/**
+ *  JMapFont property to be applied to text map labels
+ */
+@property (nonatomic, strong) JMapFont * mapLabelJMapFont;
+
+/**
  *  Boolean property for enabling/disabling pan gesture, defaults to true
  */
 @property (nonatomic, assign) BOOL panGesture;

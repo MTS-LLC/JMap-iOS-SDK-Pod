@@ -480,6 +480,13 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (void)setMapLabelFont:(nonnull UIFont*)font;
 
+/**
+ *  Sets the font for textual map labels.
+ *
+ *  @param jmapFont The font to be used for the text in labels.
+ */
+- (void)setMapLabelJMapFont:(nonnull JMapFont*)jmapFont;
+
 #pragma mark - Unit Helpers
 
 /**
@@ -498,6 +505,15 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param font A UIFont object to edit the text font for unit labels.
  */
 - (void)addText:(nonnull NSString*)text toUnit:(nonnull Shape*)unit withFont:(nullable UIFont *)font;
+
+/**
+ *  Adds text to a unit on the map.
+ *
+ *  @param text A string with the text to be added to the unit.
+ *  @param unit A shape representing the unit on the map that the text will be added to.
+ *  @param font A JMapFont object to edit the text font for unit labels.
+ */
+- (void)addText:(nonnull NSString*)text toUnit:(nonnull Shape*)unit withJMapFont:(nullable JMapFont *)jmapFont;
 
 /**
  *  Adds an image to a unit on the map.
@@ -543,11 +559,18 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (void)applyDisplayModeToAllUnits;
 
 /**
- *  Applies display mode to units on all maps, with fontStyle on units which display text
+ *  Applies display mode to units on all maps with defined font
  *
  *  @param font A UIFont object to be applied to units which display text
  */
 - (void)applyDisplayModeToAllUnitsWithFont:(nullable UIFont *)font;
+
+/**
+ *  Applies display mode to units on all maps with defined JMapFont
+ *
+ *  @param jmapFont A JMapFont object to be applied to units which display text
+ */
+- (void)applyDisplayModeToAllUnitsWithJMapFont:(nullable JMapFont *)jmapFont;
 
 /**
  *  Applies display mode to units.
@@ -557,12 +580,20 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (void)applyDisplayModeToUnits:(nonnull NSArray<Shape *>*)units;
 
 /**
- *  Applies display mode to units, with fontStyle on units which display text
+ *  Applies display mode to units with defined font
  *
  *  @param units An NSArray of Shape objects
  *  @param font A UIFont object to be applied to units which display text
  */
 - (void)applyDisplayModeToUnits:(nonnull NSArray<Shape *>*)units withFont:(nullable UIFont *)font;
+
+/**
+ *  Applies display mode to units with defined JMapFont
+ *
+ *  @param units An NSArray of Shape objects
+ *  @param jmapFont A JMapFont object to be applied to units which display text
+ */
+- (void)applyDisplayModeToUnits:(nonnull NSArray<Shape *>*)units withJMapFont:(nullable JMapFont *)jmapFont;
 
 #pragma mark - Component/Popup Helpers
 
@@ -656,14 +687,14 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 -(void)resetMapStyle;
 
 /**
- *  Applies default styling using a json config file
+ *  Applies default styling using a json config file, resetting map style will persist the styling
  *
  *  @param stylesheet NSString containing styles info
  */
 - (void)useCustomStyleSheet:(nonnull NSString *)stylesheet;
 
 /**
- *  Applies custom styling using a json config file
+ *  Applies styling using a json config file after map has loaded, resetting map style will persist the styling
  *
  *  @param stylesheet NSString containing styles info
  */

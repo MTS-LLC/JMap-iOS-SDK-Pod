@@ -34,6 +34,6 @@
 #import <JMapRenderingKit/JMapRenderingKitUtils.h>
 #import <JMapRenderingKit/JMapMovingObject.h>
 #import <JMapRenderingKit/JMapItemView.h>
-
+#import <JMapRenderingKit/JMapFont.h>
 
 

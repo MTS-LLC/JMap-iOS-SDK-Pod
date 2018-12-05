@@ -64,6 +64,14 @@
  */
 @property (nonatomic, strong, readonly, nullable) JMapMapLabelCollection * mapLabels;
 /**
+ *  An NSString associated to the map template id selected for the venue, defaults to nil if none are chosen.
+ */
+@property (nonatomic, strong, readonly, nullable) NSString * defaultMapTemplateId;
+/**
+ *  An NSDictionary associated to the map template data for the venue, default to nil if none are chosen.
+ */
+@property (nonatomic, strong, readonly, nullable) NSDictionary * mapTemplateData;
+/**
  *  Initializes a JMapActiveVenue.
  *
  *  @param dict An NSDictionary parsed from the server.
