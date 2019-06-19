@@ -40,6 +40,7 @@
  *  The rendering kit delegate.
  */
 @property (nonatomic, weak, nullable) id<JMapRenderingKitDelegate> delegate;
+
 /**
  *  The singleton instance of the user location class.
  */
@@ -64,6 +65,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param activeVenue A JMapActiveVenue object to be loaded
  */
 -(nonnull instancetype)initWithCanvas:(nonnull JMapCanvas *)canvas activeVenue:(nonnull JMapActiveVenue *)activeVenue;
+
 
 #pragma mark - Deallocation Methods
 
@@ -495,7 +497,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param map The JMapMap that the units will be retrieved from.
  *  @param completion A callback with array of Shapes from the map's unit layer and JMapError.
  */
--(void)getUnitsFromMap:(nonnull JMapMap*)map completionHandler:(void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
+-(void)getUnitsFromMap:(nonnull JMapMap*)map completionHandler:(void(^ _Nonnull)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
 
 /**
  *  Adds text to a unit on the map.
@@ -511,7 +513,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *
  *  @param text A string with the text to be added to the unit.
  *  @param unit A shape representing the unit on the map that the text will be added to.
- *  @param font A JMapFont object to edit the text font for unit labels.
+ *  @param jmapFont A JMapFont object to edit the text font for unit labels.
  */
 - (void)addText:(nonnull NSString*)text toUnit:(nonnull Shape*)unit withJMapFont:(nullable JMapFont *)jmapFont;
 
@@ -543,7 +545,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param waypoint A JMapWaypoint object used to search for unit
  *  @param completion A callback that returns the shape and any errors or nil if shape association doesn't exist.
  */
-- (void)getUnitFromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
+- (void)getUnitFromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(void(^ _Nonnull)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
 
 /**
  *  Gets a units from a destination.
@@ -551,7 +553,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param destination A JMapDestination object used to search for unit
  *  @param completion A callback that returns an array of shapes and any errors.
  */
-- (void)getUnitsFromDestination:(nonnull JMapDestination *)destination completionHandler:(void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
+- (void)getUnitsFromDestination:(nonnull JMapDestination *)destination completionHandler:(void(^ _Nonnull)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
 
 /**
  *  Applies display mode to all units.
@@ -700,6 +702,13 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (void)loadJsonStyleConfiguration:(nonnull NSString *)stylesheet;
 
+/**
+ *  Define a sequence for map layers to be loaded using a json config file
+ *
+ *  @param sequence NSString containing sequence info
+ */
+- (void)loadMapWithSequence:(nonnull NSString *)sequence;
+
 #pragma mark - Shape/Layer Helpers
 
 /**
@@ -709,7 +718,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param map The map that the layer is associated with.
  *  @param completion Callback for getting shapes in layer with name
  */
--(void)getShapesInLayerWithName:(nonnull NSString*)name fromMap:(nonnull JMapMap*)map completionHandler:(void(^)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
+-(void)getShapesInLayerWithName:(nonnull NSString*)name fromMap:(nonnull JMapMap*)map completionHandler:(void(^ _Nonnull)(NSArray <Shape*>* _Nonnull shapes, JMapError * _Nullable error))completion;
 
 /**
  *  Retrieves the bounds of a rectangle containing all the provided shapes.
@@ -807,7 +816,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param waypoint A JMapWaypoint association to the Shape object
  *  @param completion Callback for getting a shape object in layer with waypoint
  */
-- (void)getShapeInLayer:(nonnull NSString *)layerName fromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(void(^)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
+- (void)getShapeInLayer:(nonnull NSString *)layerName fromWaypoint:(nonnull JMapWaypoint *)waypoint completionHandler:(void(^ _Nonnull)(Shape* _Nullable shape, JMapError * _Nullable error))completion;
 
 /**
  *  Draws a shape on the map with optional style and layer name.
@@ -894,8 +903,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *
  *  @return An NSArray of JMapPathPerFloor objects
  */
-- (nonnull NSArray<JMapPathPerFloor*> *) wayfindToClosestWaypointInArray:(nonnull NSArray<JMapWaypoint *>*)waypointsArray fromWaypoint:(nonnull JMapWaypoint*)waypointStart
-                                                       withAccessibility:(NSInteger)accessibility withObstacle:(nullable NSArray<NSString *> *)obstacles;
+- (nonnull NSArray<JMapPathPerFloor*> *) wayfindToClosestWaypointInArray:(nonnull NSArray<JMapWaypoint *>*)waypointsArray fromWaypoint:(nonnull JMapWaypoint*)waypointStart withAccessibility:(NSInteger)accessibility withObstacle:(nullable NSArray<NSString *> *)obstacles;
 
 /**
  *  Draws the wayfind path on the map.
@@ -987,7 +995,6 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (void)styleEmptyUnits:(nonnull JMapStyle*)style  overrideInitialStyle:(Boolean)overrideStyle;
 
-
 /**
  *  Applies a style to all units with Destinations and will override the initial style of all UnitswithDestinations
  *  Note: Overrides the initial style of the unit with the one provided meaning that calling `resetShapeStyles` to `resetMapStyle` will default to the style set here.
@@ -1018,5 +1025,6 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  * @return an array of objects, in order of most to least relevant based on your, Query and Ranked Properties.
  */
 + (nonnull NSArray*) getObjectsInArray:(nonnull NSArray*)array byString:(nonnull NSString *)query highRankProperties:(nullable NSArray<NSString *>*)rankedProperties maxResults:(nullable NSNumber*)maxResults;
+
 @end
 

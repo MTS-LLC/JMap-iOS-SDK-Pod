@@ -34,6 +34,10 @@
  */
 @property NSMutableArray <JMapPoint*> *mapPoints;
 /**
+ *  A list of JMapWaypoint objects associated to the path per floor object.
+ */
+@property NSMutableArray <JMapWaypoint*> *waypoints;
+/**
  *  The cost of the path per floor object.
  */
 @property float cost;

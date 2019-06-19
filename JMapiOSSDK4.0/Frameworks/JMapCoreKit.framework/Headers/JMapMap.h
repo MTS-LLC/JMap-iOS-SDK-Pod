@@ -20,6 +20,10 @@
  */
 @property (nonatomic, strong, readonly, nullable) NSString *svg;
 /**
+ *  The geoJSON string of the map.
+ */
+@property (nonatomic, strong, readonly, nullable) NSDictionary *geojson;
+/**
  *  The mm/px scale of the map.
  */
 @property (nonatomic, strong, readonly, nullable) NSNumber *mmPerPixel;
