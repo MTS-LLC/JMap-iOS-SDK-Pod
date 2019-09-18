@@ -61,5 +61,5 @@
 #import <JMapCoreKit/JMapPathPerFloor.h>
 #import <JMapCoreKit/JMapPoint.h>
 
-#define JMapSDK_VERSION_STRING @"5.4.0"
+#define JMapSDK_VERSION_STRING @"5.4.2"
 #define JMapSDK_DEFAULT_TARGET_SERVER_VERSION @"4.9"
