@@ -52,6 +52,13 @@
 - (void)canvas:(nonnull JMapCanvas *)canvas scrollViewDidZoom:(float)zoomScale;
 
 /**
+*  Delegate method for handling zooming end
+*  @param canvas JMapCanvas object associated to interaction
+*  @param zoomScale float value of zoom scale at zoom gesture end
+*/
+- (void)canvas:(nonnull JMapCanvas *)canvas scrollViewDidEndZoom:(float)zoomScale;
+
+/**
  *  Delegate method for handling scrolling of the map
  *  @param canvas JMapCanvas object associated to interaction
  *  @param scrollView the UIScrollView object being interacted with
@@ -64,6 +71,13 @@
  *  @param anchorPoint CGPoint on where the panning began on map
  */
 - (void)canvas:(nonnull JMapCanvas *)canvas scrollViewDidPan:(CGPoint)anchorPoint;
+
+/**
+*  Delegate method for handling the end of panning of the map
+*  @param canvas JMapCanvas object associated to interaction
+*  @param centerPoint CGPoint on the center where the panning ends on the map
+*/
+- (void)canvas:(nonnull JMapCanvas *)canvas scrollViewDidEndPanning:(CGPoint)centerPoint;
 
 /**
  *  Delegate method for reading rotation of the map
@@ -134,5 +148,30 @@
  *  @return JMapBaseLayer object with the provided mapId if exists
  */
 - (nullable JMapBaseLayer *)searchForMapWithMapId:(NSInteger)mapId;
+
+
+#pragma mark Cluster Update
+
+/**
+ *  Call to enable clustering behaviour for labels
+*/
+- (void)enableLabelsClustering;
+
+/**
+ *  Call to disable clustering behaviour for labels
+*/
+- (void)disableLabelsClustering;
+
+/**
+ *  Call to update the cluster calculation
+ *  @param animated parameter for adding animation to the cluster updates
+*/
+- (void)updateClusterWithAnimation:(BOOL)animated;
+
+/**
+ *  Method to hide or show all unit contents
+ *  @param shouldHide BOOL to determine whether the unit contents should be hidden or shown
+*/
+- (void)shouldHideAllUnits:(BOOL)shouldHide;
 
 @end

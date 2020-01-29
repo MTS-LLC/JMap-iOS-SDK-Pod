@@ -72,6 +72,15 @@
  */
 @property (nonatomic, strong, readonly, nullable) NSDictionary * mapTemplateData;
 /**
+*  An NSNumber associated to how labels are displayed on the map.
+*/
+@property (nonatomic, strong, readonly, nullable) NSNumber *labelType;
+/**
+*  An NSNumber associated to whether labels should be displayed as clusters on the map.
+*/
+@property (nonatomic, strong, readonly, nullable) NSNumber *clustering;
+
+/**
  *  Initializes a JMapActiveVenue.
  *
  *  @param dict An NSDictionary parsed from the server.

@@ -597,6 +597,21 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 - (void)applyDisplayModeToUnits:(nonnull NSArray<Shape *>*)units withJMapFont:(nullable JMapFont *)jmapFont;
 
+/**
+*  Restricts how many labels are visible at all times when point label is active
+*
+*  @param limit An NSNumber to indicate the number of labels to be shown
+*/
+- (void)setVisiblePointLabelLimit:(nonnull NSNumber *)limit;
+
+/**
+*  Set the zoom level at where clustering should happen for labels
+*  Default value set to 5
+*
+*  @param zoomScale The zoom scale to set for clustering labels
+*/
+- (void)setZoomScaleForLabelClustering:(nonnull NSNumber *)zoomScale;
+
 #pragma mark - Component/Popup Helpers
 
 /**
