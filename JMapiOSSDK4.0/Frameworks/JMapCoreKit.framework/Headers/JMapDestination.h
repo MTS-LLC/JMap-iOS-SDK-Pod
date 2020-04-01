@@ -38,7 +38,7 @@
 /**
  *  List of extensor objects of type NSDictionary associated with the destination.
  */
-@property (nonatomic, strong, readonly, nullable) NSArray<NSDictionary *> *destinationExtensors;
+@property (nonatomic, strong, readonly, nullable) NSDictionary *extensors;
 /**
  *  List of uri's associated with the destination.
  */

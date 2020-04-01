@@ -38,6 +38,10 @@
  */
 @property (nonatomic, strong, readonly, nullable) NSNumber *primaryUriId;
 /**
+ *  List of extensor objects of type NSDictionary associated with the amenity.
+ */
+@property (nonatomic, strong, readonly, nullable) NSDictionary *extensors;
+/**
  *  The list of JMapLocation objects associated to the amenity.
  */
 @property (nonatomic, strong, readonly, nullable) NSArray<JMapLocation*> *locations;

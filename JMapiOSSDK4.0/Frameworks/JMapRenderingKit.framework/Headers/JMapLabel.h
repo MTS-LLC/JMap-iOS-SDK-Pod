@@ -11,6 +11,7 @@
 #import "JMapItemView.h"
 #import <JMapCoreKit/UIFont+withColor.h>
 #import "JMapFont.h"
+#import <WebKit/WebKit.h>
 
 #define hideAfterSize 17.0
 
@@ -72,7 +73,7 @@
 /**
  *  Map Label web label for svg and other web images
  */
-@property (nonatomic, strong, readonly, nullable) UIWebView *webLabel;
+@property (nonatomic, strong, readonly, nullable) WKWebView *webLabel;
 
 /**
  *  Map Label image label for any image to be used as labels
