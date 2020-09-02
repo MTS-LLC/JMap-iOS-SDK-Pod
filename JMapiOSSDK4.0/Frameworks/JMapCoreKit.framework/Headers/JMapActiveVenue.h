@@ -79,6 +79,10 @@
 *  An NSNumber associated to whether labels should be displayed as clusters on the map.
 */
 @property (nonatomic, strong, readonly, nullable) NSNumber *clustering;
+/**
+*  An NSDictionary associated to the venue for providing extensors data.
+*/
+@property (nonatomic, strong, readonly, nullable) NSDictionary *extensors;
 
 /**
  *  Initializes a JMapActiveVenue.
