@@ -973,6 +973,50 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  */
 -(void)clearWayfindingPath;
 
+/**
+*  Blocks the edge connecting from fromWaypoint to toWaypoint
+*
+*  @param fromWaypoint The starting waypoint to block the edge
+*  @param toWaypoint The ending waypoint to block the edge
+*/
+- (void)blockPathBetweenWaypoint:(nonnull JMapWaypoint *)fromWaypoint andWaypoint:(nonnull JMapWaypoint *)toWaypoint;
+
+/**
+*  Unblocks the edges connecting from fromWaypoint to toWaypoint
+*
+*  @param fromWaypoint The starting waypoint to unblock the edge
+*  @param toWaypoint The ending waypoint to unblock the edge
+*/
+- (void)unblockPathBetweenWaypoint:(nonnull JMapWaypoint *)fromWaypoint andWaypoint:(nonnull JMapWaypoint *)toWaypoint;
+
+/**
+*  Blocks the edges entering a waypoint
+*
+*  @param toWaypoint The waypoint to restrict entry to
+*/
+- (void)blockEntryToWaypoint:(nonnull JMapWaypoint *)toWaypoint;
+
+/**
+*  Unblocks the edges entering a waypoint
+*
+*  @param toWaypoint The waypoint to remove restriction of entry to
+*/
+- (void)unblockEntryToWaypoint:(nonnull JMapWaypoint *)toWaypoint;
+
+/**
+*  Blocks the edges exiting a waypoint
+*
+*  @param fromWaypoint The waypoint to restrict exit from
+*/
+- (void)blockExitFromWaypoint:(nonnull JMapWaypoint *)fromWaypoint;
+
+/**
+*  Unblocks the edges exiting a waypoint
+*
+*  @param fromWaypoint The waypoint to remove restriction of exit from
+*/
+- (void)unblockExitFromWaypoint:(nonnull JMapWaypoint *)fromWaypoint;
+
 #pragma mark - User Location
 
 /**

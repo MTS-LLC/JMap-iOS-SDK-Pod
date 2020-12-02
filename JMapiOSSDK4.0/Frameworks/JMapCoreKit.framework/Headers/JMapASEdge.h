@@ -46,6 +46,10 @@
  */
 @property NSNumber *direction;
 /**
+ *  The blocked status of the edge for whether wayfinding should use this edge.
+ */
+@property BOOL blocked;
+/**
  *  Initializes a JMapASEdge.
  *
  *  @param edgeIdIn The edge ID.

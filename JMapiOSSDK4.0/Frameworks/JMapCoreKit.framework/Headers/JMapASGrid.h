@@ -98,5 +98,36 @@
  *  @return A JMapASNode object neighbor node associated to the node ID.
  */
 -(JMapASNode *) getNeighborNodeObject:(int)idIn;
+/**
+*  Method to block/unblock the edge between 2 nodes
+*
+*  @param fromNode The first node for blocking the edge
+*  @param toNode The second node for blocking the edge
+*  @param block Boolean to block/unblock the edge connecting the nodes
+*/
+-(void)shouldBlockEdgeBetweenNode:(JMapASNode *)fromNode andNode:(JMapASNode *)toNode block:(BOOL)block;
+/**
+*  Method to check if the edge between 2 nodes are blocked
+*
+*  @param fromNode The first node for checking the edge
+*  @param toNode The second node for checking the edge
+*  @return A Boolean indicating whether the edge is blocked
+*/
+-(Boolean)isEdgeBlockedBetweenNode:(JMapASNode *)fromNode andNode:(JMapASNode *)toNode;
+/**
+*  Method to block/unblock the edges entering a node
+*
+*  @param toNode The node for blocking inbound edges
+*  @param block Boolean to block/unblock the edges entering the node
+*/
+- (void)shouldBlockEntryToNode:(JMapASNode *)toNode block:(BOOL)block;
+
+/**
+*  Method to block/unblock the edges exiting a node
+*
+*  @param fromNode The node for blocking outbound edges
+*  @param block Boolean to block/unblock the edges exiting the node
+*/
+- (void)shouldBlockExitFromNode:(JMapASNode *)fromNode block:(BOOL)block;
 
 @end
