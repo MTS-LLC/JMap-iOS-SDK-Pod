@@ -8,10 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  The JMapTransform object.
+ */
 @interface JMapFont : NSObject
 
+/**
+ *  The JMapFont's font family.
+ */
 @property (nonatomic, nullable) NSString *fontFamily;
+/**
+ *  The JMapFont's hex fill string.
+ */
 @property (nonatomic, nullable) NSString *fill;
+/**
+ *  The JMapFont's font size.
+ */
 @property (nonatomic, nullable) NSNumber *fontSize;
 
 @end

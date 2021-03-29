@@ -4,3 +4,8 @@ framework module JMapCoreKit {
   export *
   module * { export * }
 }
+
+module JMapCoreKit.Swift {
+    header "JMapCoreKit-Swift.h"
+    requires objc
+}

@@ -18,6 +18,7 @@
 @class JMapMapLabelCollection;
 @class JMapPathPerFloor;
 @class JMapPosition;
+@class JMapNearestElement;
 
 /**
  *  The JMapActiveVenue model.
@@ -72,16 +73,16 @@
  */
 @property (nonatomic, strong, readonly, nullable) NSDictionary * mapTemplateData;
 /**
-*  An NSNumber associated to how labels are displayed on the map.
-*/
+ *  An NSNumber associated to how labels are displayed on the map.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *labelType;
 /**
-*  An NSNumber associated to whether labels should be displayed as clusters on the map.
-*/
+ *  An NSNumber associated to whether labels should be displayed as clusters on the map.
+ */
 @property (nonatomic, strong, readonly, nullable) NSNumber *clustering;
 /**
-*  An NSDictionary associated to the venue for providing extensors data.
-*/
+ *  An NSDictionary associated to the venue for providing extensors data.
+ */
 @property (nonatomic, strong, readonly, nullable) NSDictionary *extensors;
 
 /**
@@ -124,5 +125,13 @@
  *  @param point The point reference to search with.
  */
 - (nullable JMapWaypoint *)getClosestWaypointInArray:(nonnull NSArray <JMapWaypoint *>*)waypointArray toCoordinate:(CGPoint)point;
+/**
+ *  Gets the nearest waypoint of the searched element on the map from a given coordinate.
+ *  @param element An element to search of type: JMapDestination/JMapAmenity/JMapPathType
+ *  @param point The point reference to search with.
+ *  @param map The JMapMap object to search in.
+ *  @param completion A callback with JMapWaypoint of the nearest searched element to the point in search, searched element and JMapError.
+ */
+-(void)searchNearestElement:(nonnull id)element toCoordinate:(CGPoint)point forMap:(nonnull JMapMap *)map completionHandler:(nonnull void(^)(JMapWaypoint* _Nullable waypoint, id _Nullable element, JMapError* _Nullable error))completion;
 
 @end
