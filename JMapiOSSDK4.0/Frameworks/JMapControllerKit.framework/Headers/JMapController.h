@@ -51,6 +51,12 @@
  */
 @property(nonatomic, nullable, strong, readonly) JMapCanvas *stage;
 
+/**
+ *  Default Styles of Map, Amenities and PathType
+ */
+
+@property(nonatomic, nullable, strong, readonly) NSDictionary *defaultStyles;
+
 #pragma mark - Initializer Methods
 
 /**

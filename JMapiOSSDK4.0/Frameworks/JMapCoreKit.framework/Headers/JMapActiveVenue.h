@@ -134,4 +134,12 @@
  */
 -(void)searchNearestElement:(nonnull id)element toCoordinate:(CGPoint)point forMap:(nonnull JMapMap *)map completionHandler:(nonnull void(^)(JMapWaypoint* _Nullable waypoint, id _Nullable element, JMapError* _Nullable error))completion;
 
+#pragma mark - JMapMap Helpers
+
+/**
+ *  Gets the center latitude and longitude of the map.
+ *  @return point with latitude and longitude.
+ */
+- (CGPoint)getCenterCoordinates;
+
 @end

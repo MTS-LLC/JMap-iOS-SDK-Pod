@@ -122,9 +122,9 @@
  *  Show Map With ID : Display map on the canvas. If map has not been parse yet it will parse the map as well
  *  @param mapId unique Integer identifier for the map
  *  @param svg String that will be parsed
- *  @param completion handler to return a preRendered value or an error
+ *  @param completion handler to return a preRendered value, map style or an error
  */
-- (void)showMapWithId:(NSInteger)mapId svgString:(nonnull NSString *)svg completionHandler:(nonnull void (^)(BOOL preRendered, NSError * _Nullable error))completion;
+- (void)showMapWithId:(NSInteger)mapId svgString:(nonnull NSString *)svg completionHandler:(nonnull void (^)(BOOL preRendered,NSDictionary* _Nullable styles, NSError * _Nullable error))completion;
 
 /**
  *  Parse Map With Id : Pre parses that map but does not display the map on the canvas.
