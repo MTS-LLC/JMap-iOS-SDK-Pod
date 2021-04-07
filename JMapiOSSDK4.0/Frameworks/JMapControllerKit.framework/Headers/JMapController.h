@@ -55,7 +55,7 @@
  *  Default Styles of Map, Amenities and PathType
  */
 
-@property(nonatomic, nullable, strong, readonly) NSDictionary *defaultStyles;
+@property(nonatomic, nullable, strong, readonly) NSDictionary *defaultMapStyle;
 
 #pragma mark - Initializer Methods
 
