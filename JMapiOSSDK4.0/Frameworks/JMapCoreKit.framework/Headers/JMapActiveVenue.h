@@ -106,6 +106,22 @@
  *  @param accessible The accessibility value of the wayfinding route. 0 - 100 with 100 having full accessibility.
  */
 - (nonnull NSArray <JMapPathPerFloor *>*)wayfind:(nonnull JMapWaypoint *)waypointStart to:(nonnull JMapWaypoint *)waypointEnd  withAccessibility:(NSInteger)accessible;
+
+/**
+ *  Generates a list of wayfinding data and alternative wayfinding data with starting and ending waypoints with accessibility.
+ *  @param waypointStart The starting waypoint to wayfind from.
+ *  @param waypointEnd The ending waypoint to wayfind to.
+ *  @param accessible The accessibility value of the wayfinding route. 0 - 100 with 100 having full accessibility.
+ *  @param options For defining properties to set qualifying criteria for alternative path. If passed nil, default values are set
+ *  @code
+ *  NSDictionary *dict = @{
+ *      @"optimalPathMatchRatio": NSNumber - 0~1, default 0.6 (alternativePaths path should not overlap optimal path more than 60 %)
+ *      @"optimalPathDistanceRatio": NSNumber, default 2 (alternativePaths path at max can be 2 times in distance with respect to optimal path)
+ *  }
+ *  @param completion A callback with shortest/optimal path and alternativePaths path
+ */
+- (void)wayfind:(JMapWaypoint *_Nullable)waypointStart to:(JMapWaypoint *_Nullable)waypointEnd withOptions:(NSDictionary*_Nullable)options withAccessibility:(NSInteger)accessible completionHandler:(nonnull void(^)(NSArray <JMapPathPerFloor *>* _Nullable optimalPath, NSArray<NSArray <JMapPathPerFloor *>*>* _Nullable alternativePaths))completion;
+
 /**
  *  Gets the nearest waypoint in an array from a reference waypoint.
  *  @param waypointArray An NSArray of JMapWaypoint objects to search in.

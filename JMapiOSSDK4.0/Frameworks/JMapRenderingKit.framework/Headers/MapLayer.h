@@ -63,4 +63,6 @@
  */
 - (void)addShapeLayer:(CALayer *)shapeLayer;
 
+- (BOOL)isLayerWithName:(nonnull NSString *)layerName;
+
 @end

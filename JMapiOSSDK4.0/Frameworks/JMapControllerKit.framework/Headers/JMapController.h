@@ -914,6 +914,23 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (nonnull NSArray<JMapPathPerFloor*> *)wayfindBetweenWaypoint:(nonnull JMapWaypoint *)waypointStart andWaypoint:(nonnull JMapWaypoint *)waypointEnd withAccessibility:(NSInteger)accessibility withObstacle:(nullable NSArray <NSString *>*)obstacles;
 
 /**
+ *  Generates JMapPathPerFloor data for shortest path and alternative path.
+ *
+ *  @param waypointStart A JMapWaypoint object as starting point
+ *  @param waypointEnd A JMapWaypoint object as ending point
+ *  @param options For defining properties to set qualifying criteria for alternative path. If passed nil, default values are set
+ *  @code
+ *  NSDictionary *dict = @{
+ *      @"optimalPathMatchRatio": NSNumber - 0~1, default 0.6 (alternative path should not overlap optimal path more than 60 %)
+ *      @"optimalPathDistanceRatio": NSNumber, default 2 (alternative path at max can be 2 times in distance with respect to optimal path)
+ *  }
+ *  @param accessibility A NSInteger value between 0-100 to indicate accessibility level; 0 - Not accessible, 100 - accessible path
+ *  @param obstacles An NSArray of obstacle layer names used for path generalization
+ *  @param completion A callback with shortest/optimal path and array of alternative paths
+ */
+- (void)wayfindWithAlternativePathsBetweenWaypoint:(JMapWaypoint *_Nullable)waypointStart andWaypoint:(JMapWaypoint *_Nullable)waypointEnd withOptions:(NSDictionary*_Nullable)options withAccessibility:(NSInteger)accessibility withObstacle:(NSArray <NSString *>*_Nullable)obstacles completionHandler:(nonnull void(^)(NSArray <JMapPathPerFloor *>* _Nullable optimalPath, NSArray<NSArray <JMapPathPerFloor *>*>* _Nullable alternativePaths))completion;
+
+/**
  *  Finds the waypoint with shortest path from the start waypoint, with the path adhering to the given accessibility and obstacles
  *  Generates an NSArray containing JMapPathPerFloor data.
  *
@@ -940,6 +957,16 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param style A JMapSVGStyle object containing styling information
  */
 -(void)drawWayfindingPath:(nonnull JMapPathPerFloor*)wayfindPath withStyle:(nonnull JMapStyle*)style;
+
+/**
+ *  Draws the wayfind optimal and alternative path on the map with custom styling.
+ *
+ *  @param wayfindPaths An array of JMapPathPerFloor objects returned in the of method wayfindBetweenWaypoint:andWaypoint:withOptions:withAccessibility
+ *  @param style A JMapSVGStyle object containing styling information
+ *  @param alternativePaths An array of JMapPathPerFloor objects array returned in the of method wayfindBetweenWaypoint:andWaypoint:withOptions:withAccessibility
+ *  @param alternativePathStyle A JMapSVGStyle object containing styling information for alternative paths
+ */
+-(void)drawWayfindingPaths:(NSArray<JMapPathPerFloor *>*_Nonnull)wayfindPaths withStyle:(JMapStyle*_Nullable)style  withAlternativePaths:(NSArray<NSArray<JMapPathPerFloor *>*>*_Nullable)alternativePaths withAlternativePathStyle:(JMapStyle*_Nullable)alternativePathStyle;
 
 /**
  *  Get Bézier Path From Path Per Floor
@@ -1090,6 +1117,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  * @return an array of objects, in order of most to least relevant based on your, Query and Ranked Properties.
  */
 + (nonnull NSArray*) getObjectsInArray:(nonnull NSArray*)array byString:(nonnull NSString *)query highRankProperties:(nullable NSArray<NSString *>*)rankedProperties maxResults:(nullable NSNumber*)maxResults;
+
 
 @end
 

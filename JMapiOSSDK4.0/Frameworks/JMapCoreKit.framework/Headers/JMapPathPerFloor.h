@@ -41,5 +41,13 @@
  *  The cost of the path per floor object.
  */
 @property float cost;
+/**
+ *  Distance of the path in pixel.
+ */
+@property NSNumber *pixelDistance;
+/**
+ *  Distance of the path in mm.
+ */
+@property NSNumber *mmDistance;
 
 @end

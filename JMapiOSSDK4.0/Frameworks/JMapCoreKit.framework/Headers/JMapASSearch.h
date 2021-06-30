@@ -31,6 +31,10 @@
  */
 @property JMapASGrid *grid;
 /**
+ *  The JMapMapCollection object associated with the active venue.
+ */
+@property JMapMapCollection * maps;
+/**
  *  The search algorithm for wayfinding.
  *
  *  @param from An integer value of the waypoint/node ID.

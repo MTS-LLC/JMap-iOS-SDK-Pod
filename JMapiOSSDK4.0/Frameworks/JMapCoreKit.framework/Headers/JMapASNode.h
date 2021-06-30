@@ -65,6 +65,10 @@
  */
 @property NSNumber *h;
 /**
+ *  distance from parent node.
+ */
+@property NSNumber *distance;
+/**
  *  The parent associated to the node of type JMapASNode.
  */
 @property JMapASNode *parent;
