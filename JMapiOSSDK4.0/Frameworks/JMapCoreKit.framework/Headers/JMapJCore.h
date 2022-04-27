@@ -17,6 +17,8 @@
 @class JMapLocaleCollection;
 @class JMapLocale;
 @class JMapUtils;
+@class VenueDestinationCollection;
+@class JMapMultiActiveVenues;
 
 /**
  *  The JMapJCoreDelegate model.
@@ -62,6 +64,11 @@
  *  The locale string used for defining localization. Defaults to en-US
  */
 @property (nonatomic, strong, readonly, nullable) NSString *locale;
+
+/**
+ *  The Venue and Destination collection of the JCore.
+ */
+@property(nonatomic, strong, readonly, nullable) VenueDestinationCollection *venueDestinations;
 
 #pragma mark - Versioning
 
@@ -180,6 +187,24 @@
  *  @param completionHandler - callback method.
  */
 - (void)getRequest:(nonnull NSString *)url completionHandler:(nonnull void(^)(NSDictionary * _Nullable data, JMapError* _Nullable error))completionHandler;
+
+#pragma mark - Multiple ActiveVenue
+/**
+ *  Populates multiple venues by venue ID and also populates corresponding default building.
+ *
+ *  @param venueIds An array NSInteger ID associated to the venues.
+ *  @param completionHandler A callback that returns a JMapMultiActiveVenues object and JMapError debugging.
+ */
+-(void)populateVenuesWithDefaultBuilding:(nonnull NSArray <NSNumber*>*)venueIds completionHandler:(nonnull void(^)(JMapMultiActiveVenues* _Nullable multiActiveVenues, JMapError* _Nullable error))completionHandler;
+
+#pragma mark - Load destinations for venues
+/**
+ *  Populates destinations by venue IDs
+ *
+ *  @param venueIds An array of venue IDs
+ *  @param completionHandler A callback that returns a VenueDestinationCollection object and JMapError debugging.
+ */
+-(void)populateDestinationsForVenues:(NSArray <NSNumber*>*_Nullable)venueIds completionHandler:(nonnull void(^)(VenueDestinationCollection * _Nullable venueDestinations, JMapError* _Nullable error))completionHandler;
 
 #pragma mark - Cache
 /**

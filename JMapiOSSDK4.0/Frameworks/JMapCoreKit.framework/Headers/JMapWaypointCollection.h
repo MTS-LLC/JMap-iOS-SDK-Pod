@@ -28,6 +28,7 @@
  *  @return An NSArray of JMapWaypoint objects associated to the external ID.
  */
 - (nonnull NSArray <JMapWaypoint *>*)getByExternalId:(nonnull NSString *)externalId;
+
 /**
  *  Gets a JMapWaypoint object by ID in the collection.
  * 

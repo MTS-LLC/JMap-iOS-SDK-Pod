@@ -62,6 +62,7 @@
  * @return An NSArray of JMapBaseModel objects associated to the external ID.
  */
 - (nonnull NSArray <JMapBaseModel *>*)getByExternalId:(nonnull NSString *)externalId;
+
 /**
  * Gets JMapBaseModel objects by ID in the collection.
  *

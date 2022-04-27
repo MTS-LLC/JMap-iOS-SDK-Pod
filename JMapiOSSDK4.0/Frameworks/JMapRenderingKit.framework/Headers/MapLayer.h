@@ -18,23 +18,23 @@
 /**
  *  Optional dictionary key value pairs for the map layer
  */
-@property (nonatomic, strong) NSDictionary * options;
+@property (nullable, nonatomic, strong) NSDictionary * options;
 /**
  *  The ID of the map layer
  */
-@property (nonatomic, strong) NSNumber * id;
+@property (nullable, nonatomic, strong) NSNumber * id;
 /**
  *  The name of the map layer
  */
-@property (nonatomic, strong) NSString * name;
+@property (nullable, nonatomic, strong) NSString * name;
 /**
  *  The sequence of the map layer
  */
-@property (nonatomic, strong) NSDictionary * sequence;
+@property (nullable, nonatomic, strong) NSDictionary * sequence;
 /**
  *  The sub maps associated to the map layer
  */
-@property (nonatomic, strong) NSMutableArray * subMaps;
+@property (nullable, nonatomic, strong) NSMutableArray * subMaps;
 /**
  *  The map layer's interactivity
  */
@@ -42,7 +42,7 @@
 /**
  *  The parent reference of the map layer
  */
-@property (nonatomic, weak) JMapBaseLayer * parentMap;
+@property (nullable, nonatomic, weak) JMapBaseLayer * parentMap;
 
 /**
  *  Init With ID : Constructor method MapLayer
@@ -54,14 +54,14 @@
  *
  *  @return newly created MapLayer object
  */
-- (instancetype)initWithId:(NSNumber *)layerId options:(NSDictionary *)options name:(NSString *)name sequence:(NSDictionary *)sequence;
+- (nonnull instancetype)initWithId:(nullable NSNumber *)layerId options:(nullable NSDictionary *)options name:(nullable NSString *)name sequence:(nullable NSDictionary *)sequence;
 
 /**
  *  Add Shape Layer : used to add a shape layer to this map layer
  *
  *  @param shapeLayer shape to add to this layer
  */
-- (void)addShapeLayer:(CALayer *)shapeLayer;
+- (void)addShapeLayer:(nonnull CALayer *)shapeLayer;
 
 - (BOOL)isLayerWithName:(nonnull NSString *)layerName;
 

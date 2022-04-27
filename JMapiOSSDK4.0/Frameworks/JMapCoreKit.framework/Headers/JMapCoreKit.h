@@ -29,6 +29,8 @@
 #import <JMapCoreKit/JMapActiveVenue.h>
 #import <JMapCoreKit/JMapMapLabelInstance.h>
 #import <JMapCoreKit/JMapLocale.h>
+#import <JMapCoreKit/JMapVenueDestination.h>
+#import <JMapCoreKit/JMapMultiActiveVenues.h>
 
 //Collection Objects
 #import <JMapCoreKit/JMapBaseCollection.h>
@@ -45,6 +47,7 @@
 #import <JMapCoreKit/JMapMapLabelCollection.h>
 #import <JMapCoreKit/JMapMapLabelInstances.h>
 #import <JMapCoreKit/JMapLocaleCollection.h>
+#import <JMapCoreKit/VenueDestinationCollection.h>
 
 // Utilities
 #import <JMapCoreKit/JMapCoreUtils.h>
@@ -61,5 +64,5 @@
 #import <JMapCoreKit/JMapPathPerFloor.h>
 #import <JMapCoreKit/JMapPoint.h>
 
-#define JMapSDK_VERSION_STRING @"5.8.2"
+#define JMapSDK_VERSION_STRING @"5.9.0"
 #define JMapSDK_DEFAULT_TARGET_SERVER_VERSION @"4.12"

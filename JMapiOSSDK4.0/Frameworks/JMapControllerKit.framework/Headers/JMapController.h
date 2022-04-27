@@ -961,10 +961,10 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 /**
  *  Draws the wayfind optimal and alternative path on the map with custom styling.
  *
- *  @param wayfindPaths An array of JMapPathPerFloor objects returned in the of method wayfindBetweenWaypoint:andWaypoint:withOptions:withAccessibility
- *  @param style A JMapSVGStyle object containing styling information
- *  @param alternativePaths An array of JMapPathPerFloor objects array returned in the of method wayfindBetweenWaypoint:andWaypoint:withOptions:withAccessibility
- *  @param alternativePathStyle A JMapSVGStyle object containing styling information for alternative paths
+ *  @param wayfindPaths An array of JMapPathPerFloor objects returned in the method wayfindWithAlternativePathsBetweenWaypoint:andWaypoint:withOptions:withAccessibility
+ *  @param style A JMapSVGStyle object containing styling information (default is red)
+ *  @param alternativePaths An array of JMapPathPerFloor objects array returned in the method wayfindWithAlternativePathsBetweenWaypoint:andWaypoint:withOptions:withAccessibility
+ *  @param alternativePathStyle A JMapSVGStyle object containing styling information for alternative paths (default is gray)
  */
 -(void)drawWayfindingPaths:(NSArray<JMapPathPerFloor *>*_Nonnull)wayfindPaths withStyle:(JMapStyle*_Nullable)style  withAlternativePaths:(NSArray<NSArray<JMapPathPerFloor *>*>*_Nullable)alternativePaths withAlternativePathStyle:(JMapStyle*_Nullable)alternativePathStyle;
 

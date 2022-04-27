@@ -55,6 +55,14 @@
  */
 @property (nonatomic, assign) BOOL snapToWaypoint;
 /**
+ *  Returns whether the moving object should snap to wayfinding path on the map
+ */
+@property (nonatomic, readonly) BOOL shouldSnapToWayfindingPath;
+/**
+ *  Returns the threshold of when the moving object should snap to wayfinding path on the map, measured in pixels
+ */
+@property (nonatomic, readonly) float snapToWayfindingPathThreshold;
+/**
  *  The custom view of the moving object
  */
 @property (nonatomic, nullable) UIView *customView;
@@ -122,5 +130,9 @@
  *  Default pop in animation of the moving object
  */
 @property (nonatomic, copy) void (^_Nonnull willMoveToSuperviewAnimationBlock)(JMapMovingObject * _Nonnull view, UIView * _Nonnull superview);
+/**
+ *  Set behaviour of the moving object to snap to wayfidning path on the map
+ */
+-(void)snapToWayfindingPathWithThreshold:(float)threshold;
 
 @end

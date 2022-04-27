@@ -63,9 +63,11 @@
  *  @param pathTypesIn The list of JMapPathType objects.
  *  @param mapFullsIn The list of JMapMap objects.
  *  @param buildings The list of JMapBuilding objects.
+ *  @param isMultiVenueLoaded True if generating grid for multiple venues
  *  @return An initialized JMapASGrid instance.
  */
--(id)initASGrid:(NSArray *)waypointsIn pathsIn:(NSArray *)pathsIn pathTypesIn:(NSArray *)pathTypesIn mapFullsIn:(NSArray *)mapFullsIn buildings:(NSArray *)buildings;
+-(id)initASGrid:(NSArray *)waypointsIn pathsIn:(NSArray *)pathsIn pathTypesIn:(NSArray *)pathTypesIn mapFullsIn:(NSArray *)mapFullsIn buildings:(NSArray *)buildings isForMultiVenue:(BOOL)isMultiVenueLoaded;
+
 /**
  *  Gets the Z value of the map with the map ID.
  *
