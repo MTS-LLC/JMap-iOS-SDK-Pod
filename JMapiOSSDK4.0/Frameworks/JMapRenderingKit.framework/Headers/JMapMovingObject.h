@@ -130,6 +130,7 @@
  *  Default pop in animation of the moving object
  */
 @property (nonatomic, copy) void (^_Nonnull willMoveToSuperviewAnimationBlock)(JMapMovingObject * _Nonnull view, UIView * _Nonnull superview);
+
 /**
  *  Set behaviour of the moving object to snap to wayfidning path on the map
  */

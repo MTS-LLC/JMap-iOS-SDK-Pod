@@ -18,10 +18,23 @@
  *  Set whether the item view be centered on the view port
  */
 @property (nonatomic, assign) BOOL tracking;
+/**
+ *  Set whether the wayfinding path auto reroute based on the user locaton
+ */
+@property (nonatomic, readonly) BOOL shouldAutoRerouteWayfindingPath;
+/**
+ *  Returns the threshold of when the the wayfindng path should auto reroute on the map, measured in pixels
+ */
+@property (nonatomic, readonly) float autoRerouteWayfindingPathThreshold;
 
 /**
  *  A singleton JMapUserLocation instance
  */
 + (instancetype)sharedInstance;
+
+/**
+ *  Set behaviour of the blue dot to reroute the wayfidning path on the map
+ */
+-(void)autoRerouteWayfindingPathWithThreshold:(float)threshold;
 
 @end

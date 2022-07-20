@@ -49,5 +49,13 @@
  *  Distance of the path in mm.
  */
 @property NSNumber *mmDistance;
+/**
+ *  accessibility level set for the JMapPathPerFloor. Accessibility is a NSInteger value between 0-100 to indicate accessibility level; 0 - Not accessible, 100 - accessible path
+ */
+@property NSInteger accessibility;
+/**
+ *  an array of obstacles set for the JMapPathPerFloor. Obstacles is an NSArray of obstacle layer names used for path generalization
+ */
+@property NSArray <NSString *>* obstacles;
 
 @end

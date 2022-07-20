@@ -604,18 +604,18 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 - (void)applyDisplayModeToUnits:(nonnull NSArray<Shape *>*)units withJMapFont:(nullable JMapFont *)jmapFont;
 
 /**
-*  Restricts how many labels are visible at all times when point label is active
-*
-*  @param limit An NSNumber to indicate the number of labels to be shown
-*/
+ *  Restricts how many labels are visible at all times when point label is active
+ *
+ *  @param limit An NSNumber to indicate the number of labels to be shown
+ */
 - (void)setVisiblePointLabelLimit:(nonnull NSNumber *)limit;
 
 /**
-*  Set the zoom level at where clustering should happen for labels
-*  Default value set to 5
-*
-*  @param zoomScale The zoom scale to set for clustering labels
-*/
+ *  Set the zoom level at where clustering should happen for labels
+ *  Default value set to 5
+ *
+ *  @param zoomScale The zoom scale to set for clustering labels
+ */
 - (void)setZoomScaleForLabelClustering:(nonnull NSNumber *)zoomScale;
 
 #pragma mark - Component/Popup Helpers
@@ -948,7 +948,14 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *
  *  @param wayfindPath A JMapPathPerFloor object returned in the method wayfindBetweenWaypoint:andWaypoint:withAccessibility
  */
--(void)drawWayfindingPath:(nonnull JMapPathPerFloor*)wayfindPath;
+-(void)drawWayfindingPath:(nonnull JMapPathPerFloor*)wayfindPath __attribute__((deprecated("drawWayfindingPath has been deprecated, please use drawWayfindingPaths instead")));
+
+/**
+ *  Draws the wayfind path on the map.
+ *
+ *  @param wayfindPaths An array of JMapPathPerFloor objects returned in the method wayfindBetweenWaypoint:andWaypoint:withAccessibility
+ */
+-(void)drawWayfindingPaths:(nonnull NSArray<JMapPathPerFloor*>*)wayfindPaths;
 
 /**
  *  Draws the wayfind path on the map with custom styling.
@@ -956,7 +963,15 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *  @param wayfindPath A JMapPathPerFloor object returned in the of method wayfindBetweenWaypoint:andWaypoint:withAccessibility
  *  @param style A JMapSVGStyle object containing styling information
  */
--(void)drawWayfindingPath:(nonnull JMapPathPerFloor*)wayfindPath withStyle:(nonnull JMapStyle*)style;
+-(void)drawWayfindingPath:(nonnull JMapPathPerFloor*)wayfindPath withStyle:(nonnull JMapStyle*)style  __attribute__((deprecated("drawWayfindingPath: withStyle: has been deprecated, please use drawWayfindingPaths: withStyle: instead")));
+
+/**
+ *  Draws the wayfind path on the map with custom styling.
+ *
+ *  @param wayfindPaths  An array of JMapPathPerFloor objects returned in the of method wayfindBetweenWaypoint:andWaypoint:withAccessibility
+ *  @param style A JMapSVGStyle object containing styling information
+ */
+-(void)drawWayfindingPaths:(nonnull NSArray<JMapPathPerFloor*>*)wayfindPaths withStyle:(nullable JMapStyle*)style;
 
 /**
  *  Draws the wayfind optimal and alternative path on the map with custom styling.
@@ -1007,47 +1022,47 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 -(void)clearWayfindingPath;
 
 /**
-*  Blocks the edge connecting from fromWaypoint to toWaypoint
-*
-*  @param fromWaypoint The starting waypoint to block the edge
-*  @param toWaypoint The ending waypoint to block the edge
-*/
+ *  Blocks the edge connecting from fromWaypoint to toWaypoint
+ *
+ *  @param fromWaypoint The starting waypoint to block the edge
+ *  @param toWaypoint The ending waypoint to block the edge
+ */
 - (void)blockPathBetweenWaypoint:(nonnull JMapWaypoint *)fromWaypoint andWaypoint:(nonnull JMapWaypoint *)toWaypoint;
 
 /**
-*  Unblocks the edges connecting from fromWaypoint to toWaypoint
-*
-*  @param fromWaypoint The starting waypoint to unblock the edge
-*  @param toWaypoint The ending waypoint to unblock the edge
-*/
+ *  Unblocks the edges connecting from fromWaypoint to toWaypoint
+ *
+ *  @param fromWaypoint The starting waypoint to unblock the edge
+ *  @param toWaypoint The ending waypoint to unblock the edge
+ */
 - (void)unblockPathBetweenWaypoint:(nonnull JMapWaypoint *)fromWaypoint andWaypoint:(nonnull JMapWaypoint *)toWaypoint;
 
 /**
-*  Blocks the edges entering a waypoint
-*
-*  @param toWaypoint The waypoint to restrict entry to
-*/
+ *  Blocks the edges entering a waypoint
+ *
+ *  @param toWaypoint The waypoint to restrict entry to
+ */
 - (void)blockEntryToWaypoint:(nonnull JMapWaypoint *)toWaypoint;
 
 /**
-*  Unblocks the edges entering a waypoint
-*
-*  @param toWaypoint The waypoint to remove restriction of entry to
-*/
+ *  Unblocks the edges entering a waypoint
+ *
+ *  @param toWaypoint The waypoint to remove restriction of entry to
+ */
 - (void)unblockEntryToWaypoint:(nonnull JMapWaypoint *)toWaypoint;
 
 /**
-*  Blocks the edges exiting a waypoint
-*
-*  @param fromWaypoint The waypoint to restrict exit from
-*/
+ *  Blocks the edges exiting a waypoint
+ *
+ *  @param fromWaypoint The waypoint to restrict exit from
+ */
 - (void)blockExitFromWaypoint:(nonnull JMapWaypoint *)fromWaypoint;
 
 /**
-*  Unblocks the edges exiting a waypoint
-*
-*  @param fromWaypoint The waypoint to remove restriction of exit from
-*/
+ *  Unblocks the edges exiting a waypoint
+ *
+ *  @param fromWaypoint The waypoint to remove restriction of exit from
+ */
 - (void)unblockExitFromWaypoint:(nonnull JMapWaypoint *)fromWaypoint;
 
 #pragma mark - User Location
