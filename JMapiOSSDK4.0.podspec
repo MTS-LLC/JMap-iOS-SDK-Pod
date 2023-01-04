@@ -12,6 +12,6 @@ s.version='5.10.1'
   s.ios.deployment_target = '9.0'
   s.platform = :ios, '9.0'
 #  s.source_files = 'JMapiOSSDK4.0/Classes/*.{h,m}'
-  s.vendored_frameworks = 'JMapiOSSDK4.0/Frameworks/*.framework'
+  s.vendored_frameworks = 'JMapiOSSDK4.0/Frameworks/*.xcframework'
 
 end
