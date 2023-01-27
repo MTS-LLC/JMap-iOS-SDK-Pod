@@ -10,7 +10,7 @@ s.version='5.11.2'
   s.source           = { :git => 'https://github.com/Jibestream/JMap-iOS-SDK-Pod.git', :tag => "#{s.version}" }
 
   s.ios.deployment_target = '10.0'
-  s.platform = :ios, '10.0'
+  s.platform = :ios, '9.0'
 #  s.source_files = 'JMapiOSSDK4.0/Classes/*.{h,m}'
   s.vendored_frameworks = 'JMapiOSSDK4.0/Frameworks/*.xcframework'
 
