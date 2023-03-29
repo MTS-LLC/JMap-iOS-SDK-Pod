@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/JMapASGrid.h</key>
 		<data>
-		PJb856Gm5tCYWsUJlMTvBiodyQY=
+		sWDIo5q1Pb0BjNEeqVepSPvfCSY=
 		</data>
 		<key>Headers/JMapASNode.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/JMapASSearch.h</key>
 		<data>
-		IVVZ/Y6pe8np5S0oUoG6k+3NXPI=
+		lcBUDm+3ZS7TUOnri10VEgRwiz4=
 		</data>
 		<key>Headers/JMapActiveVenue.h</key>
 		<data>
-		luJbuIELGYoaDIUovMP+Zagjnzk=
+		30gEJ8FutRGhRNzuBMg9HLixRz0=
 		</data>
 		<key>Headers/JMapAmenity.h</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Headers/JMapCoreKit-Swift.h</key>
 		<data>
-		Dzi1LKfaVgz3dLthhZ6E8h5+NmY=
+		MXT7FpXtuhrPOUCVZ6pA8XsX3og=
 		</data>
 		<key>Headers/JMapCoreKit.h</key>
 		<data>
-		gZKUyH+L5MtX6CkoD9coyNw2Zyc=
+		FyZJA/gHDObh/RjYSDZiw77BChA=
 		</data>
 		<key>Headers/JMapCoreUtils.h</key>
 		<data>
@@ -210,11 +210,11 @@
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		g4ilEb0sHgmT/lyG5pYfxZm32qg=
+		y4D5qS4ndX0HohJVlsFrARoWIfk=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/lFIWbodkMrP0GoQP9q0v51g608=
+		L3f/EPlZE4DFWTGv7QFsYrUWcOU=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -222,11 +222,11 @@
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		g4ilEb0sHgmT/lyG5pYfxZm32qg=
+		y4D5qS4ndX0HohJVlsFrARoWIfk=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		/lFIWbodkMrP0GoQP9q0v51g608=
+		L3f/EPlZE4DFWTGv7QFsYrUWcOU=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -234,11 +234,11 @@
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		iTwmpU83KZoPZIIAIFU4FV1hfsA=
+		zx7Ur1EsvNUFKaiI/LB3TWLAStc=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JgrUYtbTs3E5hqv1VNLbYnQq0sk=
+		ER0svjsgMxrAMz54jgZk/DcD9Zw=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -246,11 +246,11 @@
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/i386.swiftinterface</key>
 		<data>
-		iTwmpU83KZoPZIIAIFU4FV1hfsA=
+		zx7Ur1EsvNUFKaiI/LB3TWLAStc=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/i386.swiftmodule</key>
 		<data>
-		JgrUYtbTs3E5hqv1VNLbYnQq0sk=
+		ER0svjsgMxrAMz54jgZk/DcD9Zw=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -258,11 +258,11 @@
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		otX+JY9ZhGjfFMi5UamBSP3RdVU=
+		cjfjZuqfKrihH1hRJQgK6R+NDdk=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		h0y7gCRXNyYEludSfqTiVgYEvk4=
+		J9IUeND55XjfX6Xm/H81Lcghozs=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -270,11 +270,11 @@
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		otX+JY9ZhGjfFMi5UamBSP3RdVU=
+		cjfjZuqfKrihH1hRJQgK6R+NDdk=
 		</data>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		h0y7gCRXNyYEludSfqTiVgYEvk4=
+		J9IUeND55XjfX6Xm/H81Lcghozs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -298,11 +298,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PJb856Gm5tCYWsUJlMTvBiodyQY=
+			sWDIo5q1Pb0BjNEeqVepSPvfCSY=
 			</data>
 			<key>hash2</key>
 			<data>
-			R4u9lLN5dUGmbFZdcMhqL9AEyuD1uV1haMKP+DoHBOI=
+			xQXubgnR4Axu5twm0ZQPn0CBt6sQzPybPM0J4GvHcMo=
 			</data>
 		</dict>
 		<key>Headers/JMapASNode.h</key>
@@ -320,22 +320,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IVVZ/Y6pe8np5S0oUoG6k+3NXPI=
+			lcBUDm+3ZS7TUOnri10VEgRwiz4=
 			</data>
 			<key>hash2</key>
 			<data>
-			MZGXzv6ilYQTqGa5T/YPiwjOpvxrfMQhAGrTRBzV5MU=
+			h9fYecsTnUVYe/FCF8E1dd/qHsKm1WvJP11t8/IS79w=
 			</data>
 		</dict>
 		<key>Headers/JMapActiveVenue.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			luJbuIELGYoaDIUovMP+Zagjnzk=
+			30gEJ8FutRGhRNzuBMg9HLixRz0=
 			</data>
 			<key>hash2</key>
 			<data>
-			YFd1aiYInC4ORxUoKMMZ1UiixDonTHIm1fLgfyqju9I=
+			6GzhlMnr3xM/UUA8YFELF7fowNLygOSDw270tkIeGqo=
 			</data>
 		</dict>
 		<key>Headers/JMapAmenity.h</key>
@@ -419,22 +419,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Dzi1LKfaVgz3dLthhZ6E8h5+NmY=
+			MXT7FpXtuhrPOUCVZ6pA8XsX3og=
 			</data>
 			<key>hash2</key>
 			<data>
-			SdromsQJQprczgi1SqKtocKD8R3tOrAKNf9PvR5X15U=
+			UzEmoln5x3FpQxh1OQ/4eOibPMdsdhMxkt2YJ2AB4gk=
 			</data>
 		</dict>
 		<key>Headers/JMapCoreKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gZKUyH+L5MtX6CkoD9coyNw2Zyc=
+			FyZJA/gHDObh/RjYSDZiw77BChA=
 			</data>
 			<key>hash2</key>
 			<data>
-			SnjJR8WANiZdmWJgwveTqjxRtZZeBlh2pCaNvyYGazA=
+			RxFCG2yuLmt3IttSOK4+LYHHiHVI55xMedN8NvZkRPI=
 			</data>
 		</dict>
 		<key>Headers/JMapCoreUtils.h</key>
@@ -837,22 +837,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			g4ilEb0sHgmT/lyG5pYfxZm32qg=
+			y4D5qS4ndX0HohJVlsFrARoWIfk=
 			</data>
 			<key>hash2</key>
 			<data>
-			BA2sSlR3qkf7+BLs+4kYb/uZhk+QJBRCc8c/Chv4UDw=
+			ipdNPUCGDfh3rWAKSXImJfUcF67dh6rfbi/M/Y84vJE=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/lFIWbodkMrP0GoQP9q0v51g608=
+			L3f/EPlZE4DFWTGv7QFsYrUWcOU=
 			</data>
 			<key>hash2</key>
 			<data>
-			/j7o3x7GR/W8PVt9OUVn0z/xzDF5/uKUOnqci5B6fSM=
+			aAZaZxkQKM0zmnPNbQuB3JYKIWaN58obccFDFBZsJjs=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/arm64.swiftdoc</key>
@@ -870,22 +870,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			g4ilEb0sHgmT/lyG5pYfxZm32qg=
+			y4D5qS4ndX0HohJVlsFrARoWIfk=
 			</data>
 			<key>hash2</key>
 			<data>
-			BA2sSlR3qkf7+BLs+4kYb/uZhk+QJBRCc8c/Chv4UDw=
+			ipdNPUCGDfh3rWAKSXImJfUcF67dh6rfbi/M/Y84vJE=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/lFIWbodkMrP0GoQP9q0v51g608=
+			L3f/EPlZE4DFWTGv7QFsYrUWcOU=
 			</data>
 			<key>hash2</key>
 			<data>
-			/j7o3x7GR/W8PVt9OUVn0z/xzDF5/uKUOnqci5B6fSM=
+			aAZaZxkQKM0zmnPNbQuB3JYKIWaN58obccFDFBZsJjs=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -903,22 +903,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iTwmpU83KZoPZIIAIFU4FV1hfsA=
+			zx7Ur1EsvNUFKaiI/LB3TWLAStc=
 			</data>
 			<key>hash2</key>
 			<data>
-			S7TaVQ/nlz9xvuQSkpuB8R0s11dD/SVMx2NyKUS/Ysg=
+			Sg1gZwQE0J44B1i6FXHsNqQA8vWGYMLxBhF2luUY30M=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JgrUYtbTs3E5hqv1VNLbYnQq0sk=
+			ER0svjsgMxrAMz54jgZk/DcD9Zw=
 			</data>
 			<key>hash2</key>
 			<data>
-			30OvIT0EBf0Fad6UXN5d1cpqCIwbZldjeC70B8nsNPo=
+			6jnkOjYFyKq+W9/XBGo3DK9dwBR1afnptlsarZzQ8/Q=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/i386.swiftdoc</key>
@@ -936,22 +936,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iTwmpU83KZoPZIIAIFU4FV1hfsA=
+			zx7Ur1EsvNUFKaiI/LB3TWLAStc=
 			</data>
 			<key>hash2</key>
 			<data>
-			S7TaVQ/nlz9xvuQSkpuB8R0s11dD/SVMx2NyKUS/Ysg=
+			Sg1gZwQE0J44B1i6FXHsNqQA8vWGYMLxBhF2luUY30M=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JgrUYtbTs3E5hqv1VNLbYnQq0sk=
+			ER0svjsgMxrAMz54jgZk/DcD9Zw=
 			</data>
 			<key>hash2</key>
 			<data>
-			30OvIT0EBf0Fad6UXN5d1cpqCIwbZldjeC70B8nsNPo=
+			6jnkOjYFyKq+W9/XBGo3DK9dwBR1afnptlsarZzQ8/Q=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -969,22 +969,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			otX+JY9ZhGjfFMi5UamBSP3RdVU=
+			cjfjZuqfKrihH1hRJQgK6R+NDdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			CiIewxY/9oMwygUtndQAvKwft0xA9p8aSbfgv2V1wEI=
+			NUQRBz8/oHcPFLSU9trFA7TAdumaYkMZFHw6+7BikJc=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h0y7gCRXNyYEludSfqTiVgYEvk4=
+			J9IUeND55XjfX6Xm/H81Lcghozs=
 			</data>
 			<key>hash2</key>
 			<data>
-			xYyCgTJz0xC8wENa+0xmNjIkbcaNeVUmhHPjgWgdbPA=
+			658ewkcz1cUZLuejD3ebIYBIMtG1nDY78S11acaJfcI=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64.swiftdoc</key>
@@ -1002,22 +1002,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			otX+JY9ZhGjfFMi5UamBSP3RdVU=
+			cjfjZuqfKrihH1hRJQgK6R+NDdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			CiIewxY/9oMwygUtndQAvKwft0xA9p8aSbfgv2V1wEI=
+			NUQRBz8/oHcPFLSU9trFA7TAdumaYkMZFHw6+7BikJc=
 			</data>
 		</dict>
 		<key>Modules/JMapCoreKit.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h0y7gCRXNyYEludSfqTiVgYEvk4=
+			J9IUeND55XjfX6Xm/H81Lcghozs=
 			</data>
 			<key>hash2</key>
 			<data>
-			xYyCgTJz0xC8wENa+0xmNjIkbcaNeVUmhHPjgWgdbPA=
+			658ewkcz1cUZLuejD3ebIYBIMtG1nDY78S11acaJfcI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

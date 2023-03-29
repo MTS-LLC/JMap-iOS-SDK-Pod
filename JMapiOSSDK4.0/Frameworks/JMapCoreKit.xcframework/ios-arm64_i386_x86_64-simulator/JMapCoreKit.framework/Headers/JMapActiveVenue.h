@@ -19,6 +19,8 @@
 @class JMapPathPerFloor;
 @class JMapPosition;
 @class JMapNearestElement;
+@class JMapPoint;
+@class JMapDestination;
 
 /**
  *  The JMapActiveVenue model.
@@ -121,6 +123,15 @@
  *  @param completion A callback with shortest/optimal path and alternativePaths path
  */
 - (void)wayfind:(JMapWaypoint *_Nullable)waypointStart to:(JMapWaypoint *_Nullable)waypointEnd withOptions:(NSDictionary*_Nullable)options withAccessibility:(NSInteger)accessible completionHandler:(nonnull void(^)(NSArray <JMapPathPerFloor *>* _Nullable optimalPath, NSArray<NSArray <JMapPathPerFloor *>*>* _Nullable alternativePaths))completion;
+
+/**
+ *  Generates a list of ordered array of JMapPathPerFloor to show the shortest path with visiting each destination exactly once. Aslo set the order of visit to achieve the shortest route for the given list of destination
+ *  @param destinations The array of destinations require to visit
+ *  @param startWayPoint The JMapWaypoint indicating the start position of the user
+ *  @param accessible The accessibility value of the wayfinding route. 0 - 100 with 100 having full accessibility.
+ *  @param completion A callback with ordered array of JMapPathPerFloor and ordered list of destinations array provided. The order for array of JMapPathPerFloor and destination is the order of visit each destination exactly once to achieve the shortest route for the given list of destination
+ */
+-(void)wayfindToMultipleDestinations:(nonnull NSArray<JMapDestination *> *)destinations fromStartWayPoint:(nonnull JMapWaypoint *)startWayPoint withAccessibility:(NSInteger)accessible completionHandler:(nonnull void(^)(NSArray<NSArray <JMapPathPerFloor *>*>* _Nullable destinationPathPerFloor, NSArray<JMapDestination*>* _Nullable orderedDestinations))completion;
 
 /**
  *  Gets the nearest waypoint in an array from a reference waypoint.

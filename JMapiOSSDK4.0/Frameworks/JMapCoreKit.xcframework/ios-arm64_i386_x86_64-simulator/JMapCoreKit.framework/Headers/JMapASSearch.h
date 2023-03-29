@@ -44,4 +44,6 @@
  */
 - (NSMutableArray<JMapPathPerFloor*>*)search:(int)from to:(int)to accessLevel:(int)accessLevel;
 
+- (NSMutableArray<JMapPathPerFloor*>*)searchInArray:(int)from to:(NSArray<JMapWaypoint*>*)arrayto accessLevel:(int)accessLevel;
+
 @end

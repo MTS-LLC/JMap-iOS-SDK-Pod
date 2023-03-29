@@ -903,6 +903,15 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
 #pragma mark - Wayfinding Helpers
 
 /**
+ *  Generates a list of ordered array of JMapPathPerFloor to show the shortest path with visiting each destination exactly once. Aslo set the order of visit to achieve the shortest route for the given list of destination
+ *  @param destinations The array of destinations require to visit
+ *  @param startWayPoint The JMapWaypoint indicating the start position of the user
+ *  @param accessible The accessibility value of the wayfinding route. 0 - 100 with 100 having full accessibility.
+ *  @param completion A callback with ordered array of JMapPathPerFloor and ordered list of destinations array provided. The order for array of JMapPathPerFloor and destination is the order of visit each destination exactly once to achieve the shortest route for the given list of destination
+ */
+-(void)wayfindToMultipleDestinations:(NSArray<JMapDestination *> *_Nonnull) destinations fromStartWayPoint:(nonnull JMapWaypoint *)startWayPoint withAccessibility:(NSInteger)accessible completionHandler:( void(^_Nullable)(NSArray<NSArray <JMapPathPerFloor *>*>* _Nullable destinationPathPerFloor, NSArray<JMapDestination*>* _Nullable orderedDestinations))completion;
+
+/**
  *  Generates an NSArray containing JMapPathPerFloor data.
  *
  *  @param waypointStart A JMapWaypoint object as starting point

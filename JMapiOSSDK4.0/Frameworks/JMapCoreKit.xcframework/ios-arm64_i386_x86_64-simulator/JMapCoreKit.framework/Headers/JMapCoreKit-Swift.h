@@ -209,6 +209,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@protocol JMapNearestElementDelegate;
 @class JMapActiveVenue;
 @class JMapMap;
 @class JMapWaypoint;
@@ -216,6 +217,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC11JMapCoreKit18JMapNearestElement")
 @interface JMapNearestElement : NSObject
+@property (nonatomic, strong) id <JMapNearestElementDelegate> _Nullable delegate;
 - (void)initializeKDTreeFor:(JMapActiveVenue * _Nonnull)activeVenue;
 /// search nearest element on given point for the given map id
 /// \param element An element to search of type JMapDestination/JMapAmenity/JMapPathType
@@ -229,6 +231,18 @@ SWIFT_CLASS("_TtC11JMapCoreKit18JMapNearestElement")
 - (void)searchNearestElement:(id _Nonnull)element at:(CGPoint)point forMap:(JMapMap * _Nonnull)map completionHandler:(SWIFT_NOESCAPE void (^ _Nonnull)(JMapWaypoint * _Nullable, id _Nullable, JMapError * _Nullable))completionHandler;
 - (void)reset;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSNumber;
+
+@interface JMapNearestElement (SWIFT_EXTENSION(JMapCoreKit))
+- (NSDictionary<NSString *, id> * _Nullable)getNearestElementFrom:(JMapWaypoint * _Nonnull)startWaypoint toMapId:(NSNumber * _Nonnull)toMapId for:(NSArray * _Nonnull)elements withAccessibility:(NSInteger)accessible SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_PROTOCOL("_TtP11JMapCoreKit26JMapNearestElementDelegate_")
+@protocol JMapNearestElementDelegate
+- (BOOL)isConditionPassedWithWaypoint:(JMapWaypoint * _Nonnull)waypoint SWIFT_WARN_UNUSED_RESULT;
 @end
 
 #if __has_attribute(external_source_symbol)
@@ -447,6 +461,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@protocol JMapNearestElementDelegate;
 @class JMapActiveVenue;
 @class JMapMap;
 @class JMapWaypoint;
@@ -454,6 +469,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC11JMapCoreKit18JMapNearestElement")
 @interface JMapNearestElement : NSObject
+@property (nonatomic, strong) id <JMapNearestElementDelegate> _Nullable delegate;
 - (void)initializeKDTreeFor:(JMapActiveVenue * _Nonnull)activeVenue;
 /// search nearest element on given point for the given map id
 /// \param element An element to search of type JMapDestination/JMapAmenity/JMapPathType
@@ -467,6 +483,18 @@ SWIFT_CLASS("_TtC11JMapCoreKit18JMapNearestElement")
 - (void)searchNearestElement:(id _Nonnull)element at:(CGPoint)point forMap:(JMapMap * _Nonnull)map completionHandler:(SWIFT_NOESCAPE void (^ _Nonnull)(JMapWaypoint * _Nullable, id _Nullable, JMapError * _Nullable))completionHandler;
 - (void)reset;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSNumber;
+
+@interface JMapNearestElement (SWIFT_EXTENSION(JMapCoreKit))
+- (NSDictionary<NSString *, id> * _Nullable)getNearestElementFrom:(JMapWaypoint * _Nonnull)startWaypoint toMapId:(NSNumber * _Nonnull)toMapId for:(NSArray * _Nonnull)elements withAccessibility:(NSInteger)accessible SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_PROTOCOL("_TtP11JMapCoreKit26JMapNearestElementDelegate_")
+@protocol JMapNearestElementDelegate
+- (BOOL)isConditionPassedWithWaypoint:(JMapWaypoint * _Nonnull)waypoint SWIFT_WARN_UNUSED_RESULT;
 @end
 
 #if __has_attribute(external_source_symbol)
@@ -685,6 +713,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@protocol JMapNearestElementDelegate;
 @class JMapActiveVenue;
 @class JMapMap;
 @class JMapWaypoint;
@@ -692,6 +721,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC11JMapCoreKit18JMapNearestElement")
 @interface JMapNearestElement : NSObject
+@property (nonatomic, strong) id <JMapNearestElementDelegate> _Nullable delegate;
 - (void)initializeKDTreeFor:(JMapActiveVenue * _Nonnull)activeVenue;
 /// search nearest element on given point for the given map id
 /// \param element An element to search of type JMapDestination/JMapAmenity/JMapPathType
@@ -705,6 +735,18 @@ SWIFT_CLASS("_TtC11JMapCoreKit18JMapNearestElement")
 - (void)searchNearestElement:(id _Nonnull)element at:(CGPoint)point forMap:(JMapMap * _Nonnull)map completionHandler:(SWIFT_NOESCAPE void (^ _Nonnull)(JMapWaypoint * _Nullable, id _Nullable, JMapError * _Nullable))completionHandler;
 - (void)reset;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSNumber;
+
+@interface JMapNearestElement (SWIFT_EXTENSION(JMapCoreKit))
+- (NSDictionary<NSString *, id> * _Nullable)getNearestElementFrom:(JMapWaypoint * _Nonnull)startWaypoint toMapId:(NSNumber * _Nonnull)toMapId for:(NSArray * _Nonnull)elements withAccessibility:(NSInteger)accessible SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_PROTOCOL("_TtP11JMapCoreKit26JMapNearestElementDelegate_")
+@protocol JMapNearestElementDelegate
+- (BOOL)isConditionPassedWithWaypoint:(JMapWaypoint * _Nonnull)waypoint SWIFT_WARN_UNUSED_RESULT;
 @end
 
 #if __has_attribute(external_source_symbol)

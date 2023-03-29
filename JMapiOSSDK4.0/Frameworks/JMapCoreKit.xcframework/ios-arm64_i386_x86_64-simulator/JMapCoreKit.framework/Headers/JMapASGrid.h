@@ -94,6 +94,13 @@
  */
 -(JMapASNode *) getNodeById:(int)idIn;
 /**
+ *  Gets the nodes with the waypoint ids.
+ *
+ *  @param wps The waypoints to get corresponding node with ids as waypoint ids
+ *  @return A JMapASNode object associated to the node ID.
+ */
+-(NSArray<JMapASNode*>*) getNodesForIds:(NSArray<JMapWaypoint*>*)wps;
+/**
  *  Gets the neighbor node with the node ID.
  *
  *  @param idIn The node ID.
@@ -131,5 +138,7 @@
 *  @param block Boolean to block/unblock the edges exiting the node
 */
 - (void)shouldBlockExitFromNode:(JMapASNode *)fromNode block:(BOOL)block;
+
+
 
 @end

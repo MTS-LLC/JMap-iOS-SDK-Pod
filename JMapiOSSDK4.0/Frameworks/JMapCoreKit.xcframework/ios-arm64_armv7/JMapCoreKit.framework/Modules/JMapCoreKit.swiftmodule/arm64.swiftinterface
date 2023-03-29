@@ -59,12 +59,19 @@ extension KDTree {
   public func nearestK(_ number: Swift.Int, to searchElement: Element, where condition: (Element) -> Swift.Bool = { _ in true }) -> [Element]
   public func allPoints(within radius: Swift.Double, of searchElement: Element) -> [Element]
 }
+@objc public protocol JMapNearestElementDelegate {
+  @objc func isConditionPassed(waypoint: JMapCoreKit.JMapWaypoint) -> Swift.Bool
+}
 @objc @_inheritsConvenienceInitializers public class JMapNearestElement : ObjectiveC.NSObject {
+  @objc public var delegate: JMapCoreKit.JMapNearestElementDelegate?
   @objc public func initializeKDTree(for activeVenue: JMapCoreKit.JMapActiveVenue)
   @objc public func searchNearestElement(_ element: Swift.AnyObject, at point: CoreGraphics.CGPoint, forMap map: JMapCoreKit.JMapMap, completionHandler: (JMapCoreKit.JMapWaypoint?, Swift.AnyObject?, JMapCoreKit.JMapError?) -> Swift.Void)
   @objc public func reset()
   @objc deinit
   @objc override dynamic public init()
+}
+extension JMapNearestElement {
+  @objc dynamic public func getNearestElement(from startWaypoint: JMapCoreKit.JMapWaypoint, toMapId: Foundation.NSNumber, for elements: [Swift.AnyObject], withAccessibility accessible: Swift.Int) -> [Swift.String : Any]?
 }
 extension CGPoint : JMapCoreKit.KDTreePoint {
   public static var dimensions: Swift.Int
