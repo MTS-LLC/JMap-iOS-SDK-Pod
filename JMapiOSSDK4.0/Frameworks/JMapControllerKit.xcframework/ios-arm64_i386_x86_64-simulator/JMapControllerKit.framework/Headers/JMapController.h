@@ -714,7 +714,7 @@ typedef void(^_Nullable ErrorCompletion)(JMapError * _Nullable error);
  *
  *  @param stylesheet NSString containing styles info
  */
-- (void)useCustomStyleSheet:(nonnull NSString *)stylesheet;
+- (void)useCustomStyleSheet:(nonnull NSString *)stylesheet __attribute__((deprecated("useCustomStyleSheet has been deprecated, please use loadJsonStyleConfiguration:(nonnull NSString *)stylesheet instead")));
 
 /**
  *  Applies styling using a json config file after map has loaded, resetting map style will persist the styling
