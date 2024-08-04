@@ -11,10 +11,10 @@
 		84D6D3A49F04CA21E339F8D56F98F7CD /* Pods-JMapiOSSDK4.0_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C43A4609234D894FFAED72DAEC6368 /* Pods-JMapiOSSDK4.0_Tests-dummy.m */; };
 		B34B7F078130586F40E0C0C215088BC1 /* Pods-JMapiOSSDK4.0_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FDB4F60200D0148D74543D4FB1A031 /* Pods-JMapiOSSDK4.0_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B43F5C604C57B73B011649E39DAB2F8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		C63FDA881E0315A1009E4EF5 /* JMapControllerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63FDA851E0315A1009E4EF5 /* JMapControllerKit.framework */; };
-		C63FDA891E0315A1009E4EF5 /* JMapCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63FDA861E0315A1009E4EF5 /* JMapCoreKit.framework */; };
-		C63FDA8A1E0315A1009E4EF5 /* JMapRenderingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63FDA871E0315A1009E4EF5 /* JMapRenderingKit.framework */; };
 		D630CD2DE5E19D80501E4DF4B04572A7 /* JMapiOSSDK4.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0844F4D35C79D9E88D4A8D2B6D5735C7 /* JMapiOSSDK4.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4E4315A2C5D9AF3007C9306 /* JMapControllerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63FDA851E0315A1009E4EF5 /* JMapControllerKit.framework */; };
+		E4E4315D2C5D9AF5007C9306 /* JMapCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63FDA861E0315A1009E4EF5 /* JMapCoreKit.framework */; };
+		E4E4315F2C5D9AF6007C9306 /* JMapRenderingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63FDA871E0315A1009E4EF5 /* JMapRenderingKit.framework */; };
 		F02A1B94E90CD0431B5DFF2F2DADE54E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,10 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C63FDA891E0315A1009E4EF5 /* JMapCoreKit.framework in Frameworks */,
-				C63FDA881E0315A1009E4EF5 /* JMapControllerKit.framework in Frameworks */,
+				E4E4315F2C5D9AF6007C9306 /* JMapRenderingKit.framework in Frameworks */,
 				B43F5C604C57B73B011649E39DAB2F8C /* Foundation.framework in Frameworks */,
-				C63FDA8A1E0315A1009E4EF5 /* JMapRenderingKit.framework in Frameworks */,
+				E4E4315D2C5D9AF5007C9306 /* JMapCoreKit.framework in Frameworks */,
+				E4E4315A2C5D9AF3007C9306 /* JMapControllerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,12 +262,21 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					63A5DD7B69AC3CA7EC22870F66A83EA9 = {
+						DevelopmentTeam = 6HHMNQZR7P;
+					};
+					6DF3437CB19949768D867EC255799002 = {
+						DevelopmentTeam = 6HHMNQZR7P;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -314,10 +323,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4522B66B0A2B3BE42C57C9CED0AD751B /* Pods-JMapiOSSDK4.0_Tests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6HHMNQZR7P;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -325,11 +335,12 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-JMapiOSSDK4.0_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -337,6 +348,10 @@
 				PRODUCT_NAME = Pods_JMapiOSSDK4_0_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -361,6 +376,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: mewillis21@gmail.com (W3BTQ9YD93)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -374,8 +390,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -385,10 +402,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F7BB27931B6BF290987B7580E9FF30CF /* Pods-JMapiOSSDK4.0_Tests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6HHMNQZR7P;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -396,11 +414,12 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-JMapiOSSDK4.0_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -408,6 +427,10 @@
 				PRODUCT_NAME = Pods_JMapiOSSDK4_0_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -418,10 +441,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 137B4C86800842B09BF0B429E823FE06 /* JMapiOSSDK4.0.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6HHMNQZR7P;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -431,13 +455,17 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JMapiOSSDK4.0/JMapiOSSDK4.0-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JMapiOSSDK4.0/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JMapiOSSDK4.0/JMapiOSSDK4.0.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = JMapiOSSDK4_0;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -448,10 +476,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 137B4C86800842B09BF0B429E823FE06 /* JMapiOSSDK4.0.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6HHMNQZR7P;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -461,13 +490,17 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JMapiOSSDK4.0/JMapiOSSDK4.0-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JMapiOSSDK4.0/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JMapiOSSDK4.0/JMapiOSSDK4.0.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = JMapiOSSDK4_0;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -492,6 +525,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: mewillis21@gmail.com (W3BTQ9YD93)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -509,9 +543,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
