@@ -1,6 +1,0 @@
-framework module JMapiOSSDK4_0 {
-  umbrella header "JMapiOSSDK4.0-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4915A247AC4D3470E4B765D0 /* Pods_JMapiOSSDK4_0_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E4A2A0EC2696D2162609C2 /* Pods_JMapiOSSDK4_0_Tests.framework */; };
+		176DD750C4834850D9752694 /* Pods_JMapiOSSDK4_0_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479F4CEB6EFB0AAC5A46218D /* Pods_JMapiOSSDK4_0_Tests.framework */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -16,10 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0CA0CCAE26DFD6DB717A64A0 /* Pods-JMapiOSSDK4.0_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMapiOSSDK4.0_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1B0004261B0D6EC0FEB2627A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		20E4A2A0EC2696D2162609C2 /* Pods_JMapiOSSDK4_0_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMapiOSSDK4_0_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4245C021C119D003DC89E70D /* Pods-JMapiOSSDK4.0_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMapiOSSDK4.0_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		46A102F6CB62F3BF6142E846 /* Pods-JMapiOSSDK4.0_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMapiOSSDK4.0_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		479F4CEB6EFB0AAC5A46218D /* Pods_JMapiOSSDK4_0_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMapiOSSDK4_0_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -30,6 +29,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		A6526EE12D158ED212B7F801 /* JMapiOSSDK4.0.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = JMapiOSSDK4.0.podspec; path = ../JMapiOSSDK4.0.podspec; sourceTree = "<group>"; };
+		C7A642D812BABC3C27947425 /* Pods-JMapiOSSDK4.0_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMapiOSSDK4.0_Tests.release.xcconfig"; path = "Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D994691F6A020568339EE3AB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				4915A247AC4D3470E4B765D0 /* Pods_JMapiOSSDK4_0_Tests.framework in Frameworks */,
+				176DD750C4834850D9752694 /* Pods_JMapiOSSDK4_0_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +55,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				C0133269E01FD55507DEC860 /* Pods */,
+				787A9E0EFF65F86DA3144382 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,7 +74,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				20E4A2A0EC2696D2162609C2 /* Pods_JMapiOSSDK4_0_Tests.framework */,
+				479F4CEB6EFB0AAC5A46218D /* Pods_JMapiOSSDK4_0_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,13 +108,14 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		C0133269E01FD55507DEC860 /* Pods */ = {
+		787A9E0EFF65F86DA3144382 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4245C021C119D003DC89E70D /* Pods-JMapiOSSDK4.0_Tests.debug.xcconfig */,
-				0CA0CCAE26DFD6DB717A64A0 /* Pods-JMapiOSSDK4.0_Tests.release.xcconfig */,
+				46A102F6CB62F3BF6142E846 /* Pods-JMapiOSSDK4.0_Tests.debug.xcconfig */,
+				C7A642D812BABC3C27947425 /* Pods-JMapiOSSDK4.0_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,12 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "JMapiOSSDK4.0_Tests" */;
 			buildPhases = (
-				95D9B74AF01944160855332C /* [CP] Check Pods Manifest.lock */,
+				775F7565AFCD0AA42028F684 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				EA0BA67FAC4B8B1284216711 /* [CP] Embed Pods Frameworks */,
-				70C1EF03174154DD259C8EE3 /* [CP] Copy Pods Resources */,
+				AC00B8AC11940F32FC827973 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,49 +187,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		70C1EF03174154DD259C8EE3 /* [CP] Copy Pods Resources */ = {
+		775F7565AFCD0AA42028F684 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95D9B74AF01944160855332C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JMapiOSSDK4.0_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA0BA67FAC4B8B1284216711 /* [CP] Embed Pods Frameworks */ = {
+		AC00B8AC11940F32FC827973 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/JMapiOSSDK/JMapCoreKit.framework/JMapCoreKit",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JMapCoreKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JMapiOSSDK4.0_Tests/Pods-JMapiOSSDK4.0_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -276,6 +271,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -316,6 +312,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -332,7 +329,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4245C021C119D003DC89E70D /* Pods-JMapiOSSDK4.0_Tests.debug.xcconfig */;
+			baseConfigurationReference = 46A102F6CB62F3BF6142E846 /* Pods-JMapiOSSDK4.0_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6HHMNQZR7P;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -362,7 +359,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CA0CCAE26DFD6DB717A64A0 /* Pods-JMapiOSSDK4.0_Tests.release.xcconfig */;
+			baseConfigurationReference = C7A642D812BABC3C27947425 /* Pods-JMapiOSSDK4.0_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6HHMNQZR7P;
 				FRAMEWORK_SEARCH_PATHS = (
